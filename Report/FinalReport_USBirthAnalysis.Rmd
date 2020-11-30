@@ -13,32 +13,9 @@ library(dbscan)
 Our Dataset: 
 
 ```{r}
-head(new_birth_data)
+USBirths <- read.csv("https://raw.githubusercontent.com/reisanar/datasets/master/us_births_00_14.csv")
 ```
 
-
-```{r}
-new_birth_data2 <- new_birth_data[-c(1:8)]
-head(new_birth_data2)
-```
 
 ## Univariate Outlier Detection
-
-From this new data set, we will look at the birth rates to perform univariate outlier detection.
-
-```{r}
-summary(new_birth_data2)
-```
-
-We can find the outliers by creating a boxplot:
-
-```{r}
-boxplot.stats(new_birth_data2$`Birth Rate`)$out
-```
-
-```{r}
-boxplot(new_birth_data2$`Birth Rate`)
-```
-
-On this dataset, we can also perform multivariate outlier detection:
 
