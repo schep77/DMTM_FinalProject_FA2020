@@ -16,9 +16,16 @@ Our Dataset:
 USBirths <- read.csv("https://raw.githubusercontent.com/reisanar/datasets/master/us_births_00_14.csv")
 ```
 
+
+##Introduction
+
+##Data Exploration
+
 ```{r}
 USBirths
 ```
+
+
 
 ```{r}
 Births2000 <- USBirths %>% 
@@ -31,9 +38,6 @@ totalBirths2000 <- Births2000 %>%
 totalBirths2000
 ```
 
-```{r, echo=FALSE, message=FALSE}
-sum(totalBirths2000$births)
-```
 
 ```{r}
 Births2001 <- USBirths %>% 
@@ -44,10 +48,6 @@ totalBirths2001 <- Births2001 %>%
   mutate(Births2001, total_births = (births/4110963) * 1000)
 
 totalBirths2001
-```
-
-```{r, echo=FALSE, message=FALSE}
-sum(totalBirths2001$births)
 ```
 
 ```{r}
@@ -61,10 +61,6 @@ totalBirths2002 <- Births2002 %>%
 totalBirths2002
 ```
 
-```{r, echo=FALSE, message=FALSE}
-sum(totalBirths2002$births)
-```
-
 ```{r}
 Births2003 <- USBirths %>% 
   select(year, month, date_of_month, date, day_of_week, births) %>% 
@@ -74,11 +70,6 @@ totalBirths2003 <- Births2003 %>%
   mutate(Births2003, total_births = (births/4163060) * 1000)
 
 totalBirths2003
-```
-
-
-```{r, echo=FALSE, message=FALSE}
-sum(totalBirths2003$births)
 ```
 
 ```{r}
@@ -92,11 +83,6 @@ totalBirths2004 <- Births2004 %>%
 totalBirths2004
 ```
 
-
-```{r, echo=FALSE, message=FALSE}
-sum(totalBirths2004$births)
-```
-
 ```{r}
 Births2005 <- USBirths %>% 
   select(year, month, date_of_month, date, day_of_week, births) %>% 
@@ -106,11 +92,6 @@ totalBirths2005 <- Births2005 %>%
   mutate(Births2005, total_births = (births/4211941) * 1000)
 
 totalBirths2005
-```
-
-
-```{r, echo=FALSE, message=FALSE}
-sum(totalBirths2005$births)
 ```
 
 ```{r}
@@ -125,10 +106,6 @@ totalBirths2006
 ```
 
 
-```{r, echo=FALSE, message=FALSE}
-sum(totalBirths2006$births)
-```
-
 ```{r}
 Births2007 <- USBirths %>% 
   select(year, month, date_of_month, date, day_of_week, births) %>% 
@@ -140,10 +117,6 @@ totalBirths2007 <- Births2007 %>%
 totalBirths2007
 ```
 
-
-```{r, echo=FALSE, message=FALSE}
-sum(totalBirths2007$births)
-```
 
 ```{r}
 Births2008 <- USBirths %>% 
@@ -157,11 +130,6 @@ totalBirths2008
 ```
 
 
-
-```{r, echo=FALSE, message=FALSE}
-sum(totalBirths2008$births)
-```
-
 ```{r}
 Births2009 <- USBirths %>% 
   select(year, month, date_of_month, date, day_of_week, births) %>% 
@@ -173,9 +141,6 @@ totalBirths2009 <- Births2009 %>%
 totalBirths2009
 ```
 
-```{r, echo=FALSE, message=FALSE}
-sum(totalBirths2009$births)
-```
 
 ```{r}
 Births2010 <- USBirths %>% 
@@ -186,11 +151,6 @@ totalBirths2010 <- Births2010 %>%
   mutate(Births2010, total_births = (births/4055975) * 1000)
 
 totalBirths2010
-```
-
-
-```{r, echo=FALSE, message=FALSE}
-sum(totalBirths2010$births)
 ```
 
 ```{r}
@@ -204,12 +164,6 @@ totalBirths2011 <- Births2011 %>%
 totalBirths2011
 ```
 
-
-
-```{r, echo=FALSE, message=FALSE}
-sum(totalBirths2011$births)
-```
-
 ```{r}
 Births2012 <- USBirths %>% 
   select(year, month, date_of_month, date, day_of_week, births) %>% 
@@ -221,9 +175,6 @@ totalBirths2012 <- Births2012 %>%
 totalBirths2012
 ```
 
-```{r, echo=FALSE, message=FALSE}
-sum(totalBirths2012$births)
-```
 
 ````{r}
 Births2013 <- USBirths %>% 
@@ -236,9 +187,6 @@ totalBirths2013 <- Births2013 %>%
 totalBirths2013
 ```
 
-```{r, echo=FALSE, message=FALSE}
-sum(totalBirths2013$births)
-```
 ```{r}
 Births2014 <- USBirths %>% 
   select(year, month, date_of_month, date, day_of_week, births) %>% 
@@ -252,8 +200,162 @@ totalBirths2014
 
 
 ```{r, echo=FALSE, message=FALSE}
+sum(totalBirths2000$births)
+sum(totalBirths2001$births)
+sum(totalBirths2002$births)
+sum(totalBirths2003$births)
+sum(totalBirths2004$births)
+sum(totalBirths2005$births)
+sum(totalBirths2006$births)
+sum(totalBirths2007$births)
+sum(totalBirths2008$births)
+sum(totalBirths2009$births)
+sum(totalBirths2010$births)
+sum(totalBirths2011$births)
+sum(totalBirths2012$births)
+sum(totalBirths2013$births)
 sum(totalBirths2014$births)
 ```
 
-## Univariate Outlier Detection
+```{r}
+B2000 <- summary(totalBirths2000$total_births)
+B2001 <- summary(totalBirths2001$total_births)
+summary(totalBirths2003$total_births)
+summary(totalBirths2004$total_births)
+summary(totalBirths2005$total_births)
+summary(totalBirths2006$total_births)
+summary(totalBirths2007$total_births)
+summary(totalBirths2008$total_births)
+summary(totalBirths2009$total_births)
+summary(totalBirths2010$total_births)
+summary(totalBirths2011$total_births)
+summary(totalBirths2012$total_births)
+summary(totalBirths2013$total_births)
+summary(totalBirths2014$total_births)
+```
+
+```{r}
+totalUSBirths <- rbind(totalBirths2000, totalBirths2001, totalBirths2003,
+                       totalBirths2004, totalBirths2005, totalBirths2006,
+                       totalBirths2007, totalBirths2008, totalBirths2009,
+                       totalBirths2010, totalBirths2011, totalBirths2012,
+                       totalBirths2013, totalBirths2014)
+
+totalUSBirths
+```
+
+
+## Data Analysis
+
+
+### Univariate Outlier Detection
+
+
+
+```{r}
+totalBirthsPerMonth <- USBirths %>% 
+  group_by(month) %>% 
+  summarise(bpm_00_14 = sum(births))
+
+totalBirthsPerMonth
+```
+
+```{r}
+boxplot(USBirths$births  ~ USBirths$year, 
+        main="Births by Year", ylab = "Number", xlab = "Year")
+```
+
+
+
+```{r}
+ggplot(totalBirthsPerMonth, aes(month, bpm_00_14)) +
+  geom_point() +
+  geom_text(aes(label=names))
+```
+
+```{r}
+bpm.lm <- lm(bpm_00_14 ~ month, data = totalBirthsPerMonth)
+bpm.res <- resid(bpm.lm)
+plot(bpm_00_14 ~ month, data = totalBirthsPerMonth)
+abline(bpm.lm, col = "blue") 
+text(bpm_00_14 ~ month, data = totalBirthsPerMonth, cex = 0.9, font = 2, pos = 4)
+
+#res.lm <- lm(residuals ~ month, data = totalBirthsPerMonth)
+#plot(totalBirthsPerMonth$month, bpm.res,
+#     ylab = "Residuals", xlab = "Month")
+#abline(res.lm, col = "blue")
+```
+
+
+
+ 
+
+
+```{r}
+beforeRecession <- USBirths %>% 
+  select(year, month, date_of_month, date, day_of_week, births) %>% 
+  filter(year %in% 2006)
+
+#totalBirths2006 <- Births2006 %>% 
+#  mutate(Births2006, total_births = (births/4335154) * 1000)
+
+totalBirths2006
+```
+
+```{r}
+totalBirthsPerMonth2006 <- USBirths %>% 
+  filter(month == 6)%>% 
+  summarise(bpm_00_14 = sum(births))
+
+totalBirthsPerMonth2006
+```
+
+
+
+
+
+
+```{r}
+duringRecession <- USBirths %>% 
+  select(year, month, date_of_month, date, day_of_week, births) %>% 
+  filter(year %in% 2008)
+
+totalBirths2008 <- Births2008 %>% 
+  mutate(Births2008, total_births = (births/4310737) * 1000)
+
+totalBirths2008
+```
+
+
+
+
+```{r}
+afterRecession <- USBirths %>% 
+  select(year, month, date_of_month, date, day_of_week, births) %>% 
+  filter(year %in% 2010)
+
+afterRecession2010 <- afterRecession %>% 
+  mutate(Births2010, total_births = (births/4055975) * 1000)
+
+afterRecession2010
+```
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
