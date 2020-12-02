@@ -25,224 +25,16 @@ USBirths <- read.csv("https://raw.githubusercontent.com/reisanar/datasets/master
 USBirths
 ```
 
-
-
 ```{r}
-Births2000 <- USBirths %>% 
-  select(year, month, date_of_month, date, day_of_week, births) %>% 
-  filter(year %in% 2000)
-
-totalBirths2000 <- Births2000 %>% 
-  mutate(Births2000, total_births = (births/4149598) * 1000)
-
-totalBirths2000
+USBirths %>% 
+  group_by(year) %>% 
+  #filter(year == 2000) %>% 
+  mutate(totalBirths = births/sum(births) * 1000) %>%  #We are multiplying by 1000 because that is what google told me to do.
+  ungroup()
 ```
 
 
-```{r}
-Births2001 <- USBirths %>% 
-  select(year, month, date_of_month, date, day_of_week, births) %>% 
-  filter(year %in% 2001)
 
-totalBirths2001 <- Births2001 %>% 
-  mutate(Births2001, total_births = (births/4110963) * 1000)
-
-totalBirths2001
-```
-
-```{r}
-Births2002 <- USBirths %>% 
-  select(year, month, date_of_month, date, day_of_week, births) %>% 
-  filter(year %in% 2002)
-
-totalBirths2002 <- Births2002 %>% 
-  mutate(Births2002, total_births = (births/4099313) * 1000)
-
-totalBirths2002
-```
-
-```{r}
-Births2003 <- USBirths %>% 
-  select(year, month, date_of_month, date, day_of_week, births) %>% 
-  filter(year %in% 2003)
-
-totalBirths2003 <- Births2003 %>% 
-  mutate(Births2003, total_births = (births/4163060) * 1000)
-
-totalBirths2003
-```
-
-```{r}
-Births2004 <- USBirths %>% 
-  select(year, month, date_of_month, date, day_of_week, births) %>% 
-  filter(year %in% 2004)
-
-totalBirths2004 <- Births2004 %>% 
-  mutate(Births2004, total_births = (births/4186863) * 1000)
-
-totalBirths2004
-```
-
-```{r}
-Births2005 <- USBirths %>% 
-  select(year, month, date_of_month, date, day_of_week, births) %>% 
-  filter(year %in% 2005)
-
-totalBirths2005 <- Births2005 %>% 
-  mutate(Births2005, total_births = (births/4211941) * 1000)
-
-totalBirths2005
-```
-
-```{r}
-Births2006 <- USBirths %>% 
-  select(year, month, date_of_month, date, day_of_week, births) %>% 
-  filter(year %in% 2006)
-
-totalBirths2006 <- Births2006 %>% 
-  mutate(Births2006, total_births = (births/4335154) * 1000)
-
-totalBirths2006
-```
-
-
-```{r}
-Births2007 <- USBirths %>% 
-  select(year, month, date_of_month, date, day_of_week, births) %>% 
-  filter(year %in% 2007)
-
-totalBirths2007 <- Births2007 %>% 
-  mutate(Births2007, total_births = (births/4380784) * 1000)
-
-totalBirths2007
-```
-
-
-```{r}
-Births2008 <- USBirths %>% 
-  select(year, month, date_of_month, date, day_of_week, births) %>% 
-  filter(year %in% 2008)
-
-totalBirths2008 <- Births2008 %>% 
-  mutate(Births2008, total_births = (births/4310737) * 1000)
-
-totalBirths2008
-```
-
-
-```{r}
-Births2009 <- USBirths %>% 
-  select(year, month, date_of_month, date, day_of_week, births) %>% 
-  filter(year %in% 2009)
-
-totalBirths2009 <- Births2009 %>% 
-  mutate(Births2009, total_births = (births/4190991) * 1000)
-
-totalBirths2009
-```
-
-
-```{r}
-Births2010 <- USBirths %>% 
-  select(year, month, date_of_month, date, day_of_week, births) %>% 
-  filter(year %in% 2010)
-
-totalBirths2010 <- Births2010 %>% 
-  mutate(Births2010, total_births = (births/4055975) * 1000)
-
-totalBirths2010
-```
-
-```{r}
-Births2011 <- USBirths %>% 
-  select(year, month, date_of_month, date, day_of_week, births) %>% 
-  filter(year %in% 2011)
-
-totalBirths2011 <- Births2011 %>% 
-  mutate(Births2011, total_births = (births/4006908) * 1000)
-
-totalBirths2011
-```
-
-```{r}
-Births2012 <- USBirths %>% 
-  select(year, month, date_of_month, date, day_of_week, births) %>% 
-  filter(year %in% 2012)
-
-totalBirths2012 <- Births2012 %>% 
-  mutate(Births2012, total_births = (births/4000868) * 1000)
-
-totalBirths2012
-```
-
-
-````{r}
-Births2013 <- USBirths %>% 
-  select(year, month, date_of_month, date, day_of_week, births) %>% 
-  filter(year %in% 2013)
-
-totalBirths2013 <- Births2013 %>% 
-  mutate(Births2013, total_births = (births/3973337) * 1000)
-
-totalBirths2013
-```
-
-```{r}
-Births2014 <- USBirths %>% 
-  select(year, month, date_of_month, date, day_of_week, births) %>% 
-  filter(year %in% 2014)
-
-totalBirths2014 <- Births2014 %>% 
-  mutate(Births2014, total_births = (births/4010532) * 1000)
-
-totalBirths2014
-```
-
-
-```{r, echo=FALSE, message=FALSE}
-sum(totalBirths2000$births)
-sum(totalBirths2001$births)
-sum(totalBirths2002$births)
-sum(totalBirths2003$births)
-sum(totalBirths2004$births)
-sum(totalBirths2005$births)
-sum(totalBirths2006$births)
-sum(totalBirths2007$births)
-sum(totalBirths2008$births)
-sum(totalBirths2009$births)
-sum(totalBirths2010$births)
-sum(totalBirths2011$births)
-sum(totalBirths2012$births)
-sum(totalBirths2013$births)
-sum(totalBirths2014$births)
-```
-
-```{r}
-B2000 <- summary(totalBirths2000$total_births)
-B2001 <- summary(totalBirths2001$total_births)
-summary(totalBirths2003$total_births)
-summary(totalBirths2004$total_births)
-summary(totalBirths2005$total_births)
-summary(totalBirths2006$total_births)
-summary(totalBirths2007$total_births)
-summary(totalBirths2008$total_births)
-summary(totalBirths2009$total_births)
-summary(totalBirths2010$total_births)
-summary(totalBirths2011$total_births)
-summary(totalBirths2012$total_births)
-summary(totalBirths2013$total_births)
-summary(totalBirths2014$total_births)
-```
-
-```{r}
-totalUSBirths <- rbind(totalBirths2000, totalBirths2001, totalBirths2003,
-                       totalBirths2004, totalBirths2005, totalBirths2006,
-                       totalBirths2007, totalBirths2008, totalBirths2009,
-                       totalBirths2010, totalBirths2011, totalBirths2012,
-                       totalBirths2013, totalBirths2014)
-
-totalUSBirths
-```
 
 
 ## Data Analysis
@@ -344,6 +136,14 @@ afterRecession2010
 
 
 
+Plans for moving foward:
+
+1) figure out what to do with the birthrates
+2) do something with days of the week
+3) do something with recession data.
+      a) look at data from Jan - Mar of 2006, 2008, 2010 to compare before, during, and after.
+4) which day of the month is the popular
+      a) this may be the birthrate?
 
 
 
