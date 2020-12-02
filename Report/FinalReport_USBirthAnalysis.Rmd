@@ -87,21 +87,26 @@ text(bpm_00_14 ~ month, data = totalBirthsPerMonth, cex = 0.9, font = 2, pos = 4
 
 
 ```{r}
-beforeRecession <- USBirths %>% 
+Births2006 <- USBirths %>% 
   select(year, month, date_of_month, date, day_of_week, births) %>% 
   filter(year %in% 2006)
+<<<<<<< HEAD
 
 #totalBirths2006 <- Births2006 %>% 
 #  mutate(Births2006, total_births = (births/4335154) * 1000)
 
 #totalBirths2006
+=======
+totalBirths2006 <- Births2006 %>% 
+  mutate(Births2006, total_births = (births/4335154) * 1000)
+totalBirths2006
+>>>>>>> 65948cea96f0e3bf2007c08c42b62d7c1d73afd5
 ```
 
 ```{r}
 totalBirthsPerMonth2006 <- USBirths %>% 
   filter(month == 6)%>% 
   summarise(bpm_00_14 = sum(births))
-
 totalBirthsPerMonth2006
 ```
 
@@ -111,13 +116,11 @@ totalBirthsPerMonth2006
 
 
 ```{r}
-duringRecession <- USBirths %>% 
+Births2008 <- USBirths %>% 
   select(year, month, date_of_month, date, day_of_week, births) %>% 
   filter(year %in% 2008)
-
 totalBirths2008 <- Births2008 %>% 
   mutate(Births2008, total_births = (births/4310737) * 1000)
-
 totalBirths2008
 ```
 
@@ -128,10 +131,8 @@ totalBirths2008
 afterRecession <- USBirths %>% 
   select(year, month, date_of_month, date, day_of_week, births) %>% 
   filter(year %in% 2010)
-
 afterRecession2010 <- afterRecession %>% 
-  mutate(Births2010, total_births = (births/4055975) * 1000)
-
+  mutate(afterRecession, total_births = (births/4055975) * 1000)
 afterRecession2010
 ```
 
@@ -161,7 +162,7 @@ Plans for moving foward:
       a) this may be the birthrate?
 
 Note: many of the R blocks have some errors. Typically just some missing variables for the last 2
-
+Note 2: Fixed the blocks with errors.
 
 
 
