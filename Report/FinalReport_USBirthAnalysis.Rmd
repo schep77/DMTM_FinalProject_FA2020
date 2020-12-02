@@ -62,9 +62,9 @@ boxplot(USBirths$births  ~ USBirths$year,
 
 
 ```{r}
-ggplot(totalBirthsPerMonth, aes(month, bpm_00_14)) +
-  geom_point() +
-  geom_text(aes(label=names))
+#ggplot(totalBirthsPerMonth, aes(month, bpm_00_14)) +
+#  geom_point() +
+#  geom_text(aes(label=names))
 ```
 
 ```{r}
@@ -146,7 +146,11 @@ Note 2: Fixed the blocks with errors.
 
 
 
+## Anomly Dectection with Birthrates - Kyle 
 
+
+
+## Days of the week - Orel 
 
 
 
