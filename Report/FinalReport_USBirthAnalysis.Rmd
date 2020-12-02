@@ -1,5 +1,6 @@
 ---
-title: "R Notebook"
+title: "Data Mining and Text Mining - Final Project"
+author: "Kyle Dean, Kaitlyn Scheppa, Orel Yoshia"
 output: html_notebook
 ---
 
@@ -93,7 +94,7 @@ beforeRecession <- USBirths %>%
 #totalBirths2006 <- Births2006 %>% 
 #  mutate(Births2006, total_births = (births/4335154) * 1000)
 
-totalBirths2006
+#totalBirths2006
 ```
 
 ```{r}
@@ -135,6 +136,18 @@ afterRecession2010
 ```
 
 
+Sum of Births based on Day of the Week
+```{r}
+USBirths %>% 
+  group_by(day_of_week) %>% 
+  summarise(Sum_of_Births = sum(births))
+```
+
+```{r}
+ggplot(USBirths, aes(fill = day_of_week, y = births, x = day_of_week)) +
+  geom_bar(position = "dodge", stat = "identity") +
+  ggtitle("Day of the Week VS. Births")
+```
 
 
 
