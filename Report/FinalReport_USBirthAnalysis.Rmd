@@ -90,23 +90,18 @@ text(bpm_00_14 ~ month, data = totalBirthsPerMonth, cex = 0.9, font = 2, pos = 4
 Births2006 <- USBirths %>% 
   select(year, month, date_of_month, date, day_of_week, births) %>% 
   filter(year %in% 2006)
-<<<<<<< HEAD
+```
 
-#totalBirths2006 <- Births2006 %>% 
-#  mutate(Births2006, total_births = (births/4335154) * 1000)
-
-#totalBirths2006
-=======
+```{r}
 totalBirths2006 <- Births2006 %>% 
   mutate(Births2006, total_births = (births/4335154) * 1000)
 totalBirths2006
->>>>>>> 65948cea96f0e3bf2007c08c42b62d7c1d73afd5
 ```
 
 ```{r}
 totalBirthsPerMonth2006 <- USBirths %>% 
   filter(month == 6)%>% 
-  summarise(bpm_00_14 = sum(births))
+  summarise(bpm_06 = sum(births))
 totalBirthsPerMonth2006
 ```
 
@@ -145,9 +140,11 @@ USBirths %>%
 ```
 
 ```{r}
+USBirths$day_of_week <- factor(USBirths$day_of_week, levels = c("Sun", "Mon", "Tues", "Wed", "Thurs", "Fri", "Sat"))
+
 ggplot(USBirths, aes(fill = day_of_week, y = births, x = day_of_week)) +
   geom_bar(position = "dodge", stat = "identity") +
-  ggtitle("Day of the Week VS. Births")
+  ggtitle("Day of the Week VS. Births") 
 ```
 
 
@@ -155,7 +152,7 @@ ggplot(USBirths, aes(fill = day_of_week, y = births, x = day_of_week)) +
 Plans for moving foward:
 
 1) figure out what to do with the birthrates
-2) do something with days of the week
+*2) do something with days of the week*
 3) do something with recession data.
       a) look at data from Jan - Mar of 2006, 2008, 2010 to compare before, during, and after.
 4) which day of the month is the popular
