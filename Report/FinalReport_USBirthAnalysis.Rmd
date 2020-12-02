@@ -19,6 +19,8 @@ USBirths <- read.csv("https://raw.githubusercontent.com/reisanar/datasets/master
 
 ##Introduction
 
+  The goal of our project is to explore the birthrates within the US and identify anomalous characteristics of birthrates, and to find the most popular times at which a child is born. In this project, we use the us_birth_00_14 dataset, which is a collections of the number of births from 2000 January 1st to 2014 December 31st. This collection has every single day between those dates, which will be used to analyze which days of birth are the most common every year, and any drastic changes in birthrates.
+
 ##Data Exploration
 
 ```{r}
@@ -145,7 +147,7 @@ Plans for moving foward:
 4) which day of the month is the popular
       a) this may be the birthrate?
 
-
+Note: many of the R blocks have some errors. Typically just some missing variables for the last 2
 
 
 
