@@ -22,114 +22,148 @@ USBirths <- read.csv("https://raw.githubusercontent.com/reisanar/datasets/master
 
   The goal of our project is to explore the birthrates within the US and identify anomalous characteristics of birthrates, and to find the most popular times at which a child is born. In this project, we use the us_birth_00_14 dataset, which is a collections of the number of births from 2000 January 1st to 2014 December 31st. This collection has every single day between those dates, which will be used to analyze which days of birth are the most common every year, and any drastic changes in birthrates.
 
+
 ##Data Exploration
 
 ```{r}
-USBirths
+head(USBirths)
 ```
-
-```{r}
-USBirths %>% 
-  group_by(year) %>% 
-  #filter(year == 2000) %>% 
-  mutate(totalBirths = births/sum(births) * 1000) %>%  #We are multiplying by 1000 because that is what google told me to do.
-  ungroup()
-```
-
-
-
-
-
-## Data Analysis
-
-
-### Univariate Outlier Detection
-
-
-
-```{r}
-totalBirthsPerMonth <- USBirths %>% 
-  group_by(month) %>% 
-  summarise(bpm_00_14 = sum(births))
-
-totalBirthsPerMonth
-```
-
 ```{r}
 boxplot(USBirths$births  ~ USBirths$year, 
         main="Births by Year", ylab = "Number", xlab = "Year")
 ```
 
 
-
 ```{r}
-#ggplot(totalBirthsPerMonth, aes(month, bpm_00_14)) +
-#  geom_point() +
-#  geom_text(aes(label=names))
+birthRates <- USBirths %>% 
+  group_by(year) %>% 
+  mutate(cbr = births/sum(births) * 1000) %>%  #cbr is the crude birth rate, and to find it you divide the sume of the births per year, by the births of that day, then multiply by 1000
+  ungroup()
 ```
 
 ```{r}
-bpm.lm <- lm(bpm_00_14 ~ month, data = totalBirthsPerMonth)
-bpm.res <- resid(bpm.lm)
-plot(bpm_00_14 ~ month, data = totalBirthsPerMonth)
-abline(bpm.lm, col = "blue") 
-text(bpm_00_14 ~ month, data = totalBirthsPerMonth, cex = 0.9, font = 2, pos = 4)
-
-#res.lm <- lm(residuals ~ month, data = totalBirthsPerMonth)
-#plot(totalBirthsPerMonth$month, bpm.res,
-#     ylab = "Residuals", xlab = "Month")
-#abline(res.lm, col = "blue")
+boxplot.stats(birthRates$cbr)$out
+```
+```{r}
+boxplot(birthRates$cbr)
 ```
 
 
 
+
+```{r}
+USBirths$mmdd = paste(USBirths$month, USBirths$date_of_month)
+USBirths
+```
+```{r, message=FALSE}
+averageBPD <- USBirths %>% 
+  group_by(mmdd = substr(mmdd, 1, 31)) %>% 
+  summarise(births = sum(births)/15) %>%
+  arrange(desc(births)) %>% 
+  ungroup() 
+
+averageBPD
+  
+```
+```{r}
+ggplot() +
+geom_point(averageBPD, mapping = aes(x = mmdd, y = births))
+```
+
+```{r}
+boxplot.stats(averageBPD$births)$out
+```
+```{r}
+boxplot(averageBPD$births)
+```
+
+
+
+## Data Analysis
+
+
+
+```{r}
+novemberBirths <- USBirths %>% #11 is also kinda good 
+  group_by(month) %>% 
+  filter(month==11) %>% 
+  ungroup() %>% 
+  select(births, year)
+
+novemberBirths
+```
+
+
+```{r}
+ggplot(novemberBirths, aes(x = year, y = births)) +
+  geom_histogram(stat = "identity")
+```
+
+
+
+
+```{r}
+jun06 <- USBirths %>% 
+  filter(year == 2006) %>% 
+  filter(month == 06)
+
+jun06
+
+ggplot(jun06, aes(x = births, y = date)) +
+geom_point() +
+labs(x = "Number of Births",
+y = "Date",
+title = "US Births on 06-06-06")
+```
+
+
+```{r}
+jul07 <- USBirths %>% 
+  filter(year == 2007) %>% 
+  filter(month == 07)
+
+jul07
+
+ggplot(jul07, aes(x = births, y = date)) +
+geom_point() +
+labs(x = "Number of Births",
+y = "Date",
+title = "US Births on 07-07-07")
+```
+
+```{r}
+aug08 <- USBirths %>% 
+  filter(year == 2008) %>% 
+  filter(month == 08)
+
+aug08
+
+ggplot(aug08, aes(x = births, y = date)) +
+geom_point() +
+labs(x = "Number of Births",
+y = "Date",
+title = "US Births on 08-08-08")
+```
+
+```{r}
+nov11 <- USBirths %>% 
+  filter(year == 2011) %>% 
+  filter(month == 11)
+
+nov11
+```
  
-
-
 ```{r}
-Births2006 <- USBirths %>% 
-  select(year, month, date_of_month, date, day_of_week, births) %>% 
-  filter(year %in% 2006)
-```
-
-```{r}
-totalBirths2006 <- Births2006 %>% 
-  mutate(Births2006, total_births = (births/4335154) * 1000)
-totalBirths2006
-```
-
-```{r}
-totalBirthsPerMonth2006 <- USBirths %>% 
-  filter(month == 6)%>% 
-  summarise(bpm_06 = sum(births))
-totalBirthsPerMonth2006
+ggplot(nov11, aes(x = births, y = date)) +
+geom_point() +
+labs(x = "Number of Births",
+y = "Date",
+title = "US Births on 11-11-11")
 ```
 
 
-
-
-
-
-```{r}
-Births2008 <- USBirths %>% 
-  select(year, month, date_of_month, date, day_of_week, births) %>% 
-  filter(year %in% 2008)
-totalBirths2008 <- Births2008 %>% 
-  mutate(Births2008, total_births = (births/4310737) * 1000)
-totalBirths2008
-```
-
-
-
-
-```{r}
-afterRecession <- USBirths %>% 
-  select(year, month, date_of_month, date, day_of_week, births) %>% 
-  filter(year %in% 2010)
-afterRecession2010 <- afterRecession %>% 
-  mutate(afterRecession, total_births = (births/4055975) * 1000)
-afterRecession2010
-```
+## Anomaly Dectection with Birthrates
+## Days of the week
 
 
 Sum of Births based on Day of the Week
@@ -144,35 +178,7 @@ USBirths$day_of_week <- factor(USBirths$day_of_week, levels = c("Sun", "Mon", "T
 
 ggplot(USBirths, aes(fill = day_of_week, y = births, x = day_of_week)) +
   geom_bar(position = "dodge", stat = "identity") +
-  ggtitle("Day of the Week VS. Births") 
+  ggtitle("Day of the Week VS. Births")
 ```
-
-
-
-Plans for moving foward:
-
-1) figure out what to do with the birthrates
-*2) do something with days of the week*
-3) do something with recession data.
-      a) look at data from Jan - Mar of 2006, 2008, 2010 to compare before, during, and after.
-4) which day of the month is the popular
-      a) this may be the birthrate?
-
-Note: many of the R blocks have some errors. Typically just some missing variables for the last 2
-Note 2: Fixed the blocks with errors.
-
-
-
-
-## Anomly Dectection with Birthrates - Kyle 
-
-
-
-## Days of the week - Orel 
-
-
-
-
-
 
 
