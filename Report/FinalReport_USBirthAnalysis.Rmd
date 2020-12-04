@@ -34,6 +34,43 @@ USBirths <- read.csv("https://raw.githubusercontent.com/reisanar/datasets/master
 
 # Data Exploration
 
+
+##Data Exploration---
+title: "Data Mining and Text Mining - Final Project"
+author: "Kyle Dean, Kaitlyn Scheppa, Orel Yoshia"
+output: 
+  html_notebook:
+    toc: TRUE
+    toc_float: TRUE
+    toc_depth: 4
+    number_sections: TRUE
+    theme: united
+---
+
+```{r, message=FALSE}
+library(tidyverse)
+library(dplyr)
+library(dbscan)
+library(ggplot2)
+```
+
+<br>
+
+## Our Dataset
+```{r}
+USBirths <- read.csv("https://raw.githubusercontent.com/reisanar/datasets/master/us_births_00_14.csv")
+```
+
+<br>
+
+# Introduction
+
+  The goal of our project is to explore the birthrates within the US and identify anomalous characteristics and to find the most popular times at which a child is born. In this project, we use the `us_birth_00_14` dataset, which is a collection of the number of births from January 1st 2000 to December 31st 2014. Our initial intentions with this dataset were to analyze, if "special occasion" babies were really a thing. However we realize that expecting families can plan as much as possible, there are many factors that can affect when a baby is brought into this world. 
+
+<br>
+
+# Data Exploration
+
 ```{r}
 head(USBirths)
 ```
@@ -227,3 +264,353 @@ title = "US Births on 11-11-11")
   We then did an analysis to see which day of the week was least and most popular to give birth on. As a result, we saw that Saturday and Sunday had the least average amount of births. We even saw that a birth date of `07-07-07` (which is everyone's lucky number) still had a pretty low amount of births because it was on a Saturday. This then led us to explore our final analysis. We looked at the births on specially numbered days of specific years, like `06-06-06`, `07-07-07`, `08-08-08`, and `11-11-11`. This was just a sample of those days in range of years in our data. The results showed that these dates were significant days to give birth on. Although there is not a solid reason why weekends are not a popular time to give birth, we can take into consideration that hospitals might not be fully staffed on weekends, people take vacations on the weekend, or because pregnant woman just want extra days off work and therefore choose that they want to give birth in the middle of the week. This last analysis really showed that although the date of birth does not have a huge effect on the amount of births, the day of the week the baby is born has a huge correlation to the amount of births.
   
   Again, although expecting families can plan as much as possible, there are many factors that can affect when a baby is brought into this world. Financial hardships, weekends, or holidays are some of the factors the bring births down. Signicatlly numbered days, middle of the week, and higher economy are some of the factors that bring births up.
+
+
+```{r}
+head(USBirths)
+```
+
+> Presented is the first 6 entries of the dataset. It includes the `year`, `month`, `date_of_month`, `date`,`day_of_week`, and `births` recorded in the US.
+
+```{r}
+# this data frame was used all throughout out analysis
+USBirths %>% 
+  group_by(day_of_week) %>% 
+  summarise(Sum_of_Births = sum(births))
+=======
+```{r}
+boxplot(USBirths$births  ~ USBirths$year, 
+        main="Births by Year", ylab = "Number", xlab = "Year")
+```
+
+
+```{r}
+birthRates <- USBirths %>% 
+  group_by(year) %>% 
+  mutate(cbr = births/sum(births) * 1000) %>%  #cbr is the crude birth rate, and to find it you divide the sume of the births per year, by the births of that day, then multiply by 1000
+  ungroup()
+>>>>>>> 7ea8b96a61b9dc4f16975674875f2261fe4f5437
+```
+> The final thing we wanted to explore was the total sum of births for each day of the week through the 15 years recorded. We wanted to see if any day of the week was more popular. In our data analysis, we can see the results in a bar graph.
+
+<<<<<<< HEAD
+<br>
+=======
+```{r}
+boxplot.stats(birthRates$cbr)$out
+```
+```{r}
+boxplot(birthRates$cbr)
+```
+>>>>>>> 7ea8b96a61b9dc4f16975674875f2261fe4f5437
+
+## Exploration for Births per Year
+
+```{r, message=FALSE}
+bpy <- USBirths %>% 
+  group_by(year) %>% 
+  summarise(totalBPY = sum(births))
+
+<<<<<<< HEAD
+bpy
+```
+> The number listed above in `totalBPY` represent the total births per year from 2000 to 2014. We use this data frame to to view the highest and lowest total births for each year.
+
+<br>
+
+## Exploration for Births per Day
+```{r}
+USBirths$mmdd = paste(USBirths$month, USBirths$date_of_month)
+USBirths
+=======
+
+```{r}
+USBirths$mmdd = paste(USBirths$month, USBirths$date_of_month)
+USBirths
+```
+```{r, message=FALSE}
+averageBPD <- USBirths %>% 
+  group_by(mmdd = substr(mmdd, 1, 31)) %>% 
+  summarise(births = sum(births)/15) %>%
+  arrange(desc(births)) %>% 
+  ungroup() 
+
+averageBPD
+  
+```
+```{r}
+ggplot() +
+geom_point(averageBPD, mapping = aes(x = mmdd, y = births))
+>>>>>>> 7ea8b96a61b9dc4f16975674875f2261fe4f5437
+```
+> This new attribute `mmdd` represents a combination of month and day. We use this tool to help us with our data mining portion.
+
+<<<<<<< HEAD
+
+```{r, message=FALSE}
+averageBPD <- USBirths %>% 
+  group_by(mmdd = substr(mmdd, 1, 31)) %>% 
+  summarise(births = sum(births)/15) %>%
+  arrange(desc(births)) %>%
+  ungroup() 
+averageBPD
+```
+```{r}
+head(averageBPD)
+```
+```{r}
+tail(averageBPD, 13)
+=======
+```{r}
+boxplot.stats(averageBPD$births)$out
+```
+```{r}
+boxplot(averageBPD$births)
+>>>>>>> 7ea8b96a61b9dc4f16975674875f2261fe4f5437
+```
+
+> This summary shows what the average number of births was on every date during that year. Here, we can see that September 12th has an average of 12734.933 births over these 15 years, making this day the highest average births in the US. We also see that February 29th averaged the lowest births. This makes sense because February 29th is a leap year date and only happened 4 times in our range from 2000 to 2014 (2000, 2004, 2008, 2012). We can also see that the lowest days are around holiday time. We mention this part in the next section as well.
+
+<br>
+
+<<<<<<< HEAD
+## Exploration for Days of the Week
+=======
+## Data Analysis
+>>>>>>> 7ea8b96a61b9dc4f16975674875f2261fe4f5437
+
+```{r}
+jun06 <- USBirths %>% 
+  filter(year == 2006) %>% 
+  filter(month == 06)
+jun06
+```
+
+<<<<<<< HEAD
+```{r}
+jul07 <- USBirths %>% 
+  filter(year == 2007) %>% 
+  filter(month == 07)
+jul07
+```
+
+```{r}
+aug08 <- USBirths %>% 
+  filter(year == 2008) %>% 
+  filter(month == 08)
+aug08
+=======
+
+```{r}
+novemberBirths <- USBirths %>% #11 is also kinda good 
+  group_by(month) %>% 
+  filter(month==11) %>% 
+  ungroup() %>% 
+  select(births, year)
+
+novemberBirths
+>>>>>>> 7ea8b96a61b9dc4f16975674875f2261fe4f5437
+```
+
+
+```{r}
+<<<<<<< HEAD
+nov11 <- USBirths %>% 
+  filter(year == 2011) %>% 
+  filter(month == 11)
+nov11
+=======
+ggplot(novemberBirths, aes(x = year, y = births)) +
+  geom_histogram(stat = "identity")
+>>>>>>> 7ea8b96a61b9dc4f16975674875f2261fe4f5437
+```
+> In these 4 chunks of code we created data frames for a specific month that we wanted to explore. Our intentions were to see if a cool date like `06-06-06` or `11-11-11` had any spikes in birth on that given date. In the Data Analysis section, we see the graphs that display the results.
+
+
+<br>
+
+# Data Analysis
+
+<br>
+<br>
+
+<<<<<<< HEAD
+## Analysis based on Births per Year
+
+
+```{r}
+boxplot(USBirths$births  ~ USBirths$year, 
+        main="Births by Year", ylab = "Number", xlab = "Year")
+=======
+```{r}
+jun06 <- USBirths %>% 
+  filter(year == 2006) %>% 
+  filter(month == 06)
+
+jun06
+
+ggplot(jun06, aes(x = births, y = date)) +
+geom_point() +
+labs(x = "Number of Births",
+y = "Date",
+title = "US Births on 06-06-06")
+```
+
+
+```{r}
+jul07 <- USBirths %>% 
+  filter(year == 2007) %>% 
+  filter(month == 07)
+
+jul07
+
+ggplot(jul07, aes(x = births, y = date)) +
+geom_point() +
+labs(x = "Number of Births",
+y = "Date",
+title = "US Births on 07-07-07")
+>>>>>>> 7ea8b96a61b9dc4f16975674875f2261fe4f5437
+```
+> This is a boxplot showing the total number of births from each year from the year 2000 to 2014. The difference between the first interquartile and second is quite large compared to the second and third. We also notice that the quartiles do not change that much over the years, with just a small increase in 2005 to 2007, and then a decrease to the original second quartile. Additionally, we also see that 2009 had the highest total births, whereas 2013 had the fewest total births overall.
+
+<<<<<<< HEAD
+<br>
+
+## Analysis Based on Average Births per Day
+=======
+```{r}
+aug08 <- USBirths %>% 
+  filter(year == 2008) %>% 
+  filter(month == 08)
+
+aug08
+>>>>>>> 7ea8b96a61b9dc4f16975674875f2261fe4f5437
+
+ggplot(aug08, aes(x = births, y = date)) +
+geom_point() +
+labs(x = "Number of Births",
+y = "Date",
+title = "US Births on 08-08-08")
+```
+
+```{r}
+nov11 <- USBirths %>% 
+  filter(year == 2011) %>% 
+  filter(month == 11)
+
+nov11
+```
+ 
+```{r}
+<<<<<<< HEAD
+ggplot() +
+geom_point(averageBPD, mapping = aes(x = mmdd, y = births)) +
+  labs(x = "Day of the Year", 
+       y = "Number of Births", 
+       title = "Average Birth per Day")
+=======
+ggplot(nov11, aes(x = births, y = date)) +
+geom_point() +
+labs(x = "Number of Births",
+y = "Date",
+title = "US Births on 11-11-11")
+>>>>>>> 7ea8b96a61b9dc4f16975674875f2261fe4f5437
+```
+> This is a visualization of the average births per date. We took each date in a year and averaged it between the 15 years and created a scatter plot above. As seen on this plot, there are 366 points on this graph. Each point represents the average of each date in a year. While most dates hover between 10,000 and 12,500, there are a few dates with an extremely low average of births.
+
+<<<<<<< HEAD
+=======
+
+## Anomaly Dectection with Birthrates
+## Days of the week
+
+
+Sum of Births based on Day of the Week
+>>>>>>> 7ea8b96a61b9dc4f16975674875f2261fe4f5437
+```{r}
+boxplot.stats(averageBPD$births)$out
+```
+> We then wanted to list out the specific numbers that were outliers in this dataset so we used $out. If you reference the 'averageBPD' data frame in the data exploration section, we have the dates listed in descending order. We could see that the dates listed as outliers were usually the days right before or right after holidays. This was especially true for the 4th of July, Thanksgiving, Christmas, and New Year's. The lowest average Birth Per Date was February 29th, which as mentioned previously is a leap year date, and only occurs 4 times out of the 15 years presented in our data set.
+
+```{r}
+<<<<<<< HEAD
+boxplot(averageBPD$births)
+=======
+USBirths$day_of_week <- factor(USBirths$day_of_week, levels = c("Sun", "Mon", "Tues", "Wed", "Thurs", "Fri", "Sat"))
+
+ggplot(USBirths, aes(fill = day_of_week, y = births, x = day_of_week)) +
+  geom_bar(position = "dodge", stat = "identity") +
+  ggtitle("Day of the Week VS. Births")
+>>>>>>> 7ea8b96a61b9dc4f16975674875f2261fe4f5437
+```
+> This is yet again another visualization of the average number of births for each date, but displayed in boxplot form. This shows a smaller quartile range than the totals from the original US Births dataset, and shows a few outliers creating a large gap, all below the minimum.
+
+<br>
+
+<<<<<<< HEAD
+## Analysis Based on Days of the Week
+*Within this section, it is worth noting that weekends (colored in blue and green) had a significantly lower number of births than its weekday counterparts. We made 4 graphs showing the total births each day in June of 2006, July of 2007, August of 2008, and November of 2011. Each month displayed shows mostly 12,000+ births a day, with a few dips below 10,000. The main point of these graphs were to be able to visualize these dates each year.*
+
+```{r}
+USBirths$day_of_week <- factor(USBirths$day_of_week, levels = c("Sun", "Mon", "Tues", "Wed", "Thurs", "Fri", "Sat"))
+ggplot(USBirths, aes(fill = day_of_week, y = births, x = day_of_week)) +
+  geom_bar(stat = "identity") +
+  labs(x = "Day of the Week", 
+       y = "Number of Births",
+       title = "Days of the Week vs. Births") +
+  scale_y_continuous(labels = scales::comma)
+```
+> In this display, we see a stark difference in number of births between weekdays and weekends. Clearly shown in the height of the weekends being significantly shorter in their collective number of births than the weekdays. We can also see that Wednesday has the most collective births in a day compared to the other days of the week. We also take note of the distribution formed by the total births, rising as a week heads to its center, and coming down as it gets closer to the end of a week. When we look at the graph below, there is an example that cooralates the day of week with the amount of births on that day.
+
+
+```{r}
+ggplot(jun06, aes(color = day_of_week, x = births, y = date)) +
+geom_point(size = 3) +
+labs(x = "Number of Births",
+y = "Date",
+title = "US Births on 06-06-06")
+```
+> We created a scatter plot for the month of June in 2006 and plotted each day in that month. We look at the specific date of June 6th, compared to the rest of the month. June 6, 2006 is usually written as `06-06-06`. 666 is also usually a superstitous number and although it didnt have the lowest number of births, you could see that it didnt have the highest number of births either (compared to the other months and years with signicantly numbered dates).
+
+```{r}
+ggplot(jul07, aes(color = day_of_week, x = births, y = date)) +
+geom_point(size = 3) +
+labs(x = "Number of Births",
+     y = "Date",
+     title = "US Births on 07-07-07")
+```
+> We then took a look at July in the year 2007. With all the days displayed in that month, yet again we see that `07-07-07` was right in the middle skewing more towards the lower end of total births for each day of that month. If we compared this July scatter plot to the rest of the cool dates, you would think it would also be the date with the highest births but July 7th, 2007 actually fell on a Saturday. This could explain why it was on the lower end, but it still skewed towards the right, people would still rather give birth on a weekday, but since it was a cool day we saw a spike in births.
+
+```{r}
+ggplot(aug08, aes(color = day_of_week, x = births, y = date)) +
+geom_point(size = 3) +
+labs(x = "Number of Births",
+y = "Date",
+title = "US Births on 08-08-08")
+```
+>  We then repeated the same process for August 8th, 2008 `08-08-08`. As you can see in the scatterplot, it was the day with the most amount of births.
+ 
+```{r}
+ggplot(nov11, aes(color = day_of_week, x = births, y = date)) +
+geom_point(size = 3) +
+labs(x = "Number of Births",
+y = "Date",
+title = "US Births on 11-11-11")
+```
+> We did the same thing with November 11, 2011 `11-11-11` and we see that yet again, it was the day with the most amount of births in November.
+
+<br>
+
+# Conclusion
+
+  In the US, the amount of new born infants born is pretty large, but relatively stagnant. There could only be so much planning and scheduling when having a baby but we decided to look at this dataset to really determine if there were any patterns in the amount of births. This dataset included births from every day starting from January 1st, 2000 all the way until December 31st, 2014.
+  
+  We first started by looking at the total amount of births each year. Based on that data, the only thing we really saw was that 2009 had the highest total amount of births and 2013 had the lowest total amount of births. Many people have said that there was such a decline in 2013 because people felt the effects of the recession. Children are the highest expense a family can have and therefore, families did not feel as they could afford it after something as big as The Great Recession happened and many people lost their jobs. That could really explain the decline. We do not have more data after 2014 and we cannot really see if the amount of births were rising for a few years after the recession, but we know that many factors can have an effect on having children. We also cannot guarantee that the recession was the only factor in the decline of births in 2013.
+  
+  The next thing we explored was the average births per date. This was our breakthrough moment with the data. By doing this data mining analysis, we were able to visualize the outliers of this dataset. We took the average births each day, of each year and combined them and then plotted it into a scatter plot. As mentioned in the previous section, we were able to see that the lowest average of births on a specific date was the dates before and after major holidays. Holidays are a stressful time for families, and people want to spend that time with their families (not giving birth in a hospital). Again, there is only so much planning an expecting family can do before giving birth, but through the visualization results, we could see that before and after major holidays there were relatively low births.
+
+  We then did an analysis to see which day of the week was least and most popular to give birth on. As a result, we saw that Saturday and Sunday had the least average amount of births. We even saw that a birth date of `07-07-07` (which is everyone's lucky number) still had a pretty low amount of births because it was on a Saturday. This then led us to explore our final analysis. We looked at the births on specially numbered days of specific years, like `06-06-06`, `07-07-07`, `08-08-08`, and `11-11-11`. This was just a sample of those days in range of years in our data. The results showed that these dates were significant days to give birth on. Although there is not a solid reason why weekends are not a popular time to give birth, we can take into consideration that hospitals might not be fully staffed on weekends, people take vacations on the weekend, or because pregnant woman just want extra days off work and therefore choose that they want to give birth in the middle of the week. This last analysis really showed that although the date of birth does not have a huge effect on the amount of births, the day of the week the baby is born has a huge correlation to the amount of births.
+  
+  Again, although expecting families can plan as much as possible, there are many factors that can affect when a baby is brought into this world. Financial hardships, weekends, or holidays are some of the factors the bring births down. Signicatlly numbered days, middle of the week, and higher economy are some of the factors that bring births up.
+=======
+>>>>>>> 7ea8b96a61b9dc4f16975674875f2261fe4f5437
