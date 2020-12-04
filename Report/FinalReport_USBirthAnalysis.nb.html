@@ -2981,37 +2981,6 @@ library(ggplot2)</code></pre>
 </div>
 <div id="data-exploration" class="section level1">
 <h1><span class="header-section-number">2</span> Data Exploration</h1>
-<p>##Data Exploration— title: “Data Mining and Text Mining - Final Project” author: “Kyle Dean, Kaitlyn Scheppa, Orel Yoshia” output: html_notebook: toc: TRUE toc_float: TRUE toc_depth: 4 number_sections: TRUE theme: united —</p>
-<!-- rnb-text-end -->
-<!-- rnb-chunk-begin -->
-<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxubGlicmFyeSh0aWR5dmVyc2UpXG5saWJyYXJ5KGRwbHlyKVxubGlicmFyeShkYnNjYW4pXG5saWJyYXJ5KGdncGxvdDIpXG5gYGAifQ== -->
-<pre class="r"><code>library(tidyverse)
-library(dplyr)
-library(dbscan)
-library(ggplot2)</code></pre>
-<!-- rnb-source-end -->
-<!-- rnb-chunk-end -->
-<!-- rnb-text-begin -->
-<p><br></p>
-<div id="our-dataset-1" class="section level2">
-<h2><span class="header-section-number">2.1</span> Our Dataset</h2>
-<!-- rnb-text-end -->
-<!-- rnb-chunk-begin -->
-<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuVVNCaXJ0aHMgPC0gcmVhZC5jc3YoXCJodHRwczovL3Jhdy5naXRodWJ1c2VyY29udGVudC5jb20vcmVpc2FuYXIvZGF0YXNldHMvbWFzdGVyL3VzX2JpcnRoc18wMF8xNC5jc3ZcIilcbmBgYCJ9 -->
-<pre class="r"><code>USBirths &lt;- read.csv(&quot;https://raw.githubusercontent.com/reisanar/datasets/master/us_births_00_14.csv&quot;)</code></pre>
-<!-- rnb-source-end -->
-<!-- rnb-chunk-end -->
-<!-- rnb-text-begin -->
-<p><br></p>
-</div>
-</div>
-<div id="introduction-1" class="section level1">
-<h1><span class="header-section-number">3</span> Introduction</h1>
-<p>The goal of our project is to explore the birthrates within the US and identify anomalous characteristics and to find the most popular times at which a child is born. In this project, we use the <code>us_birth_00_14</code> dataset, which is a collection of the number of births from January 1st 2000 to December 31st 2014. Our initial intentions with this dataset were to analyze, if “special occasion” babies were really a thing. However we realize that expecting families can plan as much as possible, there are many factors that can affect when a baby is brought into this world.</p>
-<p><br></p>
-</div>
-<div id="data-exploration-1" class="section level1">
-<h1><span class="header-section-number">4</span> Data Exploration</h1>
 <!-- rnb-text-end -->
 <!-- rnb-chunk-begin -->
 <!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuaGVhZChVU0JpcnRocylcbmBgYCJ9 -->
@@ -3037,7 +3006,7 @@ USBirths %&gt;%
 </blockquote>
 <p><br></p>
 <div id="exploration-for-births-per-year" class="section level2">
-<h2><span class="header-section-number">4.1</span> Exploration for Births per Year</h2>
+<h2><span class="header-section-number">2.1</span> Exploration for Births per Year</h2>
 <!-- rnb-text-end -->
 <!-- rnb-chunk-begin -->
 <!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuYnB5IDwtIFVTQmlydGhzICU+JSBcbiAgZ3JvdXBfYnkoeWVhcikgJT4lIFxuICBzdW1tYXJpc2UodG90YWxCUFkgPSBzdW0oYmlydGhzKSlcblxuYnB5XG5gYGAifQ== -->
@@ -3055,7 +3024,7 @@ bpy</code></pre>
 <p><br></p>
 </div>
 <div id="exploration-for-births-per-day" class="section level2">
-<h2><span class="header-section-number">4.2</span> Exploration for Births per Day</h2>
+<h2><span class="header-section-number">2.2</span> Exploration for Births per Day</h2>
 <!-- rnb-text-end -->
 <!-- rnb-chunk-begin -->
 <!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuVVNCaXJ0aHMkbW1kZCA9IHBhc3RlKFVTQmlydGhzJG1vbnRoLCBVU0JpcnRocyRkYXRlX29mX21vbnRoKVxuVVNCaXJ0aHNcbmBgYCJ9 -->
@@ -3095,7 +3064,7 @@ averageBPD</code></pre>
 <p><br></p>
 </div>
 <div id="exploration-for-days-of-the-week" class="section level2">
-<h2><span class="header-section-number">4.3</span> Exploration for Days of the Week</h2>
+<h2><span class="header-section-number">2.3</span> Exploration for Days of the Week</h2>
 <!-- rnb-text-end -->
 <!-- rnb-chunk-begin -->
 <!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuanVuMDYgPC0gVVNCaXJ0aHMgJT4lIFxuICBmaWx0ZXIoeWVhciA9PSAyMDA2KSAlPiUgXG4gIGZpbHRlcihtb250aCA9PSAwNilcbmp1bjA2XG5gYGAifQ== -->
@@ -3143,10 +3112,10 @@ nov11</code></pre>
 </div>
 </div>
 <div id="data-analysis" class="section level1">
-<h1><span class="header-section-number">5</span> Data Analysis</h1>
+<h1><span class="header-section-number">3</span> Data Analysis</h1>
 <p><br> <br></p>
 <div id="analysis-based-on-births-per-year" class="section level2">
-<h2><span class="header-section-number">5.1</span> Analysis based on Births per Year</h2>
+<h2><span class="header-section-number">3.1</span> Analysis based on Births per Year</h2>
 <!-- rnb-text-end -->
 <!-- rnb-chunk-begin -->
 <!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuYm94cGxvdChVU0JpcnRocyRiaXJ0aHMgIH4gVVNCaXJ0aHMkeWVhciwgXG4gICAgICAgIG1haW49XCJCaXJ0aHMgYnkgWWVhclwiLCB5bGFiID0gXCJOdW1iZXJcIiwgeGxhYiA9IFwiWWVhclwiKVxuYGBgIn0= -->
@@ -3161,7 +3130,7 @@ nov11</code></pre>
 <p><br></p>
 </div>
 <div id="analysis-based-on-average-births-per-day" class="section level2">
-<h2><span class="header-section-number">5.2</span> Analysis Based on Average Births per Day</h2>
+<h2><span class="header-section-number">3.2</span> Analysis Based on Average Births per Day</h2>
 <!-- rnb-text-end -->
 <!-- rnb-chunk-begin -->
 <!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuZ2dwbG90KCkgK1xuZ2VvbV9wb2ludChhdmVyYWdlQlBELCBtYXBwaW5nID0gYWVzKHggPSBtbWRkLCB5ID0gYmlydGhzKSkgK1xuICBsYWJzKHggPSBcIkRheSBvZiB0aGUgWWVhclwiLCBcbiAgICAgICB5ID0gXCJOdW1iZXIgb2YgQmlydGhzXCIsIFxuICAgICAgIHRpdGxlID0gXCJBdmVyYWdlIEJpcnRoIHBlciBEYXlcIilcbmBgYCJ9 -->
@@ -3199,7 +3168,7 @@ geom_point(averageBPD, mapping = aes(x = mmdd, y = births)) +
 <p><br></p>
 </div>
 <div id="analysis-based-on-days-of-the-week" class="section level2">
-<h2><span class="header-section-number">5.3</span> Analysis Based on Days of the Week</h2>
+<h2><span class="header-section-number">3.3</span> Analysis Based on Days of the Week</h2>
 <p><em>Within this section, it is worth noting that weekends (colored in blue and green) had a significantly lower number of births than its weekday counterparts. We made 4 graphs showing the total births each day in June of 2006, July of 2007, August of 2008, and November of 2011. Each month displayed shows mostly 12,000+ births a day, with a few dips below 10,000. The main point of these graphs were to be able to visualize these dates each year.</em></p>
 <!-- rnb-text-end -->
 <!-- rnb-chunk-begin -->
@@ -3277,492 +3246,16 @@ title = &quot;US Births on 11-11-11&quot;)</code></pre>
 </div>
 </div>
 <div id="conclusion" class="section level1">
-<h1><span class="header-section-number">6</span> Conclusion</h1>
+<h1><span class="header-section-number">4</span> Conclusion</h1>
 <p>In the US, the amount of new born infants born is pretty large, but relatively stagnant. There could only be so much planning and scheduling when having a baby but we decided to look at this dataset to really determine if there were any patterns in the amount of births. This dataset included births from every day starting from January 1st, 2000 all the way until December 31st, 2014.</p>
 <p>We first started by looking at the total amount of births each year. Based on that data, the only thing we really saw was that 2009 had the highest total amount of births and 2013 had the lowest total amount of births. Many people have said that there was such a decline in 2013 because people felt the effects of the recession. Children are the highest expense a family can have and therefore, families did not feel as they could afford it after something as big as The Great Recession happened and many people lost their jobs. That could really explain the decline. We do not have more data after 2014 and we cannot really see if the amount of births were rising for a few years after the recession, but we know that many factors can have an effect on having children. We also cannot guarantee that the recession was the only factor in the decline of births in 2013.</p>
 <p>The next thing we explored was the average births per date. This was our breakthrough moment with the data. By doing this data mining analysis, we were able to visualize the outliers of this dataset. We took the average births each day, of each year and combined them and then plotted it into a scatter plot. As mentioned in the previous section, we were able to see that the lowest average of births on a specific date was the dates before and after major holidays. Holidays are a stressful time for families, and people want to spend that time with their families (not giving birth in a hospital). Again, there is only so much planning an expecting family can do before giving birth, but through the visualization results, we could see that before and after major holidays there were relatively low births.</p>
 <p>We then did an analysis to see which day of the week was least and most popular to give birth on. As a result, we saw that Saturday and Sunday had the least average amount of births. We even saw that a birth date of <code>07-07-07</code> (which is everyone’s lucky number) still had a pretty low amount of births because it was on a Saturday. This then led us to explore our final analysis. We looked at the births on specially numbered days of specific years, like <code>06-06-06</code>, <code>07-07-07</code>, <code>08-08-08</code>, and <code>11-11-11</code>. This was just a sample of those days in range of years in our data. The results showed that these dates were significant days to give birth on. Although there is not a solid reason why weekends are not a popular time to give birth, we can take into consideration that hospitals might not be fully staffed on weekends, people take vacations on the weekend, or because pregnant woman just want extra days off work and therefore choose that they want to give birth in the middle of the week. This last analysis really showed that although the date of birth does not have a huge effect on the amount of births, the day of the week the baby is born has a huge correlation to the amount of births.</p>
 <p>Again, although expecting families can plan as much as possible, there are many factors that can affect when a baby is brought into this world. Financial hardships, weekends, or holidays are some of the factors the bring births down. Signicatlly numbered days, middle of the week, and higher economy are some of the factors that bring births up.</p>
 <!-- rnb-text-end -->
-<!-- rnb-chunk-begin -->
-<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuaGVhZChVU0JpcnRocylcbmBgYCJ9 -->
-<pre class="r"><code>head(USBirths)</code></pre>
-<!-- rnb-source-end -->
-<!-- rnb-chunk-end -->
-<!-- rnb-text-begin -->
-<blockquote>
-<p>Presented is the first 6 entries of the dataset. It includes the <code>year</code>, <code>month</code>, <code>date_of_month</code>, <code>date</code>,<code>day_of_week</code>, and <code>births</code> recorded in the US.</p>
-</blockquote>
-<!-- rnb-text-end -->
-<!-- rnb-chunk-begin -->
-<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuIyB0aGlzIGRhdGEgZnJhbWUgd2FzIHVzZWQgYWxsIHRocm91Z2hvdXQgb3V0IGFuYWx5c2lzXG5VU0JpcnRocyAlPiUgXG4gIGdyb3VwX2J5KGRheV9vZl93ZWVrKSAlPiUgXG4gIHN1bW1hcmlzZShTdW1fb2ZfQmlydGhzID0gc3VtKGJpcnRocykpXG49PT09PT09XG5gYGAifQ== -->
-<pre class="r"><code># this data frame was used all throughout out analysis
-USBirths %&gt;% 
-  group_by(day_of_week) %&gt;% 
-  summarise(Sum_of_Births = sum(births))
-=======</code></pre>
-<!-- rnb-source-end -->
-<!-- rnb-chunk-end -->
-<!-- rnb-chunk-begin -->
-<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuYm94cGxvdChVU0JpcnRocyRiaXJ0aHMgIH4gVVNCaXJ0aHMkeWVhciwgXG4gICAgICAgIG1haW49XCJCaXJ0aHMgYnkgWWVhclwiLCB5bGFiID0gXCJOdW1iZXJcIiwgeGxhYiA9IFwiWWVhclwiKVxuYGBgIn0= -->
-<pre class="r"><code>boxplot(USBirths$births  ~ USBirths$year, 
-        main=&quot;Births by Year&quot;, ylab = &quot;Number&quot;, xlab = &quot;Year&quot;)</code></pre>
-<!-- rnb-source-end -->
-<!-- rnb-chunk-end -->
-<!-- rnb-text-begin -->
-<!-- rnb-text-end -->
-<!-- rnb-chunk-begin -->
-<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuYmlydGhSYXRlcyA8LSBVU0JpcnRocyAlPiUgXG4gIGdyb3VwX2J5KHllYXIpICU+JSBcbiAgbXV0YXRlKGNiciA9IGJpcnRocy9zdW0oYmlydGhzKSAqIDEwMDApICU+JSAgI2NiciBpcyB0aGUgY3J1ZGUgYmlydGggcmF0ZSwgYW5kIHRvIGZpbmQgaXQgeW91IGRpdmlkZSB0aGUgc3VtZSBvZiB0aGUgYmlydGhzIHBlciB5ZWFyLCBieSB0aGUgYmlydGhzIG9mIHRoYXQgZGF5LCB0aGVuIG11bHRpcGx5IGJ5IDEwMDBcbiAgdW5ncm91cCgpXG4+Pj4+Pj4+IDdlYThiOTZhNjFiOWRjNGYxNjk3NTY3NDg3NWYyMjYxZmU0ZjU0MzdcbmBgYCJ9 -->
-<pre class="r"><code>birthRates &lt;- USBirths %&gt;% 
-  group_by(year) %&gt;% 
-  mutate(cbr = births/sum(births) * 1000) %&gt;%  #cbr is the crude birth rate, and to find it you divide the sume of the births per year, by the births of that day, then multiply by 1000
-  ungroup()
-&gt;&gt;&gt;&gt;&gt;&gt;&gt; 7ea8b96a61b9dc4f16975674875f2261fe4f5437</code></pre>
-<!-- rnb-source-end -->
-<!-- rnb-chunk-end -->
-<!-- rnb-text-begin -->
-<blockquote>
-<p>The final thing we wanted to explore was the total sum of births for each day of the week through the 15 years recorded. We wanted to see if any day of the week was more popular. In our data analysis, we can see the results in a bar graph.</p>
-</blockquote>
-<p>&lt;&lt;&lt;&lt;&lt;&lt;&lt; HEAD <br> =======</p>
-<!-- rnb-text-end -->
-<!-- rnb-chunk-begin -->
-<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuYm94cGxvdC5zdGF0cyhiaXJ0aFJhdGVzJGNicikkb3V0XG5gYGAifQ== -->
-<pre class="r"><code>boxplot.stats(birthRates$cbr)$out</code></pre>
-<!-- rnb-source-end -->
-<!-- rnb-chunk-end -->
-<!-- rnb-chunk-begin -->
-<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuYm94cGxvdChiaXJ0aFJhdGVzJGNicilcbmBgYCJ9 -->
-<pre class="r"><code>boxplot(birthRates$cbr)</code></pre>
-<!-- rnb-source-end -->
-<!-- rnb-chunk-end -->
-<!-- rnb-text-begin -->
-<blockquote>
-<blockquote>
-<blockquote>
-<blockquote>
-<blockquote>
-<blockquote>
-<blockquote>
-<p>7ea8b96a61b9dc4f16975674875f2261fe4f5437</p>
-</blockquote>
-</blockquote>
-</blockquote>
-</blockquote>
-</blockquote>
-</blockquote>
-</blockquote>
-<div id="exploration-for-births-per-year-1" class="section level2">
-<h2><span class="header-section-number">6.1</span> Exploration for Births per Year</h2>
-<!-- rnb-text-end -->
-<!-- rnb-chunk-begin -->
-<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuYnB5IDwtIFVTQmlydGhzICU+JSBcbiAgZ3JvdXBfYnkoeWVhcikgJT4lIFxuICBzdW1tYXJpc2UodG90YWxCUFkgPSBzdW0oYmlydGhzKSlcblxuPDw8PDw8PCBIRUFEXG5icHlcbmBgYCJ9 -->
-<pre class="r"><code>bpy &lt;- USBirths %&gt;% 
-  group_by(year) %&gt;% 
-  summarise(totalBPY = sum(births))
-
-&lt;&lt;&lt;&lt;&lt;&lt;&lt; HEAD
-bpy</code></pre>
-<!-- rnb-source-end -->
-<!-- rnb-chunk-end -->
-<!-- rnb-text-begin -->
-<blockquote>
-<p>The number listed above in <code>totalBPY</code> represent the total births per year from 2000 to 2014. We use this data frame to to view the highest and lowest total births for each year.</p>
-</blockquote>
-<p><br></p>
-</div>
-<div id="exploration-for-births-per-day-1" class="section level2">
-<h2><span class="header-section-number">6.2</span> Exploration for Births per Day</h2>
-<!-- rnb-text-end -->
-<!-- rnb-chunk-begin -->
-<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuVVNCaXJ0aHMkbW1kZCA9IHBhc3RlKFVTQmlydGhzJG1vbnRoLCBVU0JpcnRocyRkYXRlX29mX21vbnRoKVxuVVNCaXJ0aHNcbj09PT09PT1cblxuYGBgIn0= -->
-<pre class="r"><code>USBirths$mmdd = paste(USBirths$month, USBirths$date_of_month)
-USBirths
-=======
-</code></pre>
-<!-- rnb-source-end -->
-<!-- rnb-chunk-end -->
-<!-- rnb-chunk-begin -->
-<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuVVNCaXJ0aHMkbW1kZCA9IHBhc3RlKFVTQmlydGhzJG1vbnRoLCBVU0JpcnRocyRkYXRlX29mX21vbnRoKVxuVVNCaXJ0aHNcbmBgYCJ9 -->
-<pre class="r"><code>USBirths$mmdd = paste(USBirths$month, USBirths$date_of_month)
-USBirths</code></pre>
-<!-- rnb-source-end -->
-<!-- rnb-chunk-end -->
-<!-- rnb-chunk-begin -->
-<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuYXZlcmFnZUJQRCA8LSBVU0JpcnRocyAlPiUgXG4gIGdyb3VwX2J5KG1tZGQgPSBzdWJzdHIobW1kZCwgMSwgMzEpKSAlPiUgXG4gIHN1bW1hcmlzZShiaXJ0aHMgPSBzdW0oYmlydGhzKS8xNSkgJT4lXG4gIGFycmFuZ2UoZGVzYyhiaXJ0aHMpKSAlPiUgXG4gIHVuZ3JvdXAoKSBcblxuYXZlcmFnZUJQRFxuICBcbmBgYCJ9 -->
-<pre class="r"><code>averageBPD &lt;- USBirths %&gt;% 
-  group_by(mmdd = substr(mmdd, 1, 31)) %&gt;% 
-  summarise(births = sum(births)/15) %&gt;%
-  arrange(desc(births)) %&gt;% 
-  ungroup() 
-
-averageBPD
-  </code></pre>
-<!-- rnb-source-end -->
-<!-- rnb-chunk-end -->
-<!-- rnb-chunk-begin -->
-<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuZ2dwbG90KCkgK1xuZ2VvbV9wb2ludChhdmVyYWdlQlBELCBtYXBwaW5nID0gYWVzKHggPSBtbWRkLCB5ID0gYmlydGhzKSlcbj4+Pj4+Pj4gN2VhOGI5NmE2MWI5ZGM0ZjE2OTc1Njc0ODc1ZjIyNjFmZTRmNTQzN1xuYGBgIn0= -->
-<pre class="r"><code>ggplot() +
-geom_point(averageBPD, mapping = aes(x = mmdd, y = births))
-&gt;&gt;&gt;&gt;&gt;&gt;&gt; 7ea8b96a61b9dc4f16975674875f2261fe4f5437</code></pre>
-<!-- rnb-source-end -->
-<!-- rnb-chunk-end -->
-<!-- rnb-text-begin -->
-<blockquote>
-<p>This new attribute <code>mmdd</code> represents a combination of month and day. We use this tool to help us with our data mining portion.</p>
-</blockquote>
-<p>&lt;&lt;&lt;&lt;&lt;&lt;&lt; HEAD</p>
-<!-- rnb-text-end -->
-<!-- rnb-chunk-begin -->
-<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuYXZlcmFnZUJQRCA8LSBVU0JpcnRocyAlPiUgXG4gIGdyb3VwX2J5KG1tZGQgPSBzdWJzdHIobW1kZCwgMSwgMzEpKSAlPiUgXG4gIHN1bW1hcmlzZShiaXJ0aHMgPSBzdW0oYmlydGhzKS8xNSkgJT4lXG4gIGFycmFuZ2UoZGVzYyhiaXJ0aHMpKSAlPiVcbiAgdW5ncm91cCgpIFxuYXZlcmFnZUJQRFxuYGBgIn0= -->
-<pre class="r"><code>averageBPD &lt;- USBirths %&gt;% 
-  group_by(mmdd = substr(mmdd, 1, 31)) %&gt;% 
-  summarise(births = sum(births)/15) %&gt;%
-  arrange(desc(births)) %&gt;%
-  ungroup() 
-averageBPD</code></pre>
-<!-- rnb-source-end -->
-<!-- rnb-chunk-end -->
-<!-- rnb-chunk-begin -->
-<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuaGVhZChhdmVyYWdlQlBEKVxuYGBgIn0= -->
-<pre class="r"><code>head(averageBPD)</code></pre>
-<!-- rnb-source-end -->
-<!-- rnb-chunk-end -->
-<!-- rnb-chunk-begin -->
-<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxudGFpbChhdmVyYWdlQlBELCAxMylcbj09PT09PT1cbmBgYCJ9 -->
-<pre class="r"><code>tail(averageBPD, 13)
-=======</code></pre>
-<!-- rnb-source-end -->
-<!-- rnb-chunk-end -->
-<!-- rnb-chunk-begin -->
-<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuYm94cGxvdC5zdGF0cyhhdmVyYWdlQlBEJGJpcnRocykkb3V0XG5gYGAifQ== -->
-<pre class="r"><code>boxplot.stats(averageBPD$births)$out</code></pre>
-<!-- rnb-source-end -->
-<!-- rnb-chunk-end -->
-<!-- rnb-chunk-begin -->
-<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuYm94cGxvdChhdmVyYWdlQlBEJGJpcnRocylcbj4+Pj4+Pj4gN2VhOGI5NmE2MWI5ZGM0ZjE2OTc1Njc0ODc1ZjIyNjFmZTRmNTQzN1xuYGBgIn0= -->
-<pre class="r"><code>boxplot(averageBPD$births)
-&gt;&gt;&gt;&gt;&gt;&gt;&gt; 7ea8b96a61b9dc4f16975674875f2261fe4f5437</code></pre>
-<!-- rnb-source-end -->
-<!-- rnb-chunk-end -->
-<!-- rnb-text-begin -->
-<blockquote>
-<p>This summary shows what the average number of births was on every date during that year. Here, we can see that September 12th has an average of 12734.933 births over these 15 years, making this day the highest average births in the US. We also see that February 29th averaged the lowest births. This makes sense because February 29th is a leap year date and only happened 4 times in our range from 2000 to 2014 (2000, 2004, 2008, 2012). We can also see that the lowest days are around holiday time. We mention this part in the next section as well.</p>
-</blockquote>
-<p><br></p>
-<p>&lt;&lt;&lt;&lt;&lt;&lt;&lt; HEAD ## Exploration for Days of the Week ======= ## Data Analysis &gt;&gt;&gt;&gt;&gt;&gt;&gt; 7ea8b96a61b9dc4f16975674875f2261fe4f5437</p>
-<!-- rnb-text-end -->
-<!-- rnb-chunk-begin -->
-<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuanVuMDYgPC0gVVNCaXJ0aHMgJT4lIFxuICBmaWx0ZXIoeWVhciA9PSAyMDA2KSAlPiUgXG4gIGZpbHRlcihtb250aCA9PSAwNilcbmp1bjA2XG5gYGAifQ== -->
-<pre class="r"><code>jun06 &lt;- USBirths %&gt;% 
-  filter(year == 2006) %&gt;% 
-  filter(month == 06)
-jun06</code></pre>
-<!-- rnb-source-end -->
-<!-- rnb-chunk-end -->
-<!-- rnb-text-begin -->
-<p>&lt;&lt;&lt;&lt;&lt;&lt;&lt; HEAD</p>
-<!-- rnb-text-end -->
-<!-- rnb-chunk-begin -->
-<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuanVsMDcgPC0gVVNCaXJ0aHMgJT4lIFxuICBmaWx0ZXIoeWVhciA9PSAyMDA3KSAlPiUgXG4gIGZpbHRlcihtb250aCA9PSAwNylcbmp1bDA3XG5gYGAifQ== -->
-<pre class="r"><code>jul07 &lt;- USBirths %&gt;% 
-  filter(year == 2007) %&gt;% 
-  filter(month == 07)
-jul07</code></pre>
-<!-- rnb-source-end -->
-<!-- rnb-chunk-end -->
-<!-- rnb-text-begin -->
-<!-- rnb-text-end -->
-<!-- rnb-chunk-begin -->
-<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuYXVnMDggPC0gVVNCaXJ0aHMgJT4lIFxuICBmaWx0ZXIoeWVhciA9PSAyMDA4KSAlPiUgXG4gIGZpbHRlcihtb250aCA9PSAwOClcbmF1ZzA4XG49PT09PT09XG5cbmBgYCJ9 -->
-<pre class="r"><code>aug08 &lt;- USBirths %&gt;% 
-  filter(year == 2008) %&gt;% 
-  filter(month == 08)
-aug08
-=======
-</code></pre>
-<!-- rnb-source-end -->
-<!-- rnb-chunk-end -->
-<!-- rnb-chunk-begin -->
-<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxubm92ZW1iZXJCaXJ0aHMgPC0gVVNCaXJ0aHMgJT4lICMxMSBpcyBhbHNvIGtpbmRhIGdvb2QgXG4gIGdyb3VwX2J5KG1vbnRoKSAlPiUgXG4gIGZpbHRlcihtb250aD09MTEpICU+JSBcbiAgdW5ncm91cCgpICU+JSBcbiAgc2VsZWN0KGJpcnRocywgeWVhcilcblxubm92ZW1iZXJCaXJ0aHNcbj4+Pj4+Pj4gN2VhOGI5NmE2MWI5ZGM0ZjE2OTc1Njc0ODc1ZjIyNjFmZTRmNTQzN1xuYGBgIn0= -->
-<pre class="r"><code>novemberBirths &lt;- USBirths %&gt;% #11 is also kinda good 
-  group_by(month) %&gt;% 
-  filter(month==11) %&gt;% 
-  ungroup() %&gt;% 
-  select(births, year)
-
-novemberBirths
-&gt;&gt;&gt;&gt;&gt;&gt;&gt; 7ea8b96a61b9dc4f16975674875f2261fe4f5437</code></pre>
-<!-- rnb-source-end -->
-<!-- rnb-chunk-end -->
-<!-- rnb-text-begin -->
-<!-- rnb-text-end -->
-<!-- rnb-chunk-begin -->
-<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuPDw8PDw8PCBIRUFEXG5ub3YxMSA8LSBVU0JpcnRocyAlPiUgXG4gIGZpbHRlcih5ZWFyID09IDIwMTEpICU+JSBcbiAgZmlsdGVyKG1vbnRoID09IDExKVxubm92MTFcbj09PT09PT1cbmdncGxvdChub3ZlbWJlckJpcnRocywgYWVzKHggPSB5ZWFyLCB5ID0gYmlydGhzKSkgK1xuICBnZW9tX2hpc3RvZ3JhbShzdGF0ID0gXCJpZGVudGl0eVwiKVxuPj4+Pj4+PiA3ZWE4Yjk2YTYxYjlkYzRmMTY5NzU2NzQ4NzVmMjI2MWZlNGY1NDM3XG5gYGAifQ== -->
-<pre class="r"><code>&lt;&lt;&lt;&lt;&lt;&lt;&lt; HEAD
-nov11 &lt;- USBirths %&gt;% 
-  filter(year == 2011) %&gt;% 
-  filter(month == 11)
-nov11
-=======
-ggplot(novemberBirths, aes(x = year, y = births)) +
-  geom_histogram(stat = &quot;identity&quot;)
-&gt;&gt;&gt;&gt;&gt;&gt;&gt; 7ea8b96a61b9dc4f16975674875f2261fe4f5437</code></pre>
-<!-- rnb-source-end -->
-<!-- rnb-chunk-end -->
-<!-- rnb-text-begin -->
-<blockquote>
-<p>In these 4 chunks of code we created data frames for a specific month that we wanted to explore. Our intentions were to see if a cool date like <code>06-06-06</code> or <code>11-11-11</code> had any spikes in birth on that given date. In the Data Analysis section, we see the graphs that display the results.</p>
-</blockquote>
-<p><br></p>
-</div>
-</div>
-<div id="data-analysis-1" class="section level1">
-<h1><span class="header-section-number">7</span> Data Analysis</h1>
-<p><br> <br></p>
-<p>&lt;&lt;&lt;&lt;&lt;&lt;&lt; HEAD ## Analysis based on Births per Year</p>
-<!-- rnb-text-end -->
-<!-- rnb-chunk-begin -->
-<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuYm94cGxvdChVU0JpcnRocyRiaXJ0aHMgIH4gVVNCaXJ0aHMkeWVhciwgXG4gICAgICAgIG1haW49XCJCaXJ0aHMgYnkgWWVhclwiLCB5bGFiID0gXCJOdW1iZXJcIiwgeGxhYiA9IFwiWWVhclwiKVxuPT09PT09PVxuYGBgIn0= -->
-<pre class="r"><code>boxplot(USBirths$births  ~ USBirths$year, 
-        main=&quot;Births by Year&quot;, ylab = &quot;Number&quot;, xlab = &quot;Year&quot;)
-=======</code></pre>
-<!-- rnb-source-end -->
-<!-- rnb-chunk-end -->
-<!-- rnb-chunk-begin -->
-<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuanVuMDYgPC0gVVNCaXJ0aHMgJT4lIFxuICBmaWx0ZXIoeWVhciA9PSAyMDA2KSAlPiUgXG4gIGZpbHRlcihtb250aCA9PSAwNilcblxuanVuMDZcblxuZ2dwbG90KGp1bjA2LCBhZXMoeCA9IGJpcnRocywgeSA9IGRhdGUpKSArXG5nZW9tX3BvaW50KCkgK1xubGFicyh4ID0gXCJOdW1iZXIgb2YgQmlydGhzXCIsXG55ID0gXCJEYXRlXCIsXG50aXRsZSA9IFwiVVMgQmlydGhzIG9uIDA2LTA2LTA2XCIpXG5gYGAifQ== -->
-<pre class="r"><code>jun06 &lt;- USBirths %&gt;% 
-  filter(year == 2006) %&gt;% 
-  filter(month == 06)
-
-jun06
-
-ggplot(jun06, aes(x = births, y = date)) +
-geom_point() +
-labs(x = &quot;Number of Births&quot;,
-y = &quot;Date&quot;,
-title = &quot;US Births on 06-06-06&quot;)</code></pre>
-<!-- rnb-source-end -->
-<!-- rnb-chunk-end -->
-<!-- rnb-text-begin -->
-<!-- rnb-text-end -->
-<!-- rnb-chunk-begin -->
-<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuanVsMDcgPC0gVVNCaXJ0aHMgJT4lIFxuICBmaWx0ZXIoeWVhciA9PSAyMDA3KSAlPiUgXG4gIGZpbHRlcihtb250aCA9PSAwNylcblxuanVsMDdcblxuZ2dwbG90KGp1bDA3LCBhZXMoeCA9IGJpcnRocywgeSA9IGRhdGUpKSArXG5nZW9tX3BvaW50KCkgK1xubGFicyh4ID0gXCJOdW1iZXIgb2YgQmlydGhzXCIsXG55ID0gXCJEYXRlXCIsXG50aXRsZSA9IFwiVVMgQmlydGhzIG9uIDA3LTA3LTA3XCIpXG4+Pj4+Pj4+IDdlYThiOTZhNjFiOWRjNGYxNjk3NTY3NDg3NWYyMjYxZmU0ZjU0MzdcbmBgYCJ9 -->
-<pre class="r"><code>jul07 &lt;- USBirths %&gt;% 
-  filter(year == 2007) %&gt;% 
-  filter(month == 07)
-
-jul07
-
-ggplot(jul07, aes(x = births, y = date)) +
-geom_point() +
-labs(x = &quot;Number of Births&quot;,
-y = &quot;Date&quot;,
-title = &quot;US Births on 07-07-07&quot;)
-&gt;&gt;&gt;&gt;&gt;&gt;&gt; 7ea8b96a61b9dc4f16975674875f2261fe4f5437</code></pre>
-<!-- rnb-source-end -->
-<!-- rnb-chunk-end -->
-<!-- rnb-text-begin -->
-<blockquote>
-<p>This is a boxplot showing the total number of births from each year from the year 2000 to 2014. The difference between the first interquartile and second is quite large compared to the second and third. We also notice that the quartiles do not change that much over the years, with just a small increase in 2005 to 2007, and then a decrease to the original second quartile. Additionally, we also see that 2009 had the highest total births, whereas 2013 had the fewest total births overall.</p>
-</blockquote>
-<p>&lt;&lt;&lt;&lt;&lt;&lt;&lt; HEAD <br></p>
-</div>
-<div id="analysis-based-on-average-births-per-day-1" class="section level1">
-<h1><span class="header-section-number">8</span> ## Analysis Based on Average Births per Day</h1>
-<!-- rnb-text-end -->
-<!-- rnb-chunk-begin -->
-<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuYXVnMDggPC0gVVNCaXJ0aHMgJT4lIFxuICBmaWx0ZXIoeWVhciA9PSAyMDA4KSAlPiUgXG4gIGZpbHRlcihtb250aCA9PSAwOClcblxuYXVnMDhcbj4+Pj4+Pj4gN2VhOGI5NmE2MWI5ZGM0ZjE2OTc1Njc0ODc1ZjIyNjFmZTRmNTQzN1xuXG5nZ3Bsb3QoYXVnMDgsIGFlcyh4ID0gYmlydGhzLCB5ID0gZGF0ZSkpICtcbmdlb21fcG9pbnQoKSArXG5sYWJzKHggPSBcIk51bWJlciBvZiBCaXJ0aHNcIixcbnkgPSBcIkRhdGVcIixcbnRpdGxlID0gXCJVUyBCaXJ0aHMgb24gMDgtMDgtMDhcIilcbmBgYCJ9 -->
-<pre class="r"><code>aug08 &lt;- USBirths %&gt;% 
-  filter(year == 2008) %&gt;% 
-  filter(month == 08)
-
-aug08
-&gt;&gt;&gt;&gt;&gt;&gt;&gt; 7ea8b96a61b9dc4f16975674875f2261fe4f5437
-
-ggplot(aug08, aes(x = births, y = date)) +
-geom_point() +
-labs(x = &quot;Number of Births&quot;,
-y = &quot;Date&quot;,
-title = &quot;US Births on 08-08-08&quot;)</code></pre>
-<!-- rnb-source-end -->
-<!-- rnb-chunk-end -->
-<!-- rnb-text-begin -->
-<!-- rnb-text-end -->
-<!-- rnb-chunk-begin -->
-<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxubm92MTEgPC0gVVNCaXJ0aHMgJT4lIFxuICBmaWx0ZXIoeWVhciA9PSAyMDExKSAlPiUgXG4gIGZpbHRlcihtb250aCA9PSAxMSlcblxubm92MTFcbmBgYCJ9 -->
-<pre class="r"><code>nov11 &lt;- USBirths %&gt;% 
-  filter(year == 2011) %&gt;% 
-  filter(month == 11)
-
-nov11</code></pre>
-<!-- rnb-source-end -->
-<!-- rnb-chunk-end -->
-<!-- rnb-text-begin -->
-<!-- rnb-text-end -->
-<!-- rnb-chunk-begin -->
-<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuPDw8PDw8PCBIRUFEXG5nZ3Bsb3QoKSArXG5nZW9tX3BvaW50KGF2ZXJhZ2VCUEQsIG1hcHBpbmcgPSBhZXMoeCA9IG1tZGQsIHkgPSBiaXJ0aHMpKSArXG4gIGxhYnMoeCA9IFwiRGF5IG9mIHRoZSBZZWFyXCIsIFxuICAgICAgIHkgPSBcIk51bWJlciBvZiBCaXJ0aHNcIiwgXG4gICAgICAgdGl0bGUgPSBcIkF2ZXJhZ2UgQmlydGggcGVyIERheVwiKVxuPT09PT09PVxuZ2dwbG90KG5vdjExLCBhZXMoeCA9IGJpcnRocywgeSA9IGRhdGUpKSArXG5nZW9tX3BvaW50KCkgK1xubGFicyh4ID0gXCJOdW1iZXIgb2YgQmlydGhzXCIsXG55ID0gXCJEYXRlXCIsXG50aXRsZSA9IFwiVVMgQmlydGhzIG9uIDExLTExLTExXCIpXG4+Pj4+Pj4+IDdlYThiOTZhNjFiOWRjNGYxNjk3NTY3NDg3NWYyMjYxZmU0ZjU0MzdcbmBgYCJ9 -->
-<pre class="r"><code>&lt;&lt;&lt;&lt;&lt;&lt;&lt; HEAD
-ggplot() +
-geom_point(averageBPD, mapping = aes(x = mmdd, y = births)) +
-  labs(x = &quot;Day of the Year&quot;, 
-       y = &quot;Number of Births&quot;, 
-       title = &quot;Average Birth per Day&quot;)
-=======
-ggplot(nov11, aes(x = births, y = date)) +
-geom_point() +
-labs(x = &quot;Number of Births&quot;,
-y = &quot;Date&quot;,
-title = &quot;US Births on 11-11-11&quot;)
-&gt;&gt;&gt;&gt;&gt;&gt;&gt; 7ea8b96a61b9dc4f16975674875f2261fe4f5437</code></pre>
-<!-- rnb-source-end -->
-<!-- rnb-chunk-end -->
-<!-- rnb-text-begin -->
-<blockquote>
-<p>This is a visualization of the average births per date. We took each date in a year and averaged it between the 15 years and created a scatter plot above. As seen on this plot, there are 366 points on this graph. Each point represents the average of each date in a year. While most dates hover between 10,000 and 12,500, there are a few dates with an extremely low average of births.</p>
-</blockquote>
-</div>
-<div id="head" class="section level1">
-<h1><span class="header-section-number">9</span> &lt;&lt;&lt;&lt;&lt;&lt;&lt; HEAD</h1>
-<div id="anomaly-dectection-with-birthrates" class="section level2">
-<h2><span class="header-section-number">9.1</span> Anomaly Dectection with Birthrates</h2>
-</div>
-<div id="days-of-the-week" class="section level2">
-<h2><span class="header-section-number">9.2</span> Days of the week</h2>
-<p>Sum of Births based on Day of the Week &gt;&gt;&gt;&gt;&gt;&gt;&gt; 7ea8b96a61b9dc4f16975674875f2261fe4f5437</p>
-<!-- rnb-text-end -->
-<!-- rnb-chunk-begin -->
-<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuYm94cGxvdC5zdGF0cyhhdmVyYWdlQlBEJGJpcnRocykkb3V0XG5gYGAifQ== -->
-<pre class="r"><code>boxplot.stats(averageBPD$births)$out</code></pre>
-<!-- rnb-source-end -->
-<!-- rnb-chunk-end -->
-<!-- rnb-text-begin -->
-<blockquote>
-<p>We then wanted to list out the specific numbers that were outliers in this dataset so we used $out. If you reference the ‘averageBPD’ data frame in the data exploration section, we have the dates listed in descending order. We could see that the dates listed as outliers were usually the days right before or right after holidays. This was especially true for the 4th of July, Thanksgiving, Christmas, and New Year’s. The lowest average Birth Per Date was February 29th, which as mentioned previously is a leap year date, and only occurs 4 times out of the 15 years presented in our data set.</p>
-</blockquote>
-<!-- rnb-text-end -->
-<!-- rnb-chunk-begin -->
-<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuPDw8PDw8PCBIRUFEXG5ib3hwbG90KGF2ZXJhZ2VCUEQkYmlydGhzKVxuPT09PT09PVxuVVNCaXJ0aHMkZGF5X29mX3dlZWsgPC0gZmFjdG9yKFVTQmlydGhzJGRheV9vZl93ZWVrLCBsZXZlbHMgPSBjKFwiU3VuXCIsIFwiTW9uXCIsIFwiVHVlc1wiLCBcIldlZFwiLCBcIlRodXJzXCIsIFwiRnJpXCIsIFwiU2F0XCIpKVxuXG5nZ3Bsb3QoVVNCaXJ0aHMsIGFlcyhmaWxsID0gZGF5X29mX3dlZWssIHkgPSBiaXJ0aHMsIHggPSBkYXlfb2Zfd2VlaykpICtcbiAgZ2VvbV9iYXIocG9zaXRpb24gPSBcImRvZGdlXCIsIHN0YXQgPSBcImlkZW50aXR5XCIpICtcbiAgZ2d0aXRsZShcIkRheSBvZiB0aGUgV2VlayBWUy4gQmlydGhzXCIpXG4+Pj4+Pj4+IDdlYThiOTZhNjFiOWRjNGYxNjk3NTY3NDg3NWYyMjYxZmU0ZjU0MzdcbmBgYCJ9 -->
-<pre class="r"><code>&lt;&lt;&lt;&lt;&lt;&lt;&lt; HEAD
-boxplot(averageBPD$births)
-=======
-USBirths$day_of_week &lt;- factor(USBirths$day_of_week, levels = c(&quot;Sun&quot;, &quot;Mon&quot;, &quot;Tues&quot;, &quot;Wed&quot;, &quot;Thurs&quot;, &quot;Fri&quot;, &quot;Sat&quot;))
-
-ggplot(USBirths, aes(fill = day_of_week, y = births, x = day_of_week)) +
-  geom_bar(position = &quot;dodge&quot;, stat = &quot;identity&quot;) +
-  ggtitle(&quot;Day of the Week VS. Births&quot;)
-&gt;&gt;&gt;&gt;&gt;&gt;&gt; 7ea8b96a61b9dc4f16975674875f2261fe4f5437</code></pre>
-<!-- rnb-source-end -->
-<!-- rnb-chunk-end -->
-<!-- rnb-text-begin -->
-<blockquote>
-<p>This is yet again another visualization of the average number of births for each date, but displayed in boxplot form. This shows a smaller quartile range than the totals from the original US Births dataset, and shows a few outliers creating a large gap, all below the minimum.</p>
-</blockquote>
-<p><br></p>
-<p>&lt;&lt;&lt;&lt;&lt;&lt;&lt; HEAD ## Analysis Based on Days of the Week <em>Within this section, it is worth noting that weekends (colored in blue and green) had a significantly lower number of births than its weekday counterparts. We made 4 graphs showing the total births each day in June of 2006, July of 2007, August of 2008, and November of 2011. Each month displayed shows mostly 12,000+ births a day, with a few dips below 10,000. The main point of these graphs were to be able to visualize these dates each year.</em></p>
-<!-- rnb-text-end -->
-<!-- rnb-chunk-begin -->
-<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuVVNCaXJ0aHMkZGF5X29mX3dlZWsgPC0gZmFjdG9yKFVTQmlydGhzJGRheV9vZl93ZWVrLCBsZXZlbHMgPSBjKFwiU3VuXCIsIFwiTW9uXCIsIFwiVHVlc1wiLCBcIldlZFwiLCBcIlRodXJzXCIsIFwiRnJpXCIsIFwiU2F0XCIpKVxuZ2dwbG90KFVTQmlydGhzLCBhZXMoZmlsbCA9IGRheV9vZl93ZWVrLCB5ID0gYmlydGhzLCB4ID0gZGF5X29mX3dlZWspKSArXG4gIGdlb21fYmFyKHN0YXQgPSBcImlkZW50aXR5XCIpICtcbiAgbGFicyh4ID0gXCJEYXkgb2YgdGhlIFdlZWtcIiwgXG4gICAgICAgeSA9IFwiTnVtYmVyIG9mIEJpcnRoc1wiLFxuICAgICAgIHRpdGxlID0gXCJEYXlzIG9mIHRoZSBXZWVrIHZzLiBCaXJ0aHNcIikgK1xuICBzY2FsZV95X2NvbnRpbnVvdXMobGFiZWxzID0gc2NhbGVzOjpjb21tYSlcbmBgYCJ9 -->
-<pre class="r"><code>USBirths$day_of_week &lt;- factor(USBirths$day_of_week, levels = c(&quot;Sun&quot;, &quot;Mon&quot;, &quot;Tues&quot;, &quot;Wed&quot;, &quot;Thurs&quot;, &quot;Fri&quot;, &quot;Sat&quot;))
-ggplot(USBirths, aes(fill = day_of_week, y = births, x = day_of_week)) +
-  geom_bar(stat = &quot;identity&quot;) +
-  labs(x = &quot;Day of the Week&quot;, 
-       y = &quot;Number of Births&quot;,
-       title = &quot;Days of the Week vs. Births&quot;) +
-  scale_y_continuous(labels = scales::comma)</code></pre>
-<!-- rnb-source-end -->
-<!-- rnb-chunk-end -->
-<!-- rnb-text-begin -->
-<blockquote>
-<p>In this display, we see a stark difference in number of births between weekdays and weekends. Clearly shown in the height of the weekends being significantly shorter in their collective number of births than the weekdays. We can also see that Wednesday has the most collective births in a day compared to the other days of the week. We also take note of the distribution formed by the total births, rising as a week heads to its center, and coming down as it gets closer to the end of a week. When we look at the graph below, there is an example that cooralates the day of week with the amount of births on that day.</p>
-</blockquote>
-<!-- rnb-text-end -->
-<!-- rnb-chunk-begin -->
-<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuZ2dwbG90KGp1bjA2LCBhZXMoY29sb3IgPSBkYXlfb2Zfd2VlaywgeCA9IGJpcnRocywgeSA9IGRhdGUpKSArXG5nZW9tX3BvaW50KHNpemUgPSAzKSArXG5sYWJzKHggPSBcIk51bWJlciBvZiBCaXJ0aHNcIixcbnkgPSBcIkRhdGVcIixcbnRpdGxlID0gXCJVUyBCaXJ0aHMgb24gMDYtMDYtMDZcIilcbmBgYCJ9 -->
-<pre class="r"><code>ggplot(jun06, aes(color = day_of_week, x = births, y = date)) +
-geom_point(size = 3) +
-labs(x = &quot;Number of Births&quot;,
-y = &quot;Date&quot;,
-title = &quot;US Births on 06-06-06&quot;)</code></pre>
-<!-- rnb-source-end -->
-<!-- rnb-chunk-end -->
-<!-- rnb-text-begin -->
-<blockquote>
-<p>We created a scatter plot for the month of June in 2006 and plotted each day in that month. We look at the specific date of June 6th, compared to the rest of the month. June 6, 2006 is usually written as <code>06-06-06</code>. 666 is also usually a superstitous number and although it didnt have the lowest number of births, you could see that it didnt have the highest number of births either (compared to the other months and years with signicantly numbered dates).</p>
-</blockquote>
-<!-- rnb-text-end -->
-<!-- rnb-chunk-begin -->
-<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuZ2dwbG90KGp1bDA3LCBhZXMoY29sb3IgPSBkYXlfb2Zfd2VlaywgeCA9IGJpcnRocywgeSA9IGRhdGUpKSArXG5nZW9tX3BvaW50KHNpemUgPSAzKSArXG5sYWJzKHggPSBcIk51bWJlciBvZiBCaXJ0aHNcIixcbiAgICAgeSA9IFwiRGF0ZVwiLFxuICAgICB0aXRsZSA9IFwiVVMgQmlydGhzIG9uIDA3LTA3LTA3XCIpXG5gYGAifQ== -->
-<pre class="r"><code>ggplot(jul07, aes(color = day_of_week, x = births, y = date)) +
-geom_point(size = 3) +
-labs(x = &quot;Number of Births&quot;,
-     y = &quot;Date&quot;,
-     title = &quot;US Births on 07-07-07&quot;)</code></pre>
-<!-- rnb-source-end -->
-<!-- rnb-chunk-end -->
-<!-- rnb-text-begin -->
-<blockquote>
-<p>We then took a look at July in the year 2007. With all the days displayed in that month, yet again we see that <code>07-07-07</code> was right in the middle skewing more towards the lower end of total births for each day of that month. If we compared this July scatter plot to the rest of the cool dates, you would think it would also be the date with the highest births but July 7th, 2007 actually fell on a Saturday. This could explain why it was on the lower end, but it still skewed towards the right, people would still rather give birth on a weekday, but since it was a cool day we saw a spike in births.</p>
-</blockquote>
-<!-- rnb-text-end -->
-<!-- rnb-chunk-begin -->
-<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuZ2dwbG90KGF1ZzA4LCBhZXMoY29sb3IgPSBkYXlfb2Zfd2VlaywgeCA9IGJpcnRocywgeSA9IGRhdGUpKSArXG5nZW9tX3BvaW50KHNpemUgPSAzKSArXG5sYWJzKHggPSBcIk51bWJlciBvZiBCaXJ0aHNcIixcbnkgPSBcIkRhdGVcIixcbnRpdGxlID0gXCJVUyBCaXJ0aHMgb24gMDgtMDgtMDhcIilcbmBgYCJ9 -->
-<pre class="r"><code>ggplot(aug08, aes(color = day_of_week, x = births, y = date)) +
-geom_point(size = 3) +
-labs(x = &quot;Number of Births&quot;,
-y = &quot;Date&quot;,
-title = &quot;US Births on 08-08-08&quot;)</code></pre>
-<!-- rnb-source-end -->
-<!-- rnb-chunk-end -->
-<!-- rnb-text-begin -->
-<blockquote>
-<p>We then repeated the same process for August 8th, 2008 <code>08-08-08</code>. As you can see in the scatterplot, it was the day with the most amount of births.</p>
-</blockquote>
-<!-- rnb-text-end -->
-<!-- rnb-chunk-begin -->
-<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuZ2dwbG90KG5vdjExLCBhZXMoY29sb3IgPSBkYXlfb2Zfd2VlaywgeCA9IGJpcnRocywgeSA9IGRhdGUpKSArXG5nZW9tX3BvaW50KHNpemUgPSAzKSArXG5sYWJzKHggPSBcIk51bWJlciBvZiBCaXJ0aHNcIixcbnkgPSBcIkRhdGVcIixcbnRpdGxlID0gXCJVUyBCaXJ0aHMgb24gMTEtMTEtMTFcIilcbmBgYCJ9 -->
-<pre class="r"><code>ggplot(nov11, aes(color = day_of_week, x = births, y = date)) +
-geom_point(size = 3) +
-labs(x = &quot;Number of Births&quot;,
-y = &quot;Date&quot;,
-title = &quot;US Births on 11-11-11&quot;)</code></pre>
-<!-- rnb-source-end -->
-<!-- rnb-chunk-end -->
-<!-- rnb-text-begin -->
-<blockquote>
-<p>We did the same thing with November 11, 2011 <code>11-11-11</code> and we see that yet again, it was the day with the most amount of births in November.</p>
-</blockquote>
-<p><br></p>
-</div>
-</div>
-<div id="conclusion-1" class="section level1">
-<h1><span class="header-section-number">10</span> Conclusion</h1>
-<p>In the US, the amount of new born infants born is pretty large, but relatively stagnant. There could only be so much planning and scheduling when having a baby but we decided to look at this dataset to really determine if there were any patterns in the amount of births. This dataset included births from every day starting from January 1st, 2000 all the way until December 31st, 2014.</p>
-<p>We first started by looking at the total amount of births each year. Based on that data, the only thing we really saw was that 2009 had the highest total amount of births and 2013 had the lowest total amount of births. Many people have said that there was such a decline in 2013 because people felt the effects of the recession. Children are the highest expense a family can have and therefore, families did not feel as they could afford it after something as big as The Great Recession happened and many people lost their jobs. That could really explain the decline. We do not have more data after 2014 and we cannot really see if the amount of births were rising for a few years after the recession, but we know that many factors can have an effect on having children. We also cannot guarantee that the recession was the only factor in the decline of births in 2013.</p>
-<p>The next thing we explored was the average births per date. This was our breakthrough moment with the data. By doing this data mining analysis, we were able to visualize the outliers of this dataset. We took the average births each day, of each year and combined them and then plotted it into a scatter plot. As mentioned in the previous section, we were able to see that the lowest average of births on a specific date was the dates before and after major holidays. Holidays are a stressful time for families, and people want to spend that time with their families (not giving birth in a hospital). Again, there is only so much planning an expecting family can do before giving birth, but through the visualization results, we could see that before and after major holidays there were relatively low births.</p>
-<p>We then did an analysis to see which day of the week was least and most popular to give birth on. As a result, we saw that Saturday and Sunday had the least average amount of births. We even saw that a birth date of <code>07-07-07</code> (which is everyone’s lucky number) still had a pretty low amount of births because it was on a Saturday. This then led us to explore our final analysis. We looked at the births on specially numbered days of specific years, like <code>06-06-06</code>, <code>07-07-07</code>, <code>08-08-08</code>, and <code>11-11-11</code>. This was just a sample of those days in range of years in our data. The results showed that these dates were significant days to give birth on. Although there is not a solid reason why weekends are not a popular time to give birth, we can take into consideration that hospitals might not be fully staffed on weekends, people take vacations on the weekend, or because pregnant woman just want extra days off work and therefore choose that they want to give birth in the middle of the week. This last analysis really showed that although the date of birth does not have a huge effect on the amount of births, the day of the week the baby is born has a huge correlation to the amount of births.</p>
-</div>
-<div id="again-although-expecting-families-can-plan-as-much-as-possible-there-are-many-factors-that-can-affect-when-a-baby-is-brought-into-this-world.-financial-hardships-weekends-or-holidays-are-some-of-the-factors-the-bring-births-down.-signicatlly-numbered-days-middle-of-the-week-and-higher-economy-are-some-of-the-factors-that-bring-births-up." class="section level1">
-<h1><span class="header-section-number">11</span> Again, although expecting families can plan as much as possible, there are many factors that can affect when a baby is brought into this world. Financial hardships, weekends, or holidays are some of the factors the bring births down. Signicatlly numbered days, middle of the week, and higher economy are some of the factors that bring births up.</h1>
-<blockquote>
-<blockquote>
-<blockquote>
-<blockquote>
-<blockquote>
-<blockquote>
-<blockquote>
-<p>7ea8b96a61b9dc4f16975674875f2261fe4f5437</p>
-</blockquote>
-</blockquote>
-</blockquote>
-</blockquote>
-</blockquote>
-</blockquote>
-</blockquote>
-<!-- rnb-text-end -->
 </div>
 
-<div id="rmd-source-code">LS0tCnRpdGxlOiAiRGF0YSBNaW5pbmcgYW5kIFRleHQgTWluaW5nIC0gRmluYWwgUHJvamVjdCIKYXV0aG9yOiAiS3lsZSBEZWFuLCBLYWl0bHluIFNjaGVwcGEsIE9yZWwgWW9zaGlhIgpvdXRwdXQ6IAogIGh0bWxfbm90ZWJvb2s6CiAgICB0b2M6IFRSVUUKICAgIHRvY19mbG9hdDogVFJVRQogICAgdG9jX2RlcHRoOiA0CiAgICBudW1iZXJfc2VjdGlvbnM6IFRSVUUKICAgIHRoZW1lOiB1bml0ZWQKLS0tCgpgYGB7ciwgbWVzc2FnZT1GQUxTRX0KbGlicmFyeSh0aWR5dmVyc2UpCmxpYnJhcnkoZHBseXIpCmxpYnJhcnkoZGJzY2FuKQpsaWJyYXJ5KGdncGxvdDIpCmBgYAoKPGJyPgoKIyMgT3VyIERhdGFzZXQKYGBge3J9ClVTQmlydGhzIDwtIHJlYWQuY3N2KCJodHRwczovL3Jhdy5naXRodWJ1c2VyY29udGVudC5jb20vcmVpc2FuYXIvZGF0YXNldHMvbWFzdGVyL3VzX2JpcnRoc18wMF8xNC5jc3YiKQpgYGAKCjxicj4KCiMgSW50cm9kdWN0aW9uCgogIFRoZSBnb2FsIG9mIG91ciBwcm9qZWN0IGlzIHRvIGV4cGxvcmUgdGhlIGJpcnRocmF0ZXMgd2l0aGluIHRoZSBVUyBhbmQgaWRlbnRpZnkgYW5vbWFsb3VzIGNoYXJhY3RlcmlzdGljcyBhbmQgdG8gZmluZCB0aGUgbW9zdCBwb3B1bGFyIHRpbWVzIGF0IHdoaWNoIGEgY2hpbGQgaXMgYm9ybi4gSW4gdGhpcyBwcm9qZWN0LCB3ZSB1c2UgdGhlIGB1c19iaXJ0aF8wMF8xNGAgZGF0YXNldCwgd2hpY2ggaXMgYSBjb2xsZWN0aW9uIG9mIHRoZSBudW1iZXIgb2YgYmlydGhzIGZyb20gSmFudWFyeSAxc3QgMjAwMCB0byBEZWNlbWJlciAzMXN0IDIwMTQuIE91ciBpbml0aWFsIGludGVudGlvbnMgd2l0aCB0aGlzIGRhdGFzZXQgd2VyZSB0byBhbmFseXplLCBpZiAic3BlY2lhbCBvY2Nhc2lvbiIgYmFiaWVzIHdlcmUgcmVhbGx5IGEgdGhpbmcuIEhvd2V2ZXIgd2UgcmVhbGl6ZSB0aGF0IGV4cGVjdGluZyBmYW1pbGllcyBjYW4gcGxhbiBhcyBtdWNoIGFzIHBvc3NpYmxlLCB0aGVyZSBhcmUgbWFueSBmYWN0b3JzIHRoYXQgY2FuIGFmZmVjdCB3aGVuIGEgYmFieSBpcyBicm91Z2h0IGludG8gdGhpcyB3b3JsZC4gCgo8YnI+CgojIERhdGEgRXhwbG9yYXRpb24KCgojI0RhdGEgRXhwbG9yYXRpb24tLS0KdGl0bGU6ICJEYXRhIE1pbmluZyBhbmQgVGV4dCBNaW5pbmcgLSBGaW5hbCBQcm9qZWN0IgphdXRob3I6ICJLeWxlIERlYW4sIEthaXRseW4gU2NoZXBwYSwgT3JlbCBZb3NoaWEiCm91dHB1dDogCiAgaHRtbF9ub3RlYm9vazoKICAgIHRvYzogVFJVRQogICAgdG9jX2Zsb2F0OiBUUlVFCiAgICB0b2NfZGVwdGg6IDQKICAgIG51bWJlcl9zZWN0aW9uczogVFJVRQogICAgdGhlbWU6IHVuaXRlZAotLS0KCmBgYHtyLCBtZXNzYWdlPUZBTFNFfQpsaWJyYXJ5KHRpZHl2ZXJzZSkKbGlicmFyeShkcGx5cikKbGlicmFyeShkYnNjYW4pCmxpYnJhcnkoZ2dwbG90MikKYGBgCgo8YnI+CgojIyBPdXIgRGF0YXNldApgYGB7cn0KVVNCaXJ0aHMgPC0gcmVhZC5jc3YoImh0dHBzOi8vcmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbS9yZWlzYW5hci9kYXRhc2V0cy9tYXN0ZXIvdXNfYmlydGhzXzAwXzE0LmNzdiIpCmBgYAoKPGJyPgoKIyBJbnRyb2R1Y3Rpb24KCiAgVGhlIGdvYWwgb2Ygb3VyIHByb2plY3QgaXMgdG8gZXhwbG9yZSB0aGUgYmlydGhyYXRlcyB3aXRoaW4gdGhlIFVTIGFuZCBpZGVudGlmeSBhbm9tYWxvdXMgY2hhcmFjdGVyaXN0aWNzIGFuZCB0byBmaW5kIHRoZSBtb3N0IHBvcHVsYXIgdGltZXMgYXQgd2hpY2ggYSBjaGlsZCBpcyBib3JuLiBJbiB0aGlzIHByb2plY3QsIHdlIHVzZSB0aGUgYHVzX2JpcnRoXzAwXzE0YCBkYXRhc2V0LCB3aGljaCBpcyBhIGNvbGxlY3Rpb24gb2YgdGhlIG51bWJlciBvZiBiaXJ0aHMgZnJvbSBKYW51YXJ5IDFzdCAyMDAwIHRvIERlY2VtYmVyIDMxc3QgMjAxNC4gT3VyIGluaXRpYWwgaW50ZW50aW9ucyB3aXRoIHRoaXMgZGF0YXNldCB3ZXJlIHRvIGFuYWx5emUsIGlmICJzcGVjaWFsIG9jY2FzaW9uIiBiYWJpZXMgd2VyZSByZWFsbHkgYSB0aGluZy4gSG93ZXZlciB3ZSByZWFsaXplIHRoYXQgZXhwZWN0aW5nIGZhbWlsaWVzIGNhbiBwbGFuIGFzIG11Y2ggYXMgcG9zc2libGUsIHRoZXJlIGFyZSBtYW55IGZhY3RvcnMgdGhhdCBjYW4gYWZmZWN0IHdoZW4gYSBiYWJ5IGlzIGJyb3VnaHQgaW50byB0aGlzIHdvcmxkLiAKCjxicj4KCiMgRGF0YSBFeHBsb3JhdGlvbgoKYGBge3J9CmhlYWQoVVNCaXJ0aHMpCmBgYAo+IFByZXNlbnRlZCBpcyB0aGUgZmlyc3QgNiBlbnRyaWVzIG9mIHRoZSBkYXRhc2V0LiBJdCBpbmNsdWRlcyB0aGUgYHllYXJgLCBgbW9udGhgLCBgZGF0ZV9vZl9tb250aGAsIGBkYXRlYCxgZGF5X29mX3dlZWtgLCBhbmQgYGJpcnRoc2AgcmVjb3JkZWQgaW4gdGhlIFVTLgoKYGBge3J9CiMgdGhpcyBkYXRhIGZyYW1lIHdhcyB1c2VkIGFsbCB0aHJvdWdob3V0IG91dCBhbmFseXNpcwpVU0JpcnRocyAlPiUgCiAgZ3JvdXBfYnkoZGF5X29mX3dlZWspICU+JSAKICBzdW1tYXJpc2UoU3VtX29mX0JpcnRocyA9IHN1bShiaXJ0aHMpKQpgYGAKPiBUaGUgZmluYWwgdGhpbmcgd2Ugd2FudGVkIHRvIGV4cGxvcmUgd2FzIHRoZSB0b3RhbCBzdW0gb2YgYmlydGhzIGZvciBlYWNoIGRheSBvZiB0aGUgd2VlayB0aHJvdWdoIHRoZSAxNSB5ZWFycyByZWNvcmRlZC4gV2Ugd2FudGVkIHRvIHNlZSBpZiBhbnkgZGF5IG9mIHRoZSB3ZWVrIHdhcyBtb3JlIHBvcHVsYXIuIEluIG91ciBkYXRhIGFuYWx5c2lzLCB3ZSBjYW4gc2VlIHRoZSByZXN1bHRzIGluIGEgYmFyIGdyYXBoLgoKPGJyPgoKIyMgRXhwbG9yYXRpb24gZm9yIEJpcnRocyBwZXIgWWVhcgoKYGBge3IsIG1lc3NhZ2U9RkFMU0V9CmJweSA8LSBVU0JpcnRocyAlPiUgCiAgZ3JvdXBfYnkoeWVhcikgJT4lIAogIHN1bW1hcmlzZSh0b3RhbEJQWSA9IHN1bShiaXJ0aHMpKQoKYnB5CmBgYAo+IFRoZSBudW1iZXIgbGlzdGVkIGFib3ZlIGluIGB0b3RhbEJQWWAgcmVwcmVzZW50IHRoZSB0b3RhbCBiaXJ0aHMgcGVyIHllYXIgZnJvbSAyMDAwIHRvIDIwMTQuIFdlIHVzZSB0aGlzIGRhdGEgZnJhbWUgdG8gdG8gdmlldyB0aGUgaGlnaGVzdCBhbmQgbG93ZXN0IHRvdGFsIGJpcnRocyBmb3IgZWFjaCB5ZWFyLgoKPGJyPgoKIyMgRXhwbG9yYXRpb24gZm9yIEJpcnRocyBwZXIgRGF5CmBgYHtyfQpVU0JpcnRocyRtbWRkID0gcGFzdGUoVVNCaXJ0aHMkbW9udGgsIFVTQmlydGhzJGRhdGVfb2ZfbW9udGgpClVTQmlydGhzCmBgYAo+IFRoaXMgbmV3IGF0dHJpYnV0ZSBgbW1kZGAgcmVwcmVzZW50cyBhIGNvbWJpbmF0aW9uIG9mIG1vbnRoIGFuZCBkYXkuIFdlIHVzZSB0aGlzIHRvb2wgdG8gaGVscCB1cyB3aXRoIG91ciBkYXRhIG1pbmluZyBwb3J0aW9uLgoKCmBgYHtyLCBtZXNzYWdlPUZBTFNFfQphdmVyYWdlQlBEIDwtIFVTQmlydGhzICU+JSAKICBncm91cF9ieShtbWRkID0gc3Vic3RyKG1tZGQsIDEsIDMxKSkgJT4lIAogIHN1bW1hcmlzZShiaXJ0aHMgPSBzdW0oYmlydGhzKS8xNSkgJT4lCiAgYXJyYW5nZShkZXNjKGJpcnRocykpICU+JQogIHVuZ3JvdXAoKSAKYXZlcmFnZUJQRApgYGAKYGBge3J9CmhlYWQoYXZlcmFnZUJQRCkKYGBgCmBgYHtyfQp0YWlsKGF2ZXJhZ2VCUEQsIDEzKQpgYGAKCj4gVGhpcyBzdW1tYXJ5IHNob3dzIHdoYXQgdGhlIGF2ZXJhZ2UgbnVtYmVyIG9mIGJpcnRocyB3YXMgb24gZXZlcnkgZGF0ZSBkdXJpbmcgdGhhdCB5ZWFyLiBIZXJlLCB3ZSBjYW4gc2VlIHRoYXQgU2VwdGVtYmVyIDEydGggaGFzIGFuIGF2ZXJhZ2Ugb2YgMTI3MzQuOTMzIGJpcnRocyBvdmVyIHRoZXNlIDE1IHllYXJzLCBtYWtpbmcgdGhpcyBkYXkgdGhlIGhpZ2hlc3QgYXZlcmFnZSBiaXJ0aHMgaW4gdGhlIFVTLiBXZSBhbHNvIHNlZSB0aGF0IEZlYnJ1YXJ5IDI5dGggYXZlcmFnZWQgdGhlIGxvd2VzdCBiaXJ0aHMuIFRoaXMgbWFrZXMgc2Vuc2UgYmVjYXVzZSBGZWJydWFyeSAyOXRoIGlzIGEgbGVhcCB5ZWFyIGRhdGUgYW5kIG9ubHkgaGFwcGVuZWQgNCB0aW1lcyBpbiBvdXIgcmFuZ2UgZnJvbSAyMDAwIHRvIDIwMTQgKDIwMDAsIDIwMDQsIDIwMDgsIDIwMTIpLiBXZSBjYW4gYWxzbyBzZWUgdGhhdCB0aGUgbG93ZXN0IGRheXMgYXJlIGFyb3VuZCBob2xpZGF5IHRpbWUuIFdlIG1lbnRpb24gdGhpcyBwYXJ0IGluIHRoZSBuZXh0IHNlY3Rpb24gYXMgd2VsbC4KCjxicj4KCiMjIEV4cGxvcmF0aW9uIGZvciBEYXlzIG9mIHRoZSBXZWVrCgpgYGB7cn0KanVuMDYgPC0gVVNCaXJ0aHMgJT4lIAogIGZpbHRlcih5ZWFyID09IDIwMDYpICU+JSAKICBmaWx0ZXIobW9udGggPT0gMDYpCmp1bjA2CmBgYAoKYGBge3J9Cmp1bDA3IDwtIFVTQmlydGhzICU+JSAKICBmaWx0ZXIoeWVhciA9PSAyMDA3KSAlPiUgCiAgZmlsdGVyKG1vbnRoID09IDA3KQpqdWwwNwpgYGAKCmBgYHtyfQphdWcwOCA8LSBVU0JpcnRocyAlPiUgCiAgZmlsdGVyKHllYXIgPT0gMjAwOCkgJT4lIAogIGZpbHRlcihtb250aCA9PSAwOCkKYXVnMDgKYGBgCgpgYGB7cn0Kbm92MTEgPC0gVVNCaXJ0aHMgJT4lIAogIGZpbHRlcih5ZWFyID09IDIwMTEpICU+JSAKICBmaWx0ZXIobW9udGggPT0gMTEpCm5vdjExCmBgYAo+IEluIHRoZXNlIDQgY2h1bmtzIG9mIGNvZGUgd2UgY3JlYXRlZCBkYXRhIGZyYW1lcyBmb3IgYSBzcGVjaWZpYyBtb250aCB0aGF0IHdlIHdhbnRlZCB0byBleHBsb3JlLiBPdXIgaW50ZW50aW9ucyB3ZXJlIHRvIHNlZSBpZiBhIGNvb2wgZGF0ZSBsaWtlIGAwNi0wNi0wNmAgb3IgYDExLTExLTExYCBoYWQgYW55IHNwaWtlcyBpbiBiaXJ0aCBvbiB0aGF0IGdpdmVuIGRhdGUuIEluIHRoZSBEYXRhIEFuYWx5c2lzIHNlY3Rpb24sIHdlIHNlZSB0aGUgZ3JhcGhzIHRoYXQgZGlzcGxheSB0aGUgcmVzdWx0cy4KCgo8YnI+CgojIERhdGEgQW5hbHlzaXMKCjxicj4KPGJyPgoKIyMgQW5hbHlzaXMgYmFzZWQgb24gQmlydGhzIHBlciBZZWFyCgoKYGBge3J9CmJveHBsb3QoVVNCaXJ0aHMkYmlydGhzICB+IFVTQmlydGhzJHllYXIsIAogICAgICAgIG1haW49IkJpcnRocyBieSBZZWFyIiwgeWxhYiA9ICJOdW1iZXIiLCB4bGFiID0gIlllYXIiKQpgYGAKPiBUaGlzIGlzIGEgYm94cGxvdCBzaG93aW5nIHRoZSB0b3RhbCBudW1iZXIgb2YgYmlydGhzIGZyb20gZWFjaCB5ZWFyIGZyb20gdGhlIHllYXIgMjAwMCB0byAyMDE0LiBUaGUgZGlmZmVyZW5jZSBiZXR3ZWVuIHRoZSBmaXJzdCBpbnRlcnF1YXJ0aWxlIGFuZCBzZWNvbmQgaXMgcXVpdGUgbGFyZ2UgY29tcGFyZWQgdG8gdGhlIHNlY29uZCBhbmQgdGhpcmQuIFdlIGFsc28gbm90aWNlIHRoYXQgdGhlIHF1YXJ0aWxlcyBkbyBub3QgY2hhbmdlIHRoYXQgbXVjaCBvdmVyIHRoZSB5ZWFycywgd2l0aCBqdXN0IGEgc21hbGwgaW5jcmVhc2UgaW4gMjAwNSB0byAyMDA3LCBhbmQgdGhlbiBhIGRlY3JlYXNlIHRvIHRoZSBvcmlnaW5hbCBzZWNvbmQgcXVhcnRpbGUuIEFkZGl0aW9uYWxseSwgd2UgYWxzbyBzZWUgdGhhdCAyMDA5IGhhZCB0aGUgaGlnaGVzdCB0b3RhbCBiaXJ0aHMsIHdoZXJlYXMgMjAxMyBoYWQgdGhlIGZld2VzdCB0b3RhbCBiaXJ0aHMgb3ZlcmFsbC4KCjxicj4KCiMjIEFuYWx5c2lzIEJhc2VkIG9uIEF2ZXJhZ2UgQmlydGhzIHBlciBEYXkKCgpgYGB7cn0KZ2dwbG90KCkgKwpnZW9tX3BvaW50KGF2ZXJhZ2VCUEQsIG1hcHBpbmcgPSBhZXMoeCA9IG1tZGQsIHkgPSBiaXJ0aHMpKSArCiAgbGFicyh4ID0gIkRheSBvZiB0aGUgWWVhciIsIAogICAgICAgeSA9ICJOdW1iZXIgb2YgQmlydGhzIiwgCiAgICAgICB0aXRsZSA9ICJBdmVyYWdlIEJpcnRoIHBlciBEYXkiKQpgYGAKPiBUaGlzIGlzIGEgdmlzdWFsaXphdGlvbiBvZiB0aGUgYXZlcmFnZSBiaXJ0aHMgcGVyIGRhdGUuIFdlIHRvb2sgZWFjaCBkYXRlIGluIGEgeWVhciBhbmQgYXZlcmFnZWQgaXQgYmV0d2VlbiB0aGUgMTUgeWVhcnMgYW5kIGNyZWF0ZWQgYSBzY2F0dGVyIHBsb3QgYWJvdmUuIEFzIHNlZW4gb24gdGhpcyBwbG90LCB0aGVyZSBhcmUgMzY2IHBvaW50cyBvbiB0aGlzIGdyYXBoLiBFYWNoIHBvaW50IHJlcHJlc2VudHMgdGhlIGF2ZXJhZ2Ugb2YgZWFjaCBkYXRlIGluIGEgeWVhci4gV2hpbGUgbW9zdCBkYXRlcyBob3ZlciBiZXR3ZWVuIDEwLDAwMCBhbmQgMTIsNTAwLCB0aGVyZSBhcmUgYSBmZXcgZGF0ZXMgd2l0aCBhbiBleHRyZW1lbHkgbG93IGF2ZXJhZ2Ugb2YgYmlydGhzLgoKYGBge3J9CmJveHBsb3Quc3RhdHMoYXZlcmFnZUJQRCRiaXJ0aHMpJG91dApgYGAKPiBXZSB0aGVuIHdhbnRlZCB0byBsaXN0IG91dCB0aGUgc3BlY2lmaWMgbnVtYmVycyB0aGF0IHdlcmUgb3V0bGllcnMgaW4gdGhpcyBkYXRhc2V0IHNvIHdlIHVzZWQgJG91dC4gSWYgeW91IHJlZmVyZW5jZSB0aGUgJ2F2ZXJhZ2VCUEQnIGRhdGEgZnJhbWUgaW4gdGhlIGRhdGEgZXhwbG9yYXRpb24gc2VjdGlvbiwgd2UgaGF2ZSB0aGUgZGF0ZXMgbGlzdGVkIGluIGRlc2NlbmRpbmcgb3JkZXIuIFdlIGNvdWxkIHNlZSB0aGF0IHRoZSBkYXRlcyBsaXN0ZWQgYXMgb3V0bGllcnMgd2VyZSB1c3VhbGx5IHRoZSBkYXlzIHJpZ2h0IGJlZm9yZSBvciByaWdodCBhZnRlciBob2xpZGF5cy4gVGhpcyB3YXMgZXNwZWNpYWxseSB0cnVlIGZvciB0aGUgNHRoIG9mIEp1bHksIFRoYW5rc2dpdmluZywgQ2hyaXN0bWFzLCBhbmQgTmV3IFllYXIncy4gVGhlIGxvd2VzdCBhdmVyYWdlIEJpcnRoIFBlciBEYXRlIHdhcyBGZWJydWFyeSAyOXRoLCB3aGljaCBhcyBtZW50aW9uZWQgcHJldmlvdXNseSBpcyBhIGxlYXAgeWVhciBkYXRlLCBhbmQgb25seSBvY2N1cnMgNCB0aW1lcyBvdXQgb2YgdGhlIDE1IHllYXJzIHByZXNlbnRlZCBpbiBvdXIgZGF0YSBzZXQuCgpgYGB7cn0KYm94cGxvdChhdmVyYWdlQlBEJGJpcnRocykKYGBgCj4gVGhpcyBpcyB5ZXQgYWdhaW4gYW5vdGhlciB2aXN1YWxpemF0aW9uIG9mIHRoZSBhdmVyYWdlIG51bWJlciBvZiBiaXJ0aHMgZm9yIGVhY2ggZGF0ZSwgYnV0IGRpc3BsYXllZCBpbiBib3hwbG90IGZvcm0uIFRoaXMgc2hvd3MgYSBzbWFsbGVyIHF1YXJ0aWxlIHJhbmdlIHRoYW4gdGhlIHRvdGFscyBmcm9tIHRoZSBvcmlnaW5hbCBVUyBCaXJ0aHMgZGF0YXNldCwgYW5kIHNob3dzIGEgZmV3IG91dGxpZXJzIGNyZWF0aW5nIGEgbGFyZ2UgZ2FwLCBhbGwgYmVsb3cgdGhlIG1pbmltdW0uCgo8YnI+CgojIyBBbmFseXNpcyBCYXNlZCBvbiBEYXlzIG9mIHRoZSBXZWVrCipXaXRoaW4gdGhpcyBzZWN0aW9uLCBpdCBpcyB3b3J0aCBub3RpbmcgdGhhdCB3ZWVrZW5kcyAoY29sb3JlZCBpbiBibHVlIGFuZCBncmVlbikgaGFkIGEgc2lnbmlmaWNhbnRseSBsb3dlciBudW1iZXIgb2YgYmlydGhzIHRoYW4gaXRzIHdlZWtkYXkgY291bnRlcnBhcnRzLiBXZSBtYWRlIDQgZ3JhcGhzIHNob3dpbmcgdGhlIHRvdGFsIGJpcnRocyBlYWNoIGRheSBpbiBKdW5lIG9mIDIwMDYsIEp1bHkgb2YgMjAwNywgQXVndXN0IG9mIDIwMDgsIGFuZCBOb3ZlbWJlciBvZiAyMDExLiBFYWNoIG1vbnRoIGRpc3BsYXllZCBzaG93cyBtb3N0bHkgMTIsMDAwKyBiaXJ0aHMgYSBkYXksIHdpdGggYSBmZXcgZGlwcyBiZWxvdyAxMCwwMDAuIFRoZSBtYWluIHBvaW50IG9mIHRoZXNlIGdyYXBocyB3ZXJlIHRvIGJlIGFibGUgdG8gdmlzdWFsaXplIHRoZXNlIGRhdGVzIGVhY2ggeWVhci4qCgpgYGB7cn0KVVNCaXJ0aHMkZGF5X29mX3dlZWsgPC0gZmFjdG9yKFVTQmlydGhzJGRheV9vZl93ZWVrLCBsZXZlbHMgPSBjKCJTdW4iLCAiTW9uIiwgIlR1ZXMiLCAiV2VkIiwgIlRodXJzIiwgIkZyaSIsICJTYXQiKSkKZ2dwbG90KFVTQmlydGhzLCBhZXMoZmlsbCA9IGRheV9vZl93ZWVrLCB5ID0gYmlydGhzLCB4ID0gZGF5X29mX3dlZWspKSArCiAgZ2VvbV9iYXIoc3RhdCA9ICJpZGVudGl0eSIpICsKICBsYWJzKHggPSAiRGF5IG9mIHRoZSBXZWVrIiwgCiAgICAgICB5ID0gIk51bWJlciBvZiBCaXJ0aHMiLAogICAgICAgdGl0bGUgPSAiRGF5cyBvZiB0aGUgV2VlayB2cy4gQmlydGhzIikgKwogIHNjYWxlX3lfY29udGludW91cyhsYWJlbHMgPSBzY2FsZXM6OmNvbW1hKQpgYGAKPiBJbiB0aGlzIGRpc3BsYXksIHdlIHNlZSBhIHN0YXJrIGRpZmZlcmVuY2UgaW4gbnVtYmVyIG9mIGJpcnRocyBiZXR3ZWVuIHdlZWtkYXlzIGFuZCB3ZWVrZW5kcy4gQ2xlYXJseSBzaG93biBpbiB0aGUgaGVpZ2h0IG9mIHRoZSB3ZWVrZW5kcyBiZWluZyBzaWduaWZpY2FudGx5IHNob3J0ZXIgaW4gdGhlaXIgY29sbGVjdGl2ZSBudW1iZXIgb2YgYmlydGhzIHRoYW4gdGhlIHdlZWtkYXlzLiBXZSBjYW4gYWxzbyBzZWUgdGhhdCBXZWRuZXNkYXkgaGFzIHRoZSBtb3N0IGNvbGxlY3RpdmUgYmlydGhzIGluIGEgZGF5IGNvbXBhcmVkIHRvIHRoZSBvdGhlciBkYXlzIG9mIHRoZSB3ZWVrLiBXZSBhbHNvIHRha2Ugbm90ZSBvZiB0aGUgZGlzdHJpYnV0aW9uIGZvcm1lZCBieSB0aGUgdG90YWwgYmlydGhzLCByaXNpbmcgYXMgYSB3ZWVrIGhlYWRzIHRvIGl0cyBjZW50ZXIsIGFuZCBjb21pbmcgZG93biBhcyBpdCBnZXRzIGNsb3NlciB0byB0aGUgZW5kIG9mIGEgd2Vlay4gV2hlbiB3ZSBsb29rIGF0IHRoZSBncmFwaCBiZWxvdywgdGhlcmUgaXMgYW4gZXhhbXBsZSB0aGF0IGNvb3JhbGF0ZXMgdGhlIGRheSBvZiB3ZWVrIHdpdGggdGhlIGFtb3VudCBvZiBiaXJ0aHMgb24gdGhhdCBkYXkuCgoKYGBge3J9CmdncGxvdChqdW4wNiwgYWVzKGNvbG9yID0gZGF5X29mX3dlZWssIHggPSBiaXJ0aHMsIHkgPSBkYXRlKSkgKwpnZW9tX3BvaW50KHNpemUgPSAzKSArCmxhYnMoeCA9ICJOdW1iZXIgb2YgQmlydGhzIiwKeSA9ICJEYXRlIiwKdGl0bGUgPSAiVVMgQmlydGhzIG9uIDA2LTA2LTA2IikKYGBgCj4gV2UgY3JlYXRlZCBhIHNjYXR0ZXIgcGxvdCBmb3IgdGhlIG1vbnRoIG9mIEp1bmUgaW4gMjAwNiBhbmQgcGxvdHRlZCBlYWNoIGRheSBpbiB0aGF0IG1vbnRoLiBXZSBsb29rIGF0IHRoZSBzcGVjaWZpYyBkYXRlIG9mIEp1bmUgNnRoLCBjb21wYXJlZCB0byB0aGUgcmVzdCBvZiB0aGUgbW9udGguIEp1bmUgNiwgMjAwNiBpcyB1c3VhbGx5IHdyaXR0ZW4gYXMgYDA2LTA2LTA2YC4gNjY2IGlzIGFsc28gdXN1YWxseSBhIHN1cGVyc3RpdG91cyBudW1iZXIgYW5kIGFsdGhvdWdoIGl0IGRpZG50IGhhdmUgdGhlIGxvd2VzdCBudW1iZXIgb2YgYmlydGhzLCB5b3UgY291bGQgc2VlIHRoYXQgaXQgZGlkbnQgaGF2ZSB0aGUgaGlnaGVzdCBudW1iZXIgb2YgYmlydGhzIGVpdGhlciAoY29tcGFyZWQgdG8gdGhlIG90aGVyIG1vbnRocyBhbmQgeWVhcnMgd2l0aCBzaWduaWNhbnRseSBudW1iZXJlZCBkYXRlcykuCgpgYGB7cn0KZ2dwbG90KGp1bDA3LCBhZXMoY29sb3IgPSBkYXlfb2Zfd2VlaywgeCA9IGJpcnRocywgeSA9IGRhdGUpKSArCmdlb21fcG9pbnQoc2l6ZSA9IDMpICsKbGFicyh4ID0gIk51bWJlciBvZiBCaXJ0aHMiLAogICAgIHkgPSAiRGF0ZSIsCiAgICAgdGl0bGUgPSAiVVMgQmlydGhzIG9uIDA3LTA3LTA3IikKYGBgCj4gV2UgdGhlbiB0b29rIGEgbG9vayBhdCBKdWx5IGluIHRoZSB5ZWFyIDIwMDcuIFdpdGggYWxsIHRoZSBkYXlzIGRpc3BsYXllZCBpbiB0aGF0IG1vbnRoLCB5ZXQgYWdhaW4gd2Ugc2VlIHRoYXQgYDA3LTA3LTA3YCB3YXMgcmlnaHQgaW4gdGhlIG1pZGRsZSBza2V3aW5nIG1vcmUgdG93YXJkcyB0aGUgbG93ZXIgZW5kIG9mIHRvdGFsIGJpcnRocyBmb3IgZWFjaCBkYXkgb2YgdGhhdCBtb250aC4gSWYgd2UgY29tcGFyZWQgdGhpcyBKdWx5IHNjYXR0ZXIgcGxvdCB0byB0aGUgcmVzdCBvZiB0aGUgY29vbCBkYXRlcywgeW91IHdvdWxkIHRoaW5rIGl0IHdvdWxkIGFsc28gYmUgdGhlIGRhdGUgd2l0aCB0aGUgaGlnaGVzdCBiaXJ0aHMgYnV0IEp1bHkgN3RoLCAyMDA3IGFjdHVhbGx5IGZlbGwgb24gYSBTYXR1cmRheS4gVGhpcyBjb3VsZCBleHBsYWluIHdoeSBpdCB3YXMgb24gdGhlIGxvd2VyIGVuZCwgYnV0IGl0IHN0aWxsIHNrZXdlZCB0b3dhcmRzIHRoZSByaWdodCwgcGVvcGxlIHdvdWxkIHN0aWxsIHJhdGhlciBnaXZlIGJpcnRoIG9uIGEgd2Vla2RheSwgYnV0IHNpbmNlIGl0IHdhcyBhIGNvb2wgZGF5IHdlIHNhdyBhIHNwaWtlIGluIGJpcnRocy4KCmBgYHtyfQpnZ3Bsb3QoYXVnMDgsIGFlcyhjb2xvciA9IGRheV9vZl93ZWVrLCB4ID0gYmlydGhzLCB5ID0gZGF0ZSkpICsKZ2VvbV9wb2ludChzaXplID0gMykgKwpsYWJzKHggPSAiTnVtYmVyIG9mIEJpcnRocyIsCnkgPSAiRGF0ZSIsCnRpdGxlID0gIlVTIEJpcnRocyBvbiAwOC0wOC0wOCIpCmBgYAo+ICBXZSB0aGVuIHJlcGVhdGVkIHRoZSBzYW1lIHByb2Nlc3MgZm9yIEF1Z3VzdCA4dGgsIDIwMDggYDA4LTA4LTA4YC4gQXMgeW91IGNhbiBzZWUgaW4gdGhlIHNjYXR0ZXJwbG90LCBpdCB3YXMgdGhlIGRheSB3aXRoIHRoZSBtb3N0IGFtb3VudCBvZiBiaXJ0aHMuCiAKYGBge3J9CmdncGxvdChub3YxMSwgYWVzKGNvbG9yID0gZGF5X29mX3dlZWssIHggPSBiaXJ0aHMsIHkgPSBkYXRlKSkgKwpnZW9tX3BvaW50KHNpemUgPSAzKSArCmxhYnMoeCA9ICJOdW1iZXIgb2YgQmlydGhzIiwKeSA9ICJEYXRlIiwKdGl0bGUgPSAiVVMgQmlydGhzIG9uIDExLTExLTExIikKYGBgCj4gV2UgZGlkIHRoZSBzYW1lIHRoaW5nIHdpdGggTm92ZW1iZXIgMTEsIDIwMTEgYDExLTExLTExYCBhbmQgd2Ugc2VlIHRoYXQgeWV0IGFnYWluLCBpdCB3YXMgdGhlIGRheSB3aXRoIHRoZSBtb3N0IGFtb3VudCBvZiBiaXJ0aHMgaW4gTm92ZW1iZXIuCgo8YnI+CgojIENvbmNsdXNpb24KCiAgSW4gdGhlIFVTLCB0aGUgYW1vdW50IG9mIG5ldyBib3JuIGluZmFudHMgYm9ybiBpcyBwcmV0dHkgbGFyZ2UsIGJ1dCByZWxhdGl2ZWx5IHN0YWduYW50LiBUaGVyZSBjb3VsZCBvbmx5IGJlIHNvIG11Y2ggcGxhbm5pbmcgYW5kIHNjaGVkdWxpbmcgd2hlbiBoYXZpbmcgYSBiYWJ5IGJ1dCB3ZSBkZWNpZGVkIHRvIGxvb2sgYXQgdGhpcyBkYXRhc2V0IHRvIHJlYWxseSBkZXRlcm1pbmUgaWYgdGhlcmUgd2VyZSBhbnkgcGF0dGVybnMgaW4gdGhlIGFtb3VudCBvZiBiaXJ0aHMuIFRoaXMgZGF0YXNldCBpbmNsdWRlZCBiaXJ0aHMgZnJvbSBldmVyeSBkYXkgc3RhcnRpbmcgZnJvbSBKYW51YXJ5IDFzdCwgMjAwMCBhbGwgdGhlIHdheSB1bnRpbCBEZWNlbWJlciAzMXN0LCAyMDE0LgogIAogIFdlIGZpcnN0IHN0YXJ0ZWQgYnkgbG9va2luZyBhdCB0aGUgdG90YWwgYW1vdW50IG9mIGJpcnRocyBlYWNoIHllYXIuIEJhc2VkIG9uIHRoYXQgZGF0YSwgdGhlIG9ubHkgdGhpbmcgd2UgcmVhbGx5IHNhdyB3YXMgdGhhdCAyMDA5IGhhZCB0aGUgaGlnaGVzdCB0b3RhbCBhbW91bnQgb2YgYmlydGhzIGFuZCAyMDEzIGhhZCB0aGUgbG93ZXN0IHRvdGFsIGFtb3VudCBvZiBiaXJ0aHMuIE1hbnkgcGVvcGxlIGhhdmUgc2FpZCB0aGF0IHRoZXJlIHdhcyBzdWNoIGEgZGVjbGluZSBpbiAyMDEzIGJlY2F1c2UgcGVvcGxlIGZlbHQgdGhlIGVmZmVjdHMgb2YgdGhlIHJlY2Vzc2lvbi4gQ2hpbGRyZW4gYXJlIHRoZSBoaWdoZXN0IGV4cGVuc2UgYSBmYW1pbHkgY2FuIGhhdmUgYW5kIHRoZXJlZm9yZSwgZmFtaWxpZXMgZGlkIG5vdCBmZWVsIGFzIHRoZXkgY291bGQgYWZmb3JkIGl0IGFmdGVyIHNvbWV0aGluZyBhcyBiaWcgYXMgVGhlIEdyZWF0IFJlY2Vzc2lvbiBoYXBwZW5lZCBhbmQgbWFueSBwZW9wbGUgbG9zdCB0aGVpciBqb2JzLiBUaGF0IGNvdWxkIHJlYWxseSBleHBsYWluIHRoZSBkZWNsaW5lLiBXZSBkbyBub3QgaGF2ZSBtb3JlIGRhdGEgYWZ0ZXIgMjAxNCBhbmQgd2UgY2Fubm90IHJlYWxseSBzZWUgaWYgdGhlIGFtb3VudCBvZiBiaXJ0aHMgd2VyZSByaXNpbmcgZm9yIGEgZmV3IHllYXJzIGFmdGVyIHRoZSByZWNlc3Npb24sIGJ1dCB3ZSBrbm93IHRoYXQgbWFueSBmYWN0b3JzIGNhbiBoYXZlIGFuIGVmZmVjdCBvbiBoYXZpbmcgY2hpbGRyZW4uIFdlIGFsc28gY2Fubm90IGd1YXJhbnRlZSB0aGF0IHRoZSByZWNlc3Npb24gd2FzIHRoZSBvbmx5IGZhY3RvciBpbiB0aGUgZGVjbGluZSBvZiBiaXJ0aHMgaW4gMjAxMy4KICAKICBUaGUgbmV4dCB0aGluZyB3ZSBleHBsb3JlZCB3YXMgdGhlIGF2ZXJhZ2UgYmlydGhzIHBlciBkYXRlLiBUaGlzIHdhcyBvdXIgYnJlYWt0aHJvdWdoIG1vbWVudCB3aXRoIHRoZSBkYXRhLiBCeSBkb2luZyB0aGlzIGRhdGEgbWluaW5nIGFuYWx5c2lzLCB3ZSB3ZXJlIGFibGUgdG8gdmlzdWFsaXplIHRoZSBvdXRsaWVycyBvZiB0aGlzIGRhdGFzZXQuIFdlIHRvb2sgdGhlIGF2ZXJhZ2UgYmlydGhzIGVhY2ggZGF5LCBvZiBlYWNoIHllYXIgYW5kIGNvbWJpbmVkIHRoZW0gYW5kIHRoZW4gcGxvdHRlZCBpdCBpbnRvIGEgc2NhdHRlciBwbG90LiBBcyBtZW50aW9uZWQgaW4gdGhlIHByZXZpb3VzIHNlY3Rpb24sIHdlIHdlcmUgYWJsZSB0byBzZWUgdGhhdCB0aGUgbG93ZXN0IGF2ZXJhZ2Ugb2YgYmlydGhzIG9uIGEgc3BlY2lmaWMgZGF0ZSB3YXMgdGhlIGRhdGVzIGJlZm9yZSBhbmQgYWZ0ZXIgbWFqb3IgaG9saWRheXMuIEhvbGlkYXlzIGFyZSBhIHN0cmVzc2Z1bCB0aW1lIGZvciBmYW1pbGllcywgYW5kIHBlb3BsZSB3YW50IHRvIHNwZW5kIHRoYXQgdGltZSB3aXRoIHRoZWlyIGZhbWlsaWVzIChub3QgZ2l2aW5nIGJpcnRoIGluIGEgaG9zcGl0YWwpLiBBZ2FpbiwgdGhlcmUgaXMgb25seSBzbyBtdWNoIHBsYW5uaW5nIGFuIGV4cGVjdGluZyBmYW1pbHkgY2FuIGRvIGJlZm9yZSBnaXZpbmcgYmlydGgsIGJ1dCB0aHJvdWdoIHRoZSB2aXN1YWxpemF0aW9uIHJlc3VsdHMsIHdlIGNvdWxkIHNlZSB0aGF0IGJlZm9yZSBhbmQgYWZ0ZXIgbWFqb3IgaG9saWRheXMgdGhlcmUgd2VyZSByZWxhdGl2ZWx5IGxvdyBiaXJ0aHMuCgogIFdlIHRoZW4gZGlkIGFuIGFuYWx5c2lzIHRvIHNlZSB3aGljaCBkYXkgb2YgdGhlIHdlZWsgd2FzIGxlYXN0IGFuZCBtb3N0IHBvcHVsYXIgdG8gZ2l2ZSBiaXJ0aCBvbi4gQXMgYSByZXN1bHQsIHdlIHNhdyB0aGF0IFNhdHVyZGF5IGFuZCBTdW5kYXkgaGFkIHRoZSBsZWFzdCBhdmVyYWdlIGFtb3VudCBvZiBiaXJ0aHMuIFdlIGV2ZW4gc2F3IHRoYXQgYSBiaXJ0aCBkYXRlIG9mIGAwNy0wNy0wN2AgKHdoaWNoIGlzIGV2ZXJ5b25lJ3MgbHVja3kgbnVtYmVyKSBzdGlsbCBoYWQgYSBwcmV0dHkgbG93IGFtb3VudCBvZiBiaXJ0aHMgYmVjYXVzZSBpdCB3YXMgb24gYSBTYXR1cmRheS4gVGhpcyB0aGVuIGxlZCB1cyB0byBleHBsb3JlIG91ciBmaW5hbCBhbmFseXNpcy4gV2UgbG9va2VkIGF0IHRoZSBiaXJ0aHMgb24gc3BlY2lhbGx5IG51bWJlcmVkIGRheXMgb2Ygc3BlY2lmaWMgeWVhcnMsIGxpa2UgYDA2LTA2LTA2YCwgYDA3LTA3LTA3YCwgYDA4LTA4LTA4YCwgYW5kIGAxMS0xMS0xMWAuIFRoaXMgd2FzIGp1c3QgYSBzYW1wbGUgb2YgdGhvc2UgZGF5cyBpbiByYW5nZSBvZiB5ZWFycyBpbiBvdXIgZGF0YS4gVGhlIHJlc3VsdHMgc2hvd2VkIHRoYXQgdGhlc2UgZGF0ZXMgd2VyZSBzaWduaWZpY2FudCBkYXlzIHRvIGdpdmUgYmlydGggb24uIEFsdGhvdWdoIHRoZXJlIGlzIG5vdCBhIHNvbGlkIHJlYXNvbiB3aHkgd2Vla2VuZHMgYXJlIG5vdCBhIHBvcHVsYXIgdGltZSB0byBnaXZlIGJpcnRoLCB3ZSBjYW4gdGFrZSBpbnRvIGNvbnNpZGVyYXRpb24gdGhhdCBob3NwaXRhbHMgbWlnaHQgbm90IGJlIGZ1bGx5IHN0YWZmZWQgb24gd2Vla2VuZHMsIHBlb3BsZSB0YWtlIHZhY2F0aW9ucyBvbiB0aGUgd2Vla2VuZCwgb3IgYmVjYXVzZSBwcmVnbmFudCB3b21hbiBqdXN0IHdhbnQgZXh0cmEgZGF5cyBvZmYgd29yayBhbmQgdGhlcmVmb3JlIGNob29zZSB0aGF0IHRoZXkgd2FudCB0byBnaXZlIGJpcnRoIGluIHRoZSBtaWRkbGUgb2YgdGhlIHdlZWsuIFRoaXMgbGFzdCBhbmFseXNpcyByZWFsbHkgc2hvd2VkIHRoYXQgYWx0aG91Z2ggdGhlIGRhdGUgb2YgYmlydGggZG9lcyBub3QgaGF2ZSBhIGh1Z2UgZWZmZWN0IG9uIHRoZSBhbW91bnQgb2YgYmlydGhzLCB0aGUgZGF5IG9mIHRoZSB3ZWVrIHRoZSBiYWJ5IGlzIGJvcm4gaGFzIGEgaHVnZSBjb3JyZWxhdGlvbiB0byB0aGUgYW1vdW50IG9mIGJpcnRocy4KICAKICBBZ2FpbiwgYWx0aG91Z2ggZXhwZWN0aW5nIGZhbWlsaWVzIGNhbiBwbGFuIGFzIG11Y2ggYXMgcG9zc2libGUsIHRoZXJlIGFyZSBtYW55IGZhY3RvcnMgdGhhdCBjYW4gYWZmZWN0IHdoZW4gYSBiYWJ5IGlzIGJyb3VnaHQgaW50byB0aGlzIHdvcmxkLiBGaW5hbmNpYWwgaGFyZHNoaXBzLCB3ZWVrZW5kcywgb3IgaG9saWRheXMgYXJlIHNvbWUgb2YgdGhlIGZhY3RvcnMgdGhlIGJyaW5nIGJpcnRocyBkb3duLiBTaWduaWNhdGxseSBudW1iZXJlZCBkYXlzLCBtaWRkbGUgb2YgdGhlIHdlZWssIGFuZCBoaWdoZXIgZWNvbm9teSBhcmUgc29tZSBvZiB0aGUgZmFjdG9ycyB0aGF0IGJyaW5nIGJpcnRocyB1cC4KCgpgYGB7cn0KaGVhZChVU0JpcnRocykKYGBgCgo+IFByZXNlbnRlZCBpcyB0aGUgZmlyc3QgNiBlbnRyaWVzIG9mIHRoZSBkYXRhc2V0LiBJdCBpbmNsdWRlcyB0aGUgYHllYXJgLCBgbW9udGhgLCBgZGF0ZV9vZl9tb250aGAsIGBkYXRlYCxgZGF5X29mX3dlZWtgLCBhbmQgYGJpcnRoc2AgcmVjb3JkZWQgaW4gdGhlIFVTLgoKYGBge3J9CiMgdGhpcyBkYXRhIGZyYW1lIHdhcyB1c2VkIGFsbCB0aHJvdWdob3V0IG91dCBhbmFseXNpcwpVU0JpcnRocyAlPiUgCiAgZ3JvdXBfYnkoZGF5X29mX3dlZWspICU+JSAKICBzdW1tYXJpc2UoU3VtX29mX0JpcnRocyA9IHN1bShiaXJ0aHMpKQo9PT09PT09CmBgYHtyfQpib3hwbG90KFVTQmlydGhzJGJpcnRocyAgfiBVU0JpcnRocyR5ZWFyLCAKICAgICAgICBtYWluPSJCaXJ0aHMgYnkgWWVhciIsIHlsYWIgPSAiTnVtYmVyIiwgeGxhYiA9ICJZZWFyIikKYGBgCgoKYGBge3J9CmJpcnRoUmF0ZXMgPC0gVVNCaXJ0aHMgJT4lIAogIGdyb3VwX2J5KHllYXIpICU+JSAKICBtdXRhdGUoY2JyID0gYmlydGhzL3N1bShiaXJ0aHMpICogMTAwMCkgJT4lICAjY2JyIGlzIHRoZSBjcnVkZSBiaXJ0aCByYXRlLCBhbmQgdG8gZmluZCBpdCB5b3UgZGl2aWRlIHRoZSBzdW1lIG9mIHRoZSBiaXJ0aHMgcGVyIHllYXIsIGJ5IHRoZSBiaXJ0aHMgb2YgdGhhdCBkYXksIHRoZW4gbXVsdGlwbHkgYnkgMTAwMAogIHVuZ3JvdXAoKQo+Pj4+Pj4+IDdlYThiOTZhNjFiOWRjNGYxNjk3NTY3NDg3NWYyMjYxZmU0ZjU0MzcKYGBgCj4gVGhlIGZpbmFsIHRoaW5nIHdlIHdhbnRlZCB0byBleHBsb3JlIHdhcyB0aGUgdG90YWwgc3VtIG9mIGJpcnRocyBmb3IgZWFjaCBkYXkgb2YgdGhlIHdlZWsgdGhyb3VnaCB0aGUgMTUgeWVhcnMgcmVjb3JkZWQuIFdlIHdhbnRlZCB0byBzZWUgaWYgYW55IGRheSBvZiB0aGUgd2VlayB3YXMgbW9yZSBwb3B1bGFyLiBJbiBvdXIgZGF0YSBhbmFseXNpcywgd2UgY2FuIHNlZSB0aGUgcmVzdWx0cyBpbiBhIGJhciBncmFwaC4KCjw8PDw8PDwgSEVBRAo8YnI+Cj09PT09PT0KYGBge3J9CmJveHBsb3Quc3RhdHMoYmlydGhSYXRlcyRjYnIpJG91dApgYGAKYGBge3J9CmJveHBsb3QoYmlydGhSYXRlcyRjYnIpCmBgYAo+Pj4+Pj4+IDdlYThiOTZhNjFiOWRjNGYxNjk3NTY3NDg3NWYyMjYxZmU0ZjU0MzcKCiMjIEV4cGxvcmF0aW9uIGZvciBCaXJ0aHMgcGVyIFllYXIKCmBgYHtyLCBtZXNzYWdlPUZBTFNFfQpicHkgPC0gVVNCaXJ0aHMgJT4lIAogIGdyb3VwX2J5KHllYXIpICU+JSAKICBzdW1tYXJpc2UodG90YWxCUFkgPSBzdW0oYmlydGhzKSkKCjw8PDw8PDwgSEVBRApicHkKYGBgCj4gVGhlIG51bWJlciBsaXN0ZWQgYWJvdmUgaW4gYHRvdGFsQlBZYCByZXByZXNlbnQgdGhlIHRvdGFsIGJpcnRocyBwZXIgeWVhciBmcm9tIDIwMDAgdG8gMjAxNC4gV2UgdXNlIHRoaXMgZGF0YSBmcmFtZSB0byB0byB2aWV3IHRoZSBoaWdoZXN0IGFuZCBsb3dlc3QgdG90YWwgYmlydGhzIGZvciBlYWNoIHllYXIuCgo8YnI+CgojIyBFeHBsb3JhdGlvbiBmb3IgQmlydGhzIHBlciBEYXkKYGBge3J9ClVTQmlydGhzJG1tZGQgPSBwYXN0ZShVU0JpcnRocyRtb250aCwgVVNCaXJ0aHMkZGF0ZV9vZl9tb250aCkKVVNCaXJ0aHMKPT09PT09PQoKYGBge3J9ClVTQmlydGhzJG1tZGQgPSBwYXN0ZShVU0JpcnRocyRtb250aCwgVVNCaXJ0aHMkZGF0ZV9vZl9tb250aCkKVVNCaXJ0aHMKYGBgCmBgYHtyLCBtZXNzYWdlPUZBTFNFfQphdmVyYWdlQlBEIDwtIFVTQmlydGhzICU+JSAKICBncm91cF9ieShtbWRkID0gc3Vic3RyKG1tZGQsIDEsIDMxKSkgJT4lIAogIHN1bW1hcmlzZShiaXJ0aHMgPSBzdW0oYmlydGhzKS8xNSkgJT4lCiAgYXJyYW5nZShkZXNjKGJpcnRocykpICU+JSAKICB1bmdyb3VwKCkgCgphdmVyYWdlQlBECiAgCmBgYApgYGB7cn0KZ2dwbG90KCkgKwpnZW9tX3BvaW50KGF2ZXJhZ2VCUEQsIG1hcHBpbmcgPSBhZXMoeCA9IG1tZGQsIHkgPSBiaXJ0aHMpKQo+Pj4+Pj4+IDdlYThiOTZhNjFiOWRjNGYxNjk3NTY3NDg3NWYyMjYxZmU0ZjU0MzcKYGBgCj4gVGhpcyBuZXcgYXR0cmlidXRlIGBtbWRkYCByZXByZXNlbnRzIGEgY29tYmluYXRpb24gb2YgbW9udGggYW5kIGRheS4gV2UgdXNlIHRoaXMgdG9vbCB0byBoZWxwIHVzIHdpdGggb3VyIGRhdGEgbWluaW5nIHBvcnRpb24uCgo8PDw8PDw8IEhFQUQKCmBgYHtyLCBtZXNzYWdlPUZBTFNFfQphdmVyYWdlQlBEIDwtIFVTQmlydGhzICU+JSAKICBncm91cF9ieShtbWRkID0gc3Vic3RyKG1tZGQsIDEsIDMxKSkgJT4lIAogIHN1bW1hcmlzZShiaXJ0aHMgPSBzdW0oYmlydGhzKS8xNSkgJT4lCiAgYXJyYW5nZShkZXNjKGJpcnRocykpICU+JQogIHVuZ3JvdXAoKSAKYXZlcmFnZUJQRApgYGAKYGBge3J9CmhlYWQoYXZlcmFnZUJQRCkKYGBgCmBgYHtyfQp0YWlsKGF2ZXJhZ2VCUEQsIDEzKQo9PT09PT09CmBgYHtyfQpib3hwbG90LnN0YXRzKGF2ZXJhZ2VCUEQkYmlydGhzKSRvdXQKYGBgCmBgYHtyfQpib3hwbG90KGF2ZXJhZ2VCUEQkYmlydGhzKQo+Pj4+Pj4+IDdlYThiOTZhNjFiOWRjNGYxNjk3NTY3NDg3NWYyMjYxZmU0ZjU0MzcKYGBgCgo+IFRoaXMgc3VtbWFyeSBzaG93cyB3aGF0IHRoZSBhdmVyYWdlIG51bWJlciBvZiBiaXJ0aHMgd2FzIG9uIGV2ZXJ5IGRhdGUgZHVyaW5nIHRoYXQgeWVhci4gSGVyZSwgd2UgY2FuIHNlZSB0aGF0IFNlcHRlbWJlciAxMnRoIGhhcyBhbiBhdmVyYWdlIG9mIDEyNzM0LjkzMyBiaXJ0aHMgb3ZlciB0aGVzZSAxNSB5ZWFycywgbWFraW5nIHRoaXMgZGF5IHRoZSBoaWdoZXN0IGF2ZXJhZ2UgYmlydGhzIGluIHRoZSBVUy4gV2UgYWxzbyBzZWUgdGhhdCBGZWJydWFyeSAyOXRoIGF2ZXJhZ2VkIHRoZSBsb3dlc3QgYmlydGhzLiBUaGlzIG1ha2VzIHNlbnNlIGJlY2F1c2UgRmVicnVhcnkgMjl0aCBpcyBhIGxlYXAgeWVhciBkYXRlIGFuZCBvbmx5IGhhcHBlbmVkIDQgdGltZXMgaW4gb3VyIHJhbmdlIGZyb20gMjAwMCB0byAyMDE0ICgyMDAwLCAyMDA0LCAyMDA4LCAyMDEyKS4gV2UgY2FuIGFsc28gc2VlIHRoYXQgdGhlIGxvd2VzdCBkYXlzIGFyZSBhcm91bmQgaG9saWRheSB0aW1lLiBXZSBtZW50aW9uIHRoaXMgcGFydCBpbiB0aGUgbmV4dCBzZWN0aW9uIGFzIHdlbGwuCgo8YnI+Cgo8PDw8PDw8IEhFQUQKIyMgRXhwbG9yYXRpb24gZm9yIERheXMgb2YgdGhlIFdlZWsKPT09PT09PQojIyBEYXRhIEFuYWx5c2lzCj4+Pj4+Pj4gN2VhOGI5NmE2MWI5ZGM0ZjE2OTc1Njc0ODc1ZjIyNjFmZTRmNTQzNwoKYGBge3J9Cmp1bjA2IDwtIFVTQmlydGhzICU+JSAKICBmaWx0ZXIoeWVhciA9PSAyMDA2KSAlPiUgCiAgZmlsdGVyKG1vbnRoID09IDA2KQpqdW4wNgpgYGAKCjw8PDw8PDwgSEVBRApgYGB7cn0KanVsMDcgPC0gVVNCaXJ0aHMgJT4lIAogIGZpbHRlcih5ZWFyID09IDIwMDcpICU+JSAKICBmaWx0ZXIobW9udGggPT0gMDcpCmp1bDA3CmBgYAoKYGBge3J9CmF1ZzA4IDwtIFVTQmlydGhzICU+JSAKICBmaWx0ZXIoeWVhciA9PSAyMDA4KSAlPiUgCiAgZmlsdGVyKG1vbnRoID09IDA4KQphdWcwOAo9PT09PT09CgpgYGB7cn0Kbm92ZW1iZXJCaXJ0aHMgPC0gVVNCaXJ0aHMgJT4lICMxMSBpcyBhbHNvIGtpbmRhIGdvb2QgCiAgZ3JvdXBfYnkobW9udGgpICU+JSAKICBmaWx0ZXIobW9udGg9PTExKSAlPiUgCiAgdW5ncm91cCgpICU+JSAKICBzZWxlY3QoYmlydGhzLCB5ZWFyKQoKbm92ZW1iZXJCaXJ0aHMKPj4+Pj4+PiA3ZWE4Yjk2YTYxYjlkYzRmMTY5NzU2NzQ4NzVmMjI2MWZlNGY1NDM3CmBgYAoKCmBgYHtyfQo8PDw8PDw8IEhFQUQKbm92MTEgPC0gVVNCaXJ0aHMgJT4lIAogIGZpbHRlcih5ZWFyID09IDIwMTEpICU+JSAKICBmaWx0ZXIobW9udGggPT0gMTEpCm5vdjExCj09PT09PT0KZ2dwbG90KG5vdmVtYmVyQmlydGhzLCBhZXMoeCA9IHllYXIsIHkgPSBiaXJ0aHMpKSArCiAgZ2VvbV9oaXN0b2dyYW0oc3RhdCA9ICJpZGVudGl0eSIpCj4+Pj4+Pj4gN2VhOGI5NmE2MWI5ZGM0ZjE2OTc1Njc0ODc1ZjIyNjFmZTRmNTQzNwpgYGAKPiBJbiB0aGVzZSA0IGNodW5rcyBvZiBjb2RlIHdlIGNyZWF0ZWQgZGF0YSBmcmFtZXMgZm9yIGEgc3BlY2lmaWMgbW9udGggdGhhdCB3ZSB3YW50ZWQgdG8gZXhwbG9yZS4gT3VyIGludGVudGlvbnMgd2VyZSB0byBzZWUgaWYgYSBjb29sIGRhdGUgbGlrZSBgMDYtMDYtMDZgIG9yIGAxMS0xMS0xMWAgaGFkIGFueSBzcGlrZXMgaW4gYmlydGggb24gdGhhdCBnaXZlbiBkYXRlLiBJbiB0aGUgRGF0YSBBbmFseXNpcyBzZWN0aW9uLCB3ZSBzZWUgdGhlIGdyYXBocyB0aGF0IGRpc3BsYXkgdGhlIHJlc3VsdHMuCgoKPGJyPgoKIyBEYXRhIEFuYWx5c2lzCgo8YnI+Cjxicj4KCjw8PDw8PDwgSEVBRAojIyBBbmFseXNpcyBiYXNlZCBvbiBCaXJ0aHMgcGVyIFllYXIKCgpgYGB7cn0KYm94cGxvdChVU0JpcnRocyRiaXJ0aHMgIH4gVVNCaXJ0aHMkeWVhciwgCiAgICAgICAgbWFpbj0iQmlydGhzIGJ5IFllYXIiLCB5bGFiID0gIk51bWJlciIsIHhsYWIgPSAiWWVhciIpCj09PT09PT0KYGBge3J9Cmp1bjA2IDwtIFVTQmlydGhzICU+JSAKICBmaWx0ZXIoeWVhciA9PSAyMDA2KSAlPiUgCiAgZmlsdGVyKG1vbnRoID09IDA2KQoKanVuMDYKCmdncGxvdChqdW4wNiwgYWVzKHggPSBiaXJ0aHMsIHkgPSBkYXRlKSkgKwpnZW9tX3BvaW50KCkgKwpsYWJzKHggPSAiTnVtYmVyIG9mIEJpcnRocyIsCnkgPSAiRGF0ZSIsCnRpdGxlID0gIlVTIEJpcnRocyBvbiAwNi0wNi0wNiIpCmBgYAoKCmBgYHtyfQpqdWwwNyA8LSBVU0JpcnRocyAlPiUgCiAgZmlsdGVyKHllYXIgPT0gMjAwNykgJT4lIAogIGZpbHRlcihtb250aCA9PSAwNykKCmp1bDA3CgpnZ3Bsb3QoanVsMDcsIGFlcyh4ID0gYmlydGhzLCB5ID0gZGF0ZSkpICsKZ2VvbV9wb2ludCgpICsKbGFicyh4ID0gIk51bWJlciBvZiBCaXJ0aHMiLAp5ID0gIkRhdGUiLAp0aXRsZSA9ICJVUyBCaXJ0aHMgb24gMDctMDctMDciKQo+Pj4+Pj4+IDdlYThiOTZhNjFiOWRjNGYxNjk3NTY3NDg3NWYyMjYxZmU0ZjU0MzcKYGBgCj4gVGhpcyBpcyBhIGJveHBsb3Qgc2hvd2luZyB0aGUgdG90YWwgbnVtYmVyIG9mIGJpcnRocyBmcm9tIGVhY2ggeWVhciBmcm9tIHRoZSB5ZWFyIDIwMDAgdG8gMjAxNC4gVGhlIGRpZmZlcmVuY2UgYmV0d2VlbiB0aGUgZmlyc3QgaW50ZXJxdWFydGlsZSBhbmQgc2Vjb25kIGlzIHF1aXRlIGxhcmdlIGNvbXBhcmVkIHRvIHRoZSBzZWNvbmQgYW5kIHRoaXJkLiBXZSBhbHNvIG5vdGljZSB0aGF0IHRoZSBxdWFydGlsZXMgZG8gbm90IGNoYW5nZSB0aGF0IG11Y2ggb3ZlciB0aGUgeWVhcnMsIHdpdGgganVzdCBhIHNtYWxsIGluY3JlYXNlIGluIDIwMDUgdG8gMjAwNywgYW5kIHRoZW4gYSBkZWNyZWFzZSB0byB0aGUgb3JpZ2luYWwgc2Vjb25kIHF1YXJ0aWxlLiBBZGRpdGlvbmFsbHksIHdlIGFsc28gc2VlIHRoYXQgMjAwOSBoYWQgdGhlIGhpZ2hlc3QgdG90YWwgYmlydGhzLCB3aGVyZWFzIDIwMTMgaGFkIHRoZSBmZXdlc3QgdG90YWwgYmlydGhzIG92ZXJhbGwuCgo8PDw8PDw8IEhFQUQKPGJyPgoKIyMgQW5hbHlzaXMgQmFzZWQgb24gQXZlcmFnZSBCaXJ0aHMgcGVyIERheQo9PT09PT09CmBgYHtyfQphdWcwOCA8LSBVU0JpcnRocyAlPiUgCiAgZmlsdGVyKHllYXIgPT0gMjAwOCkgJT4lIAogIGZpbHRlcihtb250aCA9PSAwOCkKCmF1ZzA4Cj4+Pj4+Pj4gN2VhOGI5NmE2MWI5ZGM0ZjE2OTc1Njc0ODc1ZjIyNjFmZTRmNTQzNwoKZ2dwbG90KGF1ZzA4LCBhZXMoeCA9IGJpcnRocywgeSA9IGRhdGUpKSArCmdlb21fcG9pbnQoKSArCmxhYnMoeCA9ICJOdW1iZXIgb2YgQmlydGhzIiwKeSA9ICJEYXRlIiwKdGl0bGUgPSAiVVMgQmlydGhzIG9uIDA4LTA4LTA4IikKYGBgCgpgYGB7cn0Kbm92MTEgPC0gVVNCaXJ0aHMgJT4lIAogIGZpbHRlcih5ZWFyID09IDIwMTEpICU+JSAKICBmaWx0ZXIobW9udGggPT0gMTEpCgpub3YxMQpgYGAKIApgYGB7cn0KPDw8PDw8PCBIRUFECmdncGxvdCgpICsKZ2VvbV9wb2ludChhdmVyYWdlQlBELCBtYXBwaW5nID0gYWVzKHggPSBtbWRkLCB5ID0gYmlydGhzKSkgKwogIGxhYnMoeCA9ICJEYXkgb2YgdGhlIFllYXIiLCAKICAgICAgIHkgPSAiTnVtYmVyIG9mIEJpcnRocyIsIAogICAgICAgdGl0bGUgPSAiQXZlcmFnZSBCaXJ0aCBwZXIgRGF5IikKPT09PT09PQpnZ3Bsb3Qobm92MTEsIGFlcyh4ID0gYmlydGhzLCB5ID0gZGF0ZSkpICsKZ2VvbV9wb2ludCgpICsKbGFicyh4ID0gIk51bWJlciBvZiBCaXJ0aHMiLAp5ID0gIkRhdGUiLAp0aXRsZSA9ICJVUyBCaXJ0aHMgb24gMTEtMTEtMTEiKQo+Pj4+Pj4+IDdlYThiOTZhNjFiOWRjNGYxNjk3NTY3NDg3NWYyMjYxZmU0ZjU0MzcKYGBgCj4gVGhpcyBpcyBhIHZpc3VhbGl6YXRpb24gb2YgdGhlIGF2ZXJhZ2UgYmlydGhzIHBlciBkYXRlLiBXZSB0b29rIGVhY2ggZGF0ZSBpbiBhIHllYXIgYW5kIGF2ZXJhZ2VkIGl0IGJldHdlZW4gdGhlIDE1IHllYXJzIGFuZCBjcmVhdGVkIGEgc2NhdHRlciBwbG90IGFib3ZlLiBBcyBzZWVuIG9uIHRoaXMgcGxvdCwgdGhlcmUgYXJlIDM2NiBwb2ludHMgb24gdGhpcyBncmFwaC4gRWFjaCBwb2ludCByZXByZXNlbnRzIHRoZSBhdmVyYWdlIG9mIGVhY2ggZGF0ZSBpbiBhIHllYXIuIFdoaWxlIG1vc3QgZGF0ZXMgaG92ZXIgYmV0d2VlbiAxMCwwMDAgYW5kIDEyLDUwMCwgdGhlcmUgYXJlIGEgZmV3IGRhdGVzIHdpdGggYW4gZXh0cmVtZWx5IGxvdyBhdmVyYWdlIG9mIGJpcnRocy4KCjw8PDw8PDwgSEVBRAo9PT09PT09CgojIyBBbm9tYWx5IERlY3RlY3Rpb24gd2l0aCBCaXJ0aHJhdGVzCiMjIERheXMgb2YgdGhlIHdlZWsKCgpTdW0gb2YgQmlydGhzIGJhc2VkIG9uIERheSBvZiB0aGUgV2Vlawo+Pj4+Pj4+IDdlYThiOTZhNjFiOWRjNGYxNjk3NTY3NDg3NWYyMjYxZmU0ZjU0MzcKYGBge3J9CmJveHBsb3Quc3RhdHMoYXZlcmFnZUJQRCRiaXJ0aHMpJG91dApgYGAKPiBXZSB0aGVuIHdhbnRlZCB0byBsaXN0IG91dCB0aGUgc3BlY2lmaWMgbnVtYmVycyB0aGF0IHdlcmUgb3V0bGllcnMgaW4gdGhpcyBkYXRhc2V0IHNvIHdlIHVzZWQgJG91dC4gSWYgeW91IHJlZmVyZW5jZSB0aGUgJ2F2ZXJhZ2VCUEQnIGRhdGEgZnJhbWUgaW4gdGhlIGRhdGEgZXhwbG9yYXRpb24gc2VjdGlvbiwgd2UgaGF2ZSB0aGUgZGF0ZXMgbGlzdGVkIGluIGRlc2NlbmRpbmcgb3JkZXIuIFdlIGNvdWxkIHNlZSB0aGF0IHRoZSBkYXRlcyBsaXN0ZWQgYXMgb3V0bGllcnMgd2VyZSB1c3VhbGx5IHRoZSBkYXlzIHJpZ2h0IGJlZm9yZSBvciByaWdodCBhZnRlciBob2xpZGF5cy4gVGhpcyB3YXMgZXNwZWNpYWxseSB0cnVlIGZvciB0aGUgNHRoIG9mIEp1bHksIFRoYW5rc2dpdmluZywgQ2hyaXN0bWFzLCBhbmQgTmV3IFllYXIncy4gVGhlIGxvd2VzdCBhdmVyYWdlIEJpcnRoIFBlciBEYXRlIHdhcyBGZWJydWFyeSAyOXRoLCB3aGljaCBhcyBtZW50aW9uZWQgcHJldmlvdXNseSBpcyBhIGxlYXAgeWVhciBkYXRlLCBhbmQgb25seSBvY2N1cnMgNCB0aW1lcyBvdXQgb2YgdGhlIDE1IHllYXJzIHByZXNlbnRlZCBpbiBvdXIgZGF0YSBzZXQuCgpgYGB7cn0KPDw8PDw8PCBIRUFECmJveHBsb3QoYXZlcmFnZUJQRCRiaXJ0aHMpCj09PT09PT0KVVNCaXJ0aHMkZGF5X29mX3dlZWsgPC0gZmFjdG9yKFVTQmlydGhzJGRheV9vZl93ZWVrLCBsZXZlbHMgPSBjKCJTdW4iLCAiTW9uIiwgIlR1ZXMiLCAiV2VkIiwgIlRodXJzIiwgIkZyaSIsICJTYXQiKSkKCmdncGxvdChVU0JpcnRocywgYWVzKGZpbGwgPSBkYXlfb2Zfd2VlaywgeSA9IGJpcnRocywgeCA9IGRheV9vZl93ZWVrKSkgKwogIGdlb21fYmFyKHBvc2l0aW9uID0gImRvZGdlIiwgc3RhdCA9ICJpZGVudGl0eSIpICsKICBnZ3RpdGxlKCJEYXkgb2YgdGhlIFdlZWsgVlMuIEJpcnRocyIpCj4+Pj4+Pj4gN2VhOGI5NmE2MWI5ZGM0ZjE2OTc1Njc0ODc1ZjIyNjFmZTRmNTQzNwpgYGAKPiBUaGlzIGlzIHlldCBhZ2FpbiBhbm90aGVyIHZpc3VhbGl6YXRpb24gb2YgdGhlIGF2ZXJhZ2UgbnVtYmVyIG9mIGJpcnRocyBmb3IgZWFjaCBkYXRlLCBidXQgZGlzcGxheWVkIGluIGJveHBsb3QgZm9ybS4gVGhpcyBzaG93cyBhIHNtYWxsZXIgcXVhcnRpbGUgcmFuZ2UgdGhhbiB0aGUgdG90YWxzIGZyb20gdGhlIG9yaWdpbmFsIFVTIEJpcnRocyBkYXRhc2V0LCBhbmQgc2hvd3MgYSBmZXcgb3V0bGllcnMgY3JlYXRpbmcgYSBsYXJnZSBnYXAsIGFsbCBiZWxvdyB0aGUgbWluaW11bS4KCjxicj4KCjw8PDw8PDwgSEVBRAojIyBBbmFseXNpcyBCYXNlZCBvbiBEYXlzIG9mIHRoZSBXZWVrCipXaXRoaW4gdGhpcyBzZWN0aW9uLCBpdCBpcyB3b3J0aCBub3RpbmcgdGhhdCB3ZWVrZW5kcyAoY29sb3JlZCBpbiBibHVlIGFuZCBncmVlbikgaGFkIGEgc2lnbmlmaWNhbnRseSBsb3dlciBudW1iZXIgb2YgYmlydGhzIHRoYW4gaXRzIHdlZWtkYXkgY291bnRlcnBhcnRzLiBXZSBtYWRlIDQgZ3JhcGhzIHNob3dpbmcgdGhlIHRvdGFsIGJpcnRocyBlYWNoIGRheSBpbiBKdW5lIG9mIDIwMDYsIEp1bHkgb2YgMjAwNywgQXVndXN0IG9mIDIwMDgsIGFuZCBOb3ZlbWJlciBvZiAyMDExLiBFYWNoIG1vbnRoIGRpc3BsYXllZCBzaG93cyBtb3N0bHkgMTIsMDAwKyBiaXJ0aHMgYSBkYXksIHdpdGggYSBmZXcgZGlwcyBiZWxvdyAxMCwwMDAuIFRoZSBtYWluIHBvaW50IG9mIHRoZXNlIGdyYXBocyB3ZXJlIHRvIGJlIGFibGUgdG8gdmlzdWFsaXplIHRoZXNlIGRhdGVzIGVhY2ggeWVhci4qCgpgYGB7cn0KVVNCaXJ0aHMkZGF5X29mX3dlZWsgPC0gZmFjdG9yKFVTQmlydGhzJGRheV9vZl93ZWVrLCBsZXZlbHMgPSBjKCJTdW4iLCAiTW9uIiwgIlR1ZXMiLCAiV2VkIiwgIlRodXJzIiwgIkZyaSIsICJTYXQiKSkKZ2dwbG90KFVTQmlydGhzLCBhZXMoZmlsbCA9IGRheV9vZl93ZWVrLCB5ID0gYmlydGhzLCB4ID0gZGF5X29mX3dlZWspKSArCiAgZ2VvbV9iYXIoc3RhdCA9ICJpZGVudGl0eSIpICsKICBsYWJzKHggPSAiRGF5IG9mIHRoZSBXZWVrIiwgCiAgICAgICB5ID0gIk51bWJlciBvZiBCaXJ0aHMiLAogICAgICAgdGl0bGUgPSAiRGF5cyBvZiB0aGUgV2VlayB2cy4gQmlydGhzIikgKwogIHNjYWxlX3lfY29udGludW91cyhsYWJlbHMgPSBzY2FsZXM6OmNvbW1hKQpgYGAKPiBJbiB0aGlzIGRpc3BsYXksIHdlIHNlZSBhIHN0YXJrIGRpZmZlcmVuY2UgaW4gbnVtYmVyIG9mIGJpcnRocyBiZXR3ZWVuIHdlZWtkYXlzIGFuZCB3ZWVrZW5kcy4gQ2xlYXJseSBzaG93biBpbiB0aGUgaGVpZ2h0IG9mIHRoZSB3ZWVrZW5kcyBiZWluZyBzaWduaWZpY2FudGx5IHNob3J0ZXIgaW4gdGhlaXIgY29sbGVjdGl2ZSBudW1iZXIgb2YgYmlydGhzIHRoYW4gdGhlIHdlZWtkYXlzLiBXZSBjYW4gYWxzbyBzZWUgdGhhdCBXZWRuZXNkYXkgaGFzIHRoZSBtb3N0IGNvbGxlY3RpdmUgYmlydGhzIGluIGEgZGF5IGNvbXBhcmVkIHRvIHRoZSBvdGhlciBkYXlzIG9mIHRoZSB3ZWVrLiBXZSBhbHNvIHRha2Ugbm90ZSBvZiB0aGUgZGlzdHJpYnV0aW9uIGZvcm1lZCBieSB0aGUgdG90YWwgYmlydGhzLCByaXNpbmcgYXMgYSB3ZWVrIGhlYWRzIHRvIGl0cyBjZW50ZXIsIGFuZCBjb21pbmcgZG93biBhcyBpdCBnZXRzIGNsb3NlciB0byB0aGUgZW5kIG9mIGEgd2Vlay4gV2hlbiB3ZSBsb29rIGF0IHRoZSBncmFwaCBiZWxvdywgdGhlcmUgaXMgYW4gZXhhbXBsZSB0aGF0IGNvb3JhbGF0ZXMgdGhlIGRheSBvZiB3ZWVrIHdpdGggdGhlIGFtb3VudCBvZiBiaXJ0aHMgb24gdGhhdCBkYXkuCgoKYGBge3J9CmdncGxvdChqdW4wNiwgYWVzKGNvbG9yID0gZGF5X29mX3dlZWssIHggPSBiaXJ0aHMsIHkgPSBkYXRlKSkgKwpnZW9tX3BvaW50KHNpemUgPSAzKSArCmxhYnMoeCA9ICJOdW1iZXIgb2YgQmlydGhzIiwKeSA9ICJEYXRlIiwKdGl0bGUgPSAiVVMgQmlydGhzIG9uIDA2LTA2LTA2IikKYGBgCj4gV2UgY3JlYXRlZCBhIHNjYXR0ZXIgcGxvdCBmb3IgdGhlIG1vbnRoIG9mIEp1bmUgaW4gMjAwNiBhbmQgcGxvdHRlZCBlYWNoIGRheSBpbiB0aGF0IG1vbnRoLiBXZSBsb29rIGF0IHRoZSBzcGVjaWZpYyBkYXRlIG9mIEp1bmUgNnRoLCBjb21wYXJlZCB0byB0aGUgcmVzdCBvZiB0aGUgbW9udGguIEp1bmUgNiwgMjAwNiBpcyB1c3VhbGx5IHdyaXR0ZW4gYXMgYDA2LTA2LTA2YC4gNjY2IGlzIGFsc28gdXN1YWxseSBhIHN1cGVyc3RpdG91cyBudW1iZXIgYW5kIGFsdGhvdWdoIGl0IGRpZG50IGhhdmUgdGhlIGxvd2VzdCBudW1iZXIgb2YgYmlydGhzLCB5b3UgY291bGQgc2VlIHRoYXQgaXQgZGlkbnQgaGF2ZSB0aGUgaGlnaGVzdCBudW1iZXIgb2YgYmlydGhzIGVpdGhlciAoY29tcGFyZWQgdG8gdGhlIG90aGVyIG1vbnRocyBhbmQgeWVhcnMgd2l0aCBzaWduaWNhbnRseSBudW1iZXJlZCBkYXRlcykuCgpgYGB7cn0KZ2dwbG90KGp1bDA3LCBhZXMoY29sb3IgPSBkYXlfb2Zfd2VlaywgeCA9IGJpcnRocywgeSA9IGRhdGUpKSArCmdlb21fcG9pbnQoc2l6ZSA9IDMpICsKbGFicyh4ID0gIk51bWJlciBvZiBCaXJ0aHMiLAogICAgIHkgPSAiRGF0ZSIsCiAgICAgdGl0bGUgPSAiVVMgQmlydGhzIG9uIDA3LTA3LTA3IikKYGBgCj4gV2UgdGhlbiB0b29rIGEgbG9vayBhdCBKdWx5IGluIHRoZSB5ZWFyIDIwMDcuIFdpdGggYWxsIHRoZSBkYXlzIGRpc3BsYXllZCBpbiB0aGF0IG1vbnRoLCB5ZXQgYWdhaW4gd2Ugc2VlIHRoYXQgYDA3LTA3LTA3YCB3YXMgcmlnaHQgaW4gdGhlIG1pZGRsZSBza2V3aW5nIG1vcmUgdG93YXJkcyB0aGUgbG93ZXIgZW5kIG9mIHRvdGFsIGJpcnRocyBmb3IgZWFjaCBkYXkgb2YgdGhhdCBtb250aC4gSWYgd2UgY29tcGFyZWQgdGhpcyBKdWx5IHNjYXR0ZXIgcGxvdCB0byB0aGUgcmVzdCBvZiB0aGUgY29vbCBkYXRlcywgeW91IHdvdWxkIHRoaW5rIGl0IHdvdWxkIGFsc28gYmUgdGhlIGRhdGUgd2l0aCB0aGUgaGlnaGVzdCBiaXJ0aHMgYnV0IEp1bHkgN3RoLCAyMDA3IGFjdHVhbGx5IGZlbGwgb24gYSBTYXR1cmRheS4gVGhpcyBjb3VsZCBleHBsYWluIHdoeSBpdCB3YXMgb24gdGhlIGxvd2VyIGVuZCwgYnV0IGl0IHN0aWxsIHNrZXdlZCB0b3dhcmRzIHRoZSByaWdodCwgcGVvcGxlIHdvdWxkIHN0aWxsIHJhdGhlciBnaXZlIGJpcnRoIG9uIGEgd2Vla2RheSwgYnV0IHNpbmNlIGl0IHdhcyBhIGNvb2wgZGF5IHdlIHNhdyBhIHNwaWtlIGluIGJpcnRocy4KCmBgYHtyfQpnZ3Bsb3QoYXVnMDgsIGFlcyhjb2xvciA9IGRheV9vZl93ZWVrLCB4ID0gYmlydGhzLCB5ID0gZGF0ZSkpICsKZ2VvbV9wb2ludChzaXplID0gMykgKwpsYWJzKHggPSAiTnVtYmVyIG9mIEJpcnRocyIsCnkgPSAiRGF0ZSIsCnRpdGxlID0gIlVTIEJpcnRocyBvbiAwOC0wOC0wOCIpCmBgYAo+ICBXZSB0aGVuIHJlcGVhdGVkIHRoZSBzYW1lIHByb2Nlc3MgZm9yIEF1Z3VzdCA4dGgsIDIwMDggYDA4LTA4LTA4YC4gQXMgeW91IGNhbiBzZWUgaW4gdGhlIHNjYXR0ZXJwbG90LCBpdCB3YXMgdGhlIGRheSB3aXRoIHRoZSBtb3N0IGFtb3VudCBvZiBiaXJ0aHMuCiAKYGBge3J9CmdncGxvdChub3YxMSwgYWVzKGNvbG9yID0gZGF5X29mX3dlZWssIHggPSBiaXJ0aHMsIHkgPSBkYXRlKSkgKwpnZW9tX3BvaW50KHNpemUgPSAzKSArCmxhYnMoeCA9ICJOdW1iZXIgb2YgQmlydGhzIiwKeSA9ICJEYXRlIiwKdGl0bGUgPSAiVVMgQmlydGhzIG9uIDExLTExLTExIikKYGBgCj4gV2UgZGlkIHRoZSBzYW1lIHRoaW5nIHdpdGggTm92ZW1iZXIgMTEsIDIwMTEgYDExLTExLTExYCBhbmQgd2Ugc2VlIHRoYXQgeWV0IGFnYWluLCBpdCB3YXMgdGhlIGRheSB3aXRoIHRoZSBtb3N0IGFtb3VudCBvZiBiaXJ0aHMgaW4gTm92ZW1iZXIuCgo8YnI+CgojIENvbmNsdXNpb24KCiAgSW4gdGhlIFVTLCB0aGUgYW1vdW50IG9mIG5ldyBib3JuIGluZmFudHMgYm9ybiBpcyBwcmV0dHkgbGFyZ2UsIGJ1dCByZWxhdGl2ZWx5IHN0YWduYW50LiBUaGVyZSBjb3VsZCBvbmx5IGJlIHNvIG11Y2ggcGxhbm5pbmcgYW5kIHNjaGVkdWxpbmcgd2hlbiBoYXZpbmcgYSBiYWJ5IGJ1dCB3ZSBkZWNpZGVkIHRvIGxvb2sgYXQgdGhpcyBkYXRhc2V0IHRvIHJlYWxseSBkZXRlcm1pbmUgaWYgdGhlcmUgd2VyZSBhbnkgcGF0dGVybnMgaW4gdGhlIGFtb3VudCBvZiBiaXJ0aHMuIFRoaXMgZGF0YXNldCBpbmNsdWRlZCBiaXJ0aHMgZnJvbSBldmVyeSBkYXkgc3RhcnRpbmcgZnJvbSBKYW51YXJ5IDFzdCwgMjAwMCBhbGwgdGhlIHdheSB1bnRpbCBEZWNlbWJlciAzMXN0LCAyMDE0LgogIAogIFdlIGZpcnN0IHN0YXJ0ZWQgYnkgbG9va2luZyBhdCB0aGUgdG90YWwgYW1vdW50IG9mIGJpcnRocyBlYWNoIHllYXIuIEJhc2VkIG9uIHRoYXQgZGF0YSwgdGhlIG9ubHkgdGhpbmcgd2UgcmVhbGx5IHNhdyB3YXMgdGhhdCAyMDA5IGhhZCB0aGUgaGlnaGVzdCB0b3RhbCBhbW91bnQgb2YgYmlydGhzIGFuZCAyMDEzIGhhZCB0aGUgbG93ZXN0IHRvdGFsIGFtb3VudCBvZiBiaXJ0aHMuIE1hbnkgcGVvcGxlIGhhdmUgc2FpZCB0aGF0IHRoZXJlIHdhcyBzdWNoIGEgZGVjbGluZSBpbiAyMDEzIGJlY2F1c2UgcGVvcGxlIGZlbHQgdGhlIGVmZmVjdHMgb2YgdGhlIHJlY2Vzc2lvbi4gQ2hpbGRyZW4gYXJlIHRoZSBoaWdoZXN0IGV4cGVuc2UgYSBmYW1pbHkgY2FuIGhhdmUgYW5kIHRoZXJlZm9yZSwgZmFtaWxpZXMgZGlkIG5vdCBmZWVsIGFzIHRoZXkgY291bGQgYWZmb3JkIGl0IGFmdGVyIHNvbWV0aGluZyBhcyBiaWcgYXMgVGhlIEdyZWF0IFJlY2Vzc2lvbiBoYXBwZW5lZCBhbmQgbWFueSBwZW9wbGUgbG9zdCB0aGVpciBqb2JzLiBUaGF0IGNvdWxkIHJlYWxseSBleHBsYWluIHRoZSBkZWNsaW5lLiBXZSBkbyBub3QgaGF2ZSBtb3JlIGRhdGEgYWZ0ZXIgMjAxNCBhbmQgd2UgY2Fubm90IHJlYWxseSBzZWUgaWYgdGhlIGFtb3VudCBvZiBiaXJ0aHMgd2VyZSByaXNpbmcgZm9yIGEgZmV3IHllYXJzIGFmdGVyIHRoZSByZWNlc3Npb24sIGJ1dCB3ZSBrbm93IHRoYXQgbWFueSBmYWN0b3JzIGNhbiBoYXZlIGFuIGVmZmVjdCBvbiBoYXZpbmcgY2hpbGRyZW4uIFdlIGFsc28gY2Fubm90IGd1YXJhbnRlZSB0aGF0IHRoZSByZWNlc3Npb24gd2FzIHRoZSBvbmx5IGZhY3RvciBpbiB0aGUgZGVjbGluZSBvZiBiaXJ0aHMgaW4gMjAxMy4KICAKICBUaGUgbmV4dCB0aGluZyB3ZSBleHBsb3JlZCB3YXMgdGhlIGF2ZXJhZ2UgYmlydGhzIHBlciBkYXRlLiBUaGlzIHdhcyBvdXIgYnJlYWt0aHJvdWdoIG1vbWVudCB3aXRoIHRoZSBkYXRhLiBCeSBkb2luZyB0aGlzIGRhdGEgbWluaW5nIGFuYWx5c2lzLCB3ZSB3ZXJlIGFibGUgdG8gdmlzdWFsaXplIHRoZSBvdXRsaWVycyBvZiB0aGlzIGRhdGFzZXQuIFdlIHRvb2sgdGhlIGF2ZXJhZ2UgYmlydGhzIGVhY2ggZGF5LCBvZiBlYWNoIHllYXIgYW5kIGNvbWJpbmVkIHRoZW0gYW5kIHRoZW4gcGxvdHRlZCBpdCBpbnRvIGEgc2NhdHRlciBwbG90LiBBcyBtZW50aW9uZWQgaW4gdGhlIHByZXZpb3VzIHNlY3Rpb24sIHdlIHdlcmUgYWJsZSB0byBzZWUgdGhhdCB0aGUgbG93ZXN0IGF2ZXJhZ2Ugb2YgYmlydGhzIG9uIGEgc3BlY2lmaWMgZGF0ZSB3YXMgdGhlIGRhdGVzIGJlZm9yZSBhbmQgYWZ0ZXIgbWFqb3IgaG9saWRheXMuIEhvbGlkYXlzIGFyZSBhIHN0cmVzc2Z1bCB0aW1lIGZvciBmYW1pbGllcywgYW5kIHBlb3BsZSB3YW50IHRvIHNwZW5kIHRoYXQgdGltZSB3aXRoIHRoZWlyIGZhbWlsaWVzIChub3QgZ2l2aW5nIGJpcnRoIGluIGEgaG9zcGl0YWwpLiBBZ2FpbiwgdGhlcmUgaXMgb25seSBzbyBtdWNoIHBsYW5uaW5nIGFuIGV4cGVjdGluZyBmYW1pbHkgY2FuIGRvIGJlZm9yZSBnaXZpbmcgYmlydGgsIGJ1dCB0aHJvdWdoIHRoZSB2aXN1YWxpemF0aW9uIHJlc3VsdHMsIHdlIGNvdWxkIHNlZSB0aGF0IGJlZm9yZSBhbmQgYWZ0ZXIgbWFqb3IgaG9saWRheXMgdGhlcmUgd2VyZSByZWxhdGl2ZWx5IGxvdyBiaXJ0aHMuCgogIFdlIHRoZW4gZGlkIGFuIGFuYWx5c2lzIHRvIHNlZSB3aGljaCBkYXkgb2YgdGhlIHdlZWsgd2FzIGxlYXN0IGFuZCBtb3N0IHBvcHVsYXIgdG8gZ2l2ZSBiaXJ0aCBvbi4gQXMgYSByZXN1bHQsIHdlIHNhdyB0aGF0IFNhdHVyZGF5IGFuZCBTdW5kYXkgaGFkIHRoZSBsZWFzdCBhdmVyYWdlIGFtb3VudCBvZiBiaXJ0aHMuIFdlIGV2ZW4gc2F3IHRoYXQgYSBiaXJ0aCBkYXRlIG9mIGAwNy0wNy0wN2AgKHdoaWNoIGlzIGV2ZXJ5b25lJ3MgbHVja3kgbnVtYmVyKSBzdGlsbCBoYWQgYSBwcmV0dHkgbG93IGFtb3VudCBvZiBiaXJ0aHMgYmVjYXVzZSBpdCB3YXMgb24gYSBTYXR1cmRheS4gVGhpcyB0aGVuIGxlZCB1cyB0byBleHBsb3JlIG91ciBmaW5hbCBhbmFseXNpcy4gV2UgbG9va2VkIGF0IHRoZSBiaXJ0aHMgb24gc3BlY2lhbGx5IG51bWJlcmVkIGRheXMgb2Ygc3BlY2lmaWMgeWVhcnMsIGxpa2UgYDA2LTA2LTA2YCwgYDA3LTA3LTA3YCwgYDA4LTA4LTA4YCwgYW5kIGAxMS0xMS0xMWAuIFRoaXMgd2FzIGp1c3QgYSBzYW1wbGUgb2YgdGhvc2UgZGF5cyBpbiByYW5nZSBvZiB5ZWFycyBpbiBvdXIgZGF0YS4gVGhlIHJlc3VsdHMgc2hvd2VkIHRoYXQgdGhlc2UgZGF0ZXMgd2VyZSBzaWduaWZpY2FudCBkYXlzIHRvIGdpdmUgYmlydGggb24uIEFsdGhvdWdoIHRoZXJlIGlzIG5vdCBhIHNvbGlkIHJlYXNvbiB3aHkgd2Vla2VuZHMgYXJlIG5vdCBhIHBvcHVsYXIgdGltZSB0byBnaXZlIGJpcnRoLCB3ZSBjYW4gdGFrZSBpbnRvIGNvbnNpZGVyYXRpb24gdGhhdCBob3NwaXRhbHMgbWlnaHQgbm90IGJlIGZ1bGx5IHN0YWZmZWQgb24gd2Vla2VuZHMsIHBlb3BsZSB0YWtlIHZhY2F0aW9ucyBvbiB0aGUgd2Vla2VuZCwgb3IgYmVjYXVzZSBwcmVnbmFudCB3b21hbiBqdXN0IHdhbnQgZXh0cmEgZGF5cyBvZmYgd29yayBhbmQgdGhlcmVmb3JlIGNob29zZSB0aGF0IHRoZXkgd2FudCB0byBnaXZlIGJpcnRoIGluIHRoZSBtaWRkbGUgb2YgdGhlIHdlZWsuIFRoaXMgbGFzdCBhbmFseXNpcyByZWFsbHkgc2hvd2VkIHRoYXQgYWx0aG91Z2ggdGhlIGRhdGUgb2YgYmlydGggZG9lcyBub3QgaGF2ZSBhIGh1Z2UgZWZmZWN0IG9uIHRoZSBhbW91bnQgb2YgYmlydGhzLCB0aGUgZGF5IG9mIHRoZSB3ZWVrIHRoZSBiYWJ5IGlzIGJvcm4gaGFzIGEgaHVnZSBjb3JyZWxhdGlvbiB0byB0aGUgYW1vdW50IG9mIGJpcnRocy4KICAKICBBZ2FpbiwgYWx0aG91Z2ggZXhwZWN0aW5nIGZhbWlsaWVzIGNhbiBwbGFuIGFzIG11Y2ggYXMgcG9zc2libGUsIHRoZXJlIGFyZSBtYW55IGZhY3RvcnMgdGhhdCBjYW4gYWZmZWN0IHdoZW4gYSBiYWJ5IGlzIGJyb3VnaHQgaW50byB0aGlzIHdvcmxkLiBGaW5hbmNpYWwgaGFyZHNoaXBzLCB3ZWVrZW5kcywgb3IgaG9saWRheXMgYXJlIHNvbWUgb2YgdGhlIGZhY3RvcnMgdGhlIGJyaW5nIGJpcnRocyBkb3duLiBTaWduaWNhdGxseSBudW1iZXJlZCBkYXlzLCBtaWRkbGUgb2YgdGhlIHdlZWssIGFuZCBoaWdoZXIgZWNvbm9teSBhcmUgc29tZSBvZiB0aGUgZmFjdG9ycyB0aGF0IGJyaW5nIGJpcnRocyB1cC4KPT09PT09PQo+Pj4+Pj4+IDdlYThiOTZhNjFiOWRjNGYxNjk3NTY3NDg3NWYyMjYxZmU0ZjU0MzcK</div>
+<div id="rmd-source-code">LS0tCnRpdGxlOiAiRGF0YSBNaW5pbmcgYW5kIFRleHQgTWluaW5nIC0gRmluYWwgUHJvamVjdCIKYXV0aG9yOiAiS3lsZSBEZWFuLCBLYWl0bHluIFNjaGVwcGEsIE9yZWwgWW9zaGlhIgpvdXRwdXQ6IAogIGh0bWxfbm90ZWJvb2s6CiAgICB0b2M6IFRSVUUKICAgIHRvY19mbG9hdDogVFJVRQogICAgdG9jX2RlcHRoOiA0CiAgICBudW1iZXJfc2VjdGlvbnM6IFRSVUUKICAgIHRoZW1lOiB1bml0ZWQKLS0tCgpgYGB7ciwgbWVzc2FnZT1GQUxTRX0KbGlicmFyeSh0aWR5dmVyc2UpCmxpYnJhcnkoZHBseXIpCmxpYnJhcnkoZGJzY2FuKQpsaWJyYXJ5KGdncGxvdDIpCmBgYAoKPGJyPgoKIyMgT3VyIERhdGFzZXQKYGBge3J9ClVTQmlydGhzIDwtIHJlYWQuY3N2KCJodHRwczovL3Jhdy5naXRodWJ1c2VyY29udGVudC5jb20vcmVpc2FuYXIvZGF0YXNldHMvbWFzdGVyL3VzX2JpcnRoc18wMF8xNC5jc3YiKQpgYGAKCjxicj4KCiMgSW50cm9kdWN0aW9uCgogIFRoZSBnb2FsIG9mIG91ciBwcm9qZWN0IGlzIHRvIGV4cGxvcmUgdGhlIGJpcnRocmF0ZXMgd2l0aGluIHRoZSBVUyBhbmQgaWRlbnRpZnkgYW5vbWFsb3VzIGNoYXJhY3RlcmlzdGljcyBhbmQgdG8gZmluZCB0aGUgbW9zdCBwb3B1bGFyIHRpbWVzIGF0IHdoaWNoIGEgY2hpbGQgaXMgYm9ybi4gSW4gdGhpcyBwcm9qZWN0LCB3ZSB1c2UgdGhlIGB1c19iaXJ0aF8wMF8xNGAgZGF0YXNldCwgd2hpY2ggaXMgYSBjb2xsZWN0aW9uIG9mIHRoZSBudW1iZXIgb2YgYmlydGhzIGZyb20gSmFudWFyeSAxc3QgMjAwMCB0byBEZWNlbWJlciAzMXN0IDIwMTQuIE91ciBpbml0aWFsIGludGVudGlvbnMgd2l0aCB0aGlzIGRhdGFzZXQgd2VyZSB0byBhbmFseXplLCBpZiAic3BlY2lhbCBvY2Nhc2lvbiIgYmFiaWVzIHdlcmUgcmVhbGx5IGEgdGhpbmcuIEhvd2V2ZXIgd2UgcmVhbGl6ZSB0aGF0IGV4cGVjdGluZyBmYW1pbGllcyBjYW4gcGxhbiBhcyBtdWNoIGFzIHBvc3NpYmxlLCB0aGVyZSBhcmUgbWFueSBmYWN0b3JzIHRoYXQgY2FuIGFmZmVjdCB3aGVuIGEgYmFieSBpcyBicm91Z2h0IGludG8gdGhpcyB3b3JsZC4gCgo8YnI+CgojIERhdGEgRXhwbG9yYXRpb24KCmBgYHtyfQpoZWFkKFVTQmlydGhzKQpgYGAKPiBQcmVzZW50ZWQgaXMgdGhlIGZpcnN0IDYgZW50cmllcyBvZiB0aGUgZGF0YXNldC4gSXQgaW5jbHVkZXMgdGhlIGB5ZWFyYCwgYG1vbnRoYCwgYGRhdGVfb2ZfbW9udGhgLCBgZGF0ZWAsYGRheV9vZl93ZWVrYCwgYW5kIGBiaXJ0aHNgIHJlY29yZGVkIGluIHRoZSBVUy4KCmBgYHtyfQojIHRoaXMgZGF0YSBmcmFtZSB3YXMgdXNlZCBhbGwgdGhyb3VnaG91dCBvdXQgYW5hbHlzaXMKVVNCaXJ0aHMgJT4lIAogIGdyb3VwX2J5KGRheV9vZl93ZWVrKSAlPiUgCiAgc3VtbWFyaXNlKFN1bV9vZl9CaXJ0aHMgPSBzdW0oYmlydGhzKSkKYGBgCj4gVGhlIGZpbmFsIHRoaW5nIHdlIHdhbnRlZCB0byBleHBsb3JlIHdhcyB0aGUgdG90YWwgc3VtIG9mIGJpcnRocyBmb3IgZWFjaCBkYXkgb2YgdGhlIHdlZWsgdGhyb3VnaCB0aGUgMTUgeWVhcnMgcmVjb3JkZWQuIFdlIHdhbnRlZCB0byBzZWUgaWYgYW55IGRheSBvZiB0aGUgd2VlayB3YXMgbW9yZSBwb3B1bGFyLiBJbiBvdXIgZGF0YSBhbmFseXNpcywgd2UgY2FuIHNlZSB0aGUgcmVzdWx0cyBpbiBhIGJhciBncmFwaC4KCjxicj4KCiMjIEV4cGxvcmF0aW9uIGZvciBCaXJ0aHMgcGVyIFllYXIKCmBgYHtyLCBtZXNzYWdlPUZBTFNFfQpicHkgPC0gVVNCaXJ0aHMgJT4lIAogIGdyb3VwX2J5KHllYXIpICU+JSAKICBzdW1tYXJpc2UodG90YWxCUFkgPSBzdW0oYmlydGhzKSkKCmJweQpgYGAKPiBUaGUgbnVtYmVyIGxpc3RlZCBhYm92ZSBpbiBgdG90YWxCUFlgIHJlcHJlc2VudCB0aGUgdG90YWwgYmlydGhzIHBlciB5ZWFyIGZyb20gMjAwMCB0byAyMDE0LiBXZSB1c2UgdGhpcyBkYXRhIGZyYW1lIHRvIHRvIHZpZXcgdGhlIGhpZ2hlc3QgYW5kIGxvd2VzdCB0b3RhbCBiaXJ0aHMgZm9yIGVhY2ggeWVhci4KCjxicj4KCiMjIEV4cGxvcmF0aW9uIGZvciBCaXJ0aHMgcGVyIERheQpgYGB7cn0KVVNCaXJ0aHMkbW1kZCA9IHBhc3RlKFVTQmlydGhzJG1vbnRoLCBVU0JpcnRocyRkYXRlX29mX21vbnRoKQpVU0JpcnRocwpgYGAKPiBUaGlzIG5ldyBhdHRyaWJ1dGUgYG1tZGRgIHJlcHJlc2VudHMgYSBjb21iaW5hdGlvbiBvZiBtb250aCBhbmQgZGF5LiBXZSB1c2UgdGhpcyB0b29sIHRvIGhlbHAgdXMgd2l0aCBvdXIgZGF0YSBtaW5pbmcgcG9ydGlvbi4KCgpgYGB7ciwgbWVzc2FnZT1GQUxTRX0KYXZlcmFnZUJQRCA8LSBVU0JpcnRocyAlPiUgCiAgZ3JvdXBfYnkobW1kZCA9IHN1YnN0cihtbWRkLCAxLCAzMSkpICU+JSAKICBzdW1tYXJpc2UoYmlydGhzID0gc3VtKGJpcnRocykvMTUpICU+JQogIGFycmFuZ2UoZGVzYyhiaXJ0aHMpKSAlPiUKICB1bmdyb3VwKCkgCmF2ZXJhZ2VCUEQKYGBgCmBgYHtyfQpoZWFkKGF2ZXJhZ2VCUEQpCmBgYApgYGB7cn0KdGFpbChhdmVyYWdlQlBELCAxMykKYGBgCgo+IFRoaXMgc3VtbWFyeSBzaG93cyB3aGF0IHRoZSBhdmVyYWdlIG51bWJlciBvZiBiaXJ0aHMgd2FzIG9uIGV2ZXJ5IGRhdGUgZHVyaW5nIHRoYXQgeWVhci4gSGVyZSwgd2UgY2FuIHNlZSB0aGF0IFNlcHRlbWJlciAxMnRoIGhhcyBhbiBhdmVyYWdlIG9mIDEyNzM0LjkzMyBiaXJ0aHMgb3ZlciB0aGVzZSAxNSB5ZWFycywgbWFraW5nIHRoaXMgZGF5IHRoZSBoaWdoZXN0IGF2ZXJhZ2UgYmlydGhzIGluIHRoZSBVUy4gV2UgYWxzbyBzZWUgdGhhdCBGZWJydWFyeSAyOXRoIGF2ZXJhZ2VkIHRoZSBsb3dlc3QgYmlydGhzLiBUaGlzIG1ha2VzIHNlbnNlIGJlY2F1c2UgRmVicnVhcnkgMjl0aCBpcyBhIGxlYXAgeWVhciBkYXRlIGFuZCBvbmx5IGhhcHBlbmVkIDQgdGltZXMgaW4gb3VyIHJhbmdlIGZyb20gMjAwMCB0byAyMDE0ICgyMDAwLCAyMDA0LCAyMDA4LCAyMDEyKS4gV2UgY2FuIGFsc28gc2VlIHRoYXQgdGhlIGxvd2VzdCBkYXlzIGFyZSBhcm91bmQgaG9saWRheSB0aW1lLiBXZSBtZW50aW9uIHRoaXMgcGFydCBpbiB0aGUgbmV4dCBzZWN0aW9uIGFzIHdlbGwuCgo8YnI+CgojIyBFeHBsb3JhdGlvbiBmb3IgRGF5cyBvZiB0aGUgV2VlawoKYGBge3J9Cmp1bjA2IDwtIFVTQmlydGhzICU+JSAKICBmaWx0ZXIoeWVhciA9PSAyMDA2KSAlPiUgCiAgZmlsdGVyKG1vbnRoID09IDA2KQpqdW4wNgpgYGAKCmBgYHtyfQpqdWwwNyA8LSBVU0JpcnRocyAlPiUgCiAgZmlsdGVyKHllYXIgPT0gMjAwNykgJT4lIAogIGZpbHRlcihtb250aCA9PSAwNykKanVsMDcKYGBgCgpgYGB7cn0KYXVnMDggPC0gVVNCaXJ0aHMgJT4lIAogIGZpbHRlcih5ZWFyID09IDIwMDgpICU+JSAKICBmaWx0ZXIobW9udGggPT0gMDgpCmF1ZzA4CmBgYAoKYGBge3J9Cm5vdjExIDwtIFVTQmlydGhzICU+JSAKICBmaWx0ZXIoeWVhciA9PSAyMDExKSAlPiUgCiAgZmlsdGVyKG1vbnRoID09IDExKQpub3YxMQpgYGAKPiBJbiB0aGVzZSA0IGNodW5rcyBvZiBjb2RlIHdlIGNyZWF0ZWQgZGF0YSBmcmFtZXMgZm9yIGEgc3BlY2lmaWMgbW9udGggdGhhdCB3ZSB3YW50ZWQgdG8gZXhwbG9yZS4gT3VyIGludGVudGlvbnMgd2VyZSB0byBzZWUgaWYgYSBjb29sIGRhdGUgbGlrZSBgMDYtMDYtMDZgIG9yIGAxMS0xMS0xMWAgaGFkIGFueSBzcGlrZXMgaW4gYmlydGggb24gdGhhdCBnaXZlbiBkYXRlLiBJbiB0aGUgRGF0YSBBbmFseXNpcyBzZWN0aW9uLCB3ZSBzZWUgdGhlIGdyYXBocyB0aGF0IGRpc3BsYXkgdGhlIHJlc3VsdHMuCgoKPGJyPgoKIyBEYXRhIEFuYWx5c2lzCgo8YnI+Cjxicj4KCiMjIEFuYWx5c2lzIGJhc2VkIG9uIEJpcnRocyBwZXIgWWVhcgoKCmBgYHtyfQpib3hwbG90KFVTQmlydGhzJGJpcnRocyAgfiBVU0JpcnRocyR5ZWFyLCAKICAgICAgICBtYWluPSJCaXJ0aHMgYnkgWWVhciIsIHlsYWIgPSAiTnVtYmVyIiwgeGxhYiA9ICJZZWFyIikKYGBgCj4gVGhpcyBpcyBhIGJveHBsb3Qgc2hvd2luZyB0aGUgdG90YWwgbnVtYmVyIG9mIGJpcnRocyBmcm9tIGVhY2ggeWVhciBmcm9tIHRoZSB5ZWFyIDIwMDAgdG8gMjAxNC4gVGhlIGRpZmZlcmVuY2UgYmV0d2VlbiB0aGUgZmlyc3QgaW50ZXJxdWFydGlsZSBhbmQgc2Vjb25kIGlzIHF1aXRlIGxhcmdlIGNvbXBhcmVkIHRvIHRoZSBzZWNvbmQgYW5kIHRoaXJkLiBXZSBhbHNvIG5vdGljZSB0aGF0IHRoZSBxdWFydGlsZXMgZG8gbm90IGNoYW5nZSB0aGF0IG11Y2ggb3ZlciB0aGUgeWVhcnMsIHdpdGgganVzdCBhIHNtYWxsIGluY3JlYXNlIGluIDIwMDUgdG8gMjAwNywgYW5kIHRoZW4gYSBkZWNyZWFzZSB0byB0aGUgb3JpZ2luYWwgc2Vjb25kIHF1YXJ0aWxlLiBBZGRpdGlvbmFsbHksIHdlIGFsc28gc2VlIHRoYXQgMjAwOSBoYWQgdGhlIGhpZ2hlc3QgdG90YWwgYmlydGhzLCB3aGVyZWFzIDIwMTMgaGFkIHRoZSBmZXdlc3QgdG90YWwgYmlydGhzIG92ZXJhbGwuCgo8YnI+CgojIyBBbmFseXNpcyBCYXNlZCBvbiBBdmVyYWdlIEJpcnRocyBwZXIgRGF5CgoKYGBge3J9CmdncGxvdCgpICsKZ2VvbV9wb2ludChhdmVyYWdlQlBELCBtYXBwaW5nID0gYWVzKHggPSBtbWRkLCB5ID0gYmlydGhzKSkgKwogIGxhYnMoeCA9ICJEYXkgb2YgdGhlIFllYXIiLCAKICAgICAgIHkgPSAiTnVtYmVyIG9mIEJpcnRocyIsIAogICAgICAgdGl0bGUgPSAiQXZlcmFnZSBCaXJ0aCBwZXIgRGF5IikKYGBgCj4gVGhpcyBpcyBhIHZpc3VhbGl6YXRpb24gb2YgdGhlIGF2ZXJhZ2UgYmlydGhzIHBlciBkYXRlLiBXZSB0b29rIGVhY2ggZGF0ZSBpbiBhIHllYXIgYW5kIGF2ZXJhZ2VkIGl0IGJldHdlZW4gdGhlIDE1IHllYXJzIGFuZCBjcmVhdGVkIGEgc2NhdHRlciBwbG90IGFib3ZlLiBBcyBzZWVuIG9uIHRoaXMgcGxvdCwgdGhlcmUgYXJlIDM2NiBwb2ludHMgb24gdGhpcyBncmFwaC4gRWFjaCBwb2ludCByZXByZXNlbnRzIHRoZSBhdmVyYWdlIG9mIGVhY2ggZGF0ZSBpbiBhIHllYXIuIFdoaWxlIG1vc3QgZGF0ZXMgaG92ZXIgYmV0d2VlbiAxMCwwMDAgYW5kIDEyLDUwMCwgdGhlcmUgYXJlIGEgZmV3IGRhdGVzIHdpdGggYW4gZXh0cmVtZWx5IGxvdyBhdmVyYWdlIG9mIGJpcnRocy4KCmBgYHtyfQpib3hwbG90LnN0YXRzKGF2ZXJhZ2VCUEQkYmlydGhzKSRvdXQKYGBgCj4gV2UgdGhlbiB3YW50ZWQgdG8gbGlzdCBvdXQgdGhlIHNwZWNpZmljIG51bWJlcnMgdGhhdCB3ZXJlIG91dGxpZXJzIGluIHRoaXMgZGF0YXNldCBzbyB3ZSB1c2VkICRvdXQuIElmIHlvdSByZWZlcmVuY2UgdGhlICdhdmVyYWdlQlBEJyBkYXRhIGZyYW1lIGluIHRoZSBkYXRhIGV4cGxvcmF0aW9uIHNlY3Rpb24sIHdlIGhhdmUgdGhlIGRhdGVzIGxpc3RlZCBpbiBkZXNjZW5kaW5nIG9yZGVyLiBXZSBjb3VsZCBzZWUgdGhhdCB0aGUgZGF0ZXMgbGlzdGVkIGFzIG91dGxpZXJzIHdlcmUgdXN1YWxseSB0aGUgZGF5cyByaWdodCBiZWZvcmUgb3IgcmlnaHQgYWZ0ZXIgaG9saWRheXMuIFRoaXMgd2FzIGVzcGVjaWFsbHkgdHJ1ZSBmb3IgdGhlIDR0aCBvZiBKdWx5LCBUaGFua3NnaXZpbmcsIENocmlzdG1hcywgYW5kIE5ldyBZZWFyJ3MuIFRoZSBsb3dlc3QgYXZlcmFnZSBCaXJ0aCBQZXIgRGF0ZSB3YXMgRmVicnVhcnkgMjl0aCwgd2hpY2ggYXMgbWVudGlvbmVkIHByZXZpb3VzbHkgaXMgYSBsZWFwIHllYXIgZGF0ZSwgYW5kIG9ubHkgb2NjdXJzIDQgdGltZXMgb3V0IG9mIHRoZSAxNSB5ZWFycyBwcmVzZW50ZWQgaW4gb3VyIGRhdGEgc2V0LgoKYGBge3J9CmJveHBsb3QoYXZlcmFnZUJQRCRiaXJ0aHMpCmBgYAo+IFRoaXMgaXMgeWV0IGFnYWluIGFub3RoZXIgdmlzdWFsaXphdGlvbiBvZiB0aGUgYXZlcmFnZSBudW1iZXIgb2YgYmlydGhzIGZvciBlYWNoIGRhdGUsIGJ1dCBkaXNwbGF5ZWQgaW4gYm94cGxvdCBmb3JtLiBUaGlzIHNob3dzIGEgc21hbGxlciBxdWFydGlsZSByYW5nZSB0aGFuIHRoZSB0b3RhbHMgZnJvbSB0aGUgb3JpZ2luYWwgVVMgQmlydGhzIGRhdGFzZXQsIGFuZCBzaG93cyBhIGZldyBvdXRsaWVycyBjcmVhdGluZyBhIGxhcmdlIGdhcCwgYWxsIGJlbG93IHRoZSBtaW5pbXVtLgoKPGJyPgoKIyMgQW5hbHlzaXMgQmFzZWQgb24gRGF5cyBvZiB0aGUgV2VlawoqV2l0aGluIHRoaXMgc2VjdGlvbiwgaXQgaXMgd29ydGggbm90aW5nIHRoYXQgd2Vla2VuZHMgKGNvbG9yZWQgaW4gYmx1ZSBhbmQgZ3JlZW4pIGhhZCBhIHNpZ25pZmljYW50bHkgbG93ZXIgbnVtYmVyIG9mIGJpcnRocyB0aGFuIGl0cyB3ZWVrZGF5IGNvdW50ZXJwYXJ0cy4gV2UgbWFkZSA0IGdyYXBocyBzaG93aW5nIHRoZSB0b3RhbCBiaXJ0aHMgZWFjaCBkYXkgaW4gSnVuZSBvZiAyMDA2LCBKdWx5IG9mIDIwMDcsIEF1Z3VzdCBvZiAyMDA4LCBhbmQgTm92ZW1iZXIgb2YgMjAxMS4gRWFjaCBtb250aCBkaXNwbGF5ZWQgc2hvd3MgbW9zdGx5IDEyLDAwMCsgYmlydGhzIGEgZGF5LCB3aXRoIGEgZmV3IGRpcHMgYmVsb3cgMTAsMDAwLiBUaGUgbWFpbiBwb2ludCBvZiB0aGVzZSBncmFwaHMgd2VyZSB0byBiZSBhYmxlIHRvIHZpc3VhbGl6ZSB0aGVzZSBkYXRlcyBlYWNoIHllYXIuKgoKYGBge3J9ClVTQmlydGhzJGRheV9vZl93ZWVrIDwtIGZhY3RvcihVU0JpcnRocyRkYXlfb2Zfd2VlaywgbGV2ZWxzID0gYygiU3VuIiwgIk1vbiIsICJUdWVzIiwgIldlZCIsICJUaHVycyIsICJGcmkiLCAiU2F0IikpCmdncGxvdChVU0JpcnRocywgYWVzKGZpbGwgPSBkYXlfb2Zfd2VlaywgeSA9IGJpcnRocywgeCA9IGRheV9vZl93ZWVrKSkgKwogIGdlb21fYmFyKHN0YXQgPSAiaWRlbnRpdHkiKSArCiAgbGFicyh4ID0gIkRheSBvZiB0aGUgV2VlayIsIAogICAgICAgeSA9ICJOdW1iZXIgb2YgQmlydGhzIiwKICAgICAgIHRpdGxlID0gIkRheXMgb2YgdGhlIFdlZWsgdnMuIEJpcnRocyIpICsKICBzY2FsZV95X2NvbnRpbnVvdXMobGFiZWxzID0gc2NhbGVzOjpjb21tYSkKYGBgCj4gSW4gdGhpcyBkaXNwbGF5LCB3ZSBzZWUgYSBzdGFyayBkaWZmZXJlbmNlIGluIG51bWJlciBvZiBiaXJ0aHMgYmV0d2VlbiB3ZWVrZGF5cyBhbmQgd2Vla2VuZHMuIENsZWFybHkgc2hvd24gaW4gdGhlIGhlaWdodCBvZiB0aGUgd2Vla2VuZHMgYmVpbmcgc2lnbmlmaWNhbnRseSBzaG9ydGVyIGluIHRoZWlyIGNvbGxlY3RpdmUgbnVtYmVyIG9mIGJpcnRocyB0aGFuIHRoZSB3ZWVrZGF5cy4gV2UgY2FuIGFsc28gc2VlIHRoYXQgV2VkbmVzZGF5IGhhcyB0aGUgbW9zdCBjb2xsZWN0aXZlIGJpcnRocyBpbiBhIGRheSBjb21wYXJlZCB0byB0aGUgb3RoZXIgZGF5cyBvZiB0aGUgd2Vlay4gV2UgYWxzbyB0YWtlIG5vdGUgb2YgdGhlIGRpc3RyaWJ1dGlvbiBmb3JtZWQgYnkgdGhlIHRvdGFsIGJpcnRocywgcmlzaW5nIGFzIGEgd2VlayBoZWFkcyB0byBpdHMgY2VudGVyLCBhbmQgY29taW5nIGRvd24gYXMgaXQgZ2V0cyBjbG9zZXIgdG8gdGhlIGVuZCBvZiBhIHdlZWsuIFdoZW4gd2UgbG9vayBhdCB0aGUgZ3JhcGggYmVsb3csIHRoZXJlIGlzIGFuIGV4YW1wbGUgdGhhdCBjb29yYWxhdGVzIHRoZSBkYXkgb2Ygd2VlayB3aXRoIHRoZSBhbW91bnQgb2YgYmlydGhzIG9uIHRoYXQgZGF5LgoKCmBgYHtyfQpnZ3Bsb3QoanVuMDYsIGFlcyhjb2xvciA9IGRheV9vZl93ZWVrLCB4ID0gYmlydGhzLCB5ID0gZGF0ZSkpICsKZ2VvbV9wb2ludChzaXplID0gMykgKwpsYWJzKHggPSAiTnVtYmVyIG9mIEJpcnRocyIsCnkgPSAiRGF0ZSIsCnRpdGxlID0gIlVTIEJpcnRocyBvbiAwNi0wNi0wNiIpCmBgYAo+IFdlIGNyZWF0ZWQgYSBzY2F0dGVyIHBsb3QgZm9yIHRoZSBtb250aCBvZiBKdW5lIGluIDIwMDYgYW5kIHBsb3R0ZWQgZWFjaCBkYXkgaW4gdGhhdCBtb250aC4gV2UgbG9vayBhdCB0aGUgc3BlY2lmaWMgZGF0ZSBvZiBKdW5lIDZ0aCwgY29tcGFyZWQgdG8gdGhlIHJlc3Qgb2YgdGhlIG1vbnRoLiBKdW5lIDYsIDIwMDYgaXMgdXN1YWxseSB3cml0dGVuIGFzIGAwNi0wNi0wNmAuIDY2NiBpcyBhbHNvIHVzdWFsbHkgYSBzdXBlcnN0aXRvdXMgbnVtYmVyIGFuZCBhbHRob3VnaCBpdCBkaWRudCBoYXZlIHRoZSBsb3dlc3QgbnVtYmVyIG9mIGJpcnRocywgeW91IGNvdWxkIHNlZSB0aGF0IGl0IGRpZG50IGhhdmUgdGhlIGhpZ2hlc3QgbnVtYmVyIG9mIGJpcnRocyBlaXRoZXIgKGNvbXBhcmVkIHRvIHRoZSBvdGhlciBtb250aHMgYW5kIHllYXJzIHdpdGggc2lnbmljYW50bHkgbnVtYmVyZWQgZGF0ZXMpLgoKYGBge3J9CmdncGxvdChqdWwwNywgYWVzKGNvbG9yID0gZGF5X29mX3dlZWssIHggPSBiaXJ0aHMsIHkgPSBkYXRlKSkgKwpnZW9tX3BvaW50KHNpemUgPSAzKSArCmxhYnMoeCA9ICJOdW1iZXIgb2YgQmlydGhzIiwKICAgICB5ID0gIkRhdGUiLAogICAgIHRpdGxlID0gIlVTIEJpcnRocyBvbiAwNy0wNy0wNyIpCmBgYAo+IFdlIHRoZW4gdG9vayBhIGxvb2sgYXQgSnVseSBpbiB0aGUgeWVhciAyMDA3LiBXaXRoIGFsbCB0aGUgZGF5cyBkaXNwbGF5ZWQgaW4gdGhhdCBtb250aCwgeWV0IGFnYWluIHdlIHNlZSB0aGF0IGAwNy0wNy0wN2Agd2FzIHJpZ2h0IGluIHRoZSBtaWRkbGUgc2tld2luZyBtb3JlIHRvd2FyZHMgdGhlIGxvd2VyIGVuZCBvZiB0b3RhbCBiaXJ0aHMgZm9yIGVhY2ggZGF5IG9mIHRoYXQgbW9udGguIElmIHdlIGNvbXBhcmVkIHRoaXMgSnVseSBzY2F0dGVyIHBsb3QgdG8gdGhlIHJlc3Qgb2YgdGhlIGNvb2wgZGF0ZXMsIHlvdSB3b3VsZCB0aGluayBpdCB3b3VsZCBhbHNvIGJlIHRoZSBkYXRlIHdpdGggdGhlIGhpZ2hlc3QgYmlydGhzIGJ1dCBKdWx5IDd0aCwgMjAwNyBhY3R1YWxseSBmZWxsIG9uIGEgU2F0dXJkYXkuIFRoaXMgY291bGQgZXhwbGFpbiB3aHkgaXQgd2FzIG9uIHRoZSBsb3dlciBlbmQsIGJ1dCBpdCBzdGlsbCBza2V3ZWQgdG93YXJkcyB0aGUgcmlnaHQsIHBlb3BsZSB3b3VsZCBzdGlsbCByYXRoZXIgZ2l2ZSBiaXJ0aCBvbiBhIHdlZWtkYXksIGJ1dCBzaW5jZSBpdCB3YXMgYSBjb29sIGRheSB3ZSBzYXcgYSBzcGlrZSBpbiBiaXJ0aHMuCgpgYGB7cn0KZ2dwbG90KGF1ZzA4LCBhZXMoY29sb3IgPSBkYXlfb2Zfd2VlaywgeCA9IGJpcnRocywgeSA9IGRhdGUpKSArCmdlb21fcG9pbnQoc2l6ZSA9IDMpICsKbGFicyh4ID0gIk51bWJlciBvZiBCaXJ0aHMiLAp5ID0gIkRhdGUiLAp0aXRsZSA9ICJVUyBCaXJ0aHMgb24gMDgtMDgtMDgiKQpgYGAKPiAgV2UgdGhlbiByZXBlYXRlZCB0aGUgc2FtZSBwcm9jZXNzIGZvciBBdWd1c3QgOHRoLCAyMDA4IGAwOC0wOC0wOGAuIEFzIHlvdSBjYW4gc2VlIGluIHRoZSBzY2F0dGVycGxvdCwgaXQgd2FzIHRoZSBkYXkgd2l0aCB0aGUgbW9zdCBhbW91bnQgb2YgYmlydGhzLgogCmBgYHtyfQpnZ3Bsb3Qobm92MTEsIGFlcyhjb2xvciA9IGRheV9vZl93ZWVrLCB4ID0gYmlydGhzLCB5ID0gZGF0ZSkpICsKZ2VvbV9wb2ludChzaXplID0gMykgKwpsYWJzKHggPSAiTnVtYmVyIG9mIEJpcnRocyIsCnkgPSAiRGF0ZSIsCnRpdGxlID0gIlVTIEJpcnRocyBvbiAxMS0xMS0xMSIpCmBgYAo+IFdlIGRpZCB0aGUgc2FtZSB0aGluZyB3aXRoIE5vdmVtYmVyIDExLCAyMDExIGAxMS0xMS0xMWAgYW5kIHdlIHNlZSB0aGF0IHlldCBhZ2FpbiwgaXQgd2FzIHRoZSBkYXkgd2l0aCB0aGUgbW9zdCBhbW91bnQgb2YgYmlydGhzIGluIE5vdmVtYmVyLgoKPGJyPgoKIyBDb25jbHVzaW9uCgogIEluIHRoZSBVUywgdGhlIGFtb3VudCBvZiBuZXcgYm9ybiBpbmZhbnRzIGJvcm4gaXMgcHJldHR5IGxhcmdlLCBidXQgcmVsYXRpdmVseSBzdGFnbmFudC4gVGhlcmUgY291bGQgb25seSBiZSBzbyBtdWNoIHBsYW5uaW5nIGFuZCBzY2hlZHVsaW5nIHdoZW4gaGF2aW5nIGEgYmFieSBidXQgd2UgZGVjaWRlZCB0byBsb29rIGF0IHRoaXMgZGF0YXNldCB0byByZWFsbHkgZGV0ZXJtaW5lIGlmIHRoZXJlIHdlcmUgYW55IHBhdHRlcm5zIGluIHRoZSBhbW91bnQgb2YgYmlydGhzLiBUaGlzIGRhdGFzZXQgaW5jbHVkZWQgYmlydGhzIGZyb20gZXZlcnkgZGF5IHN0YXJ0aW5nIGZyb20gSmFudWFyeSAxc3QsIDIwMDAgYWxsIHRoZSB3YXkgdW50aWwgRGVjZW1iZXIgMzFzdCwgMjAxNC4KICAKICBXZSBmaXJzdCBzdGFydGVkIGJ5IGxvb2tpbmcgYXQgdGhlIHRvdGFsIGFtb3VudCBvZiBiaXJ0aHMgZWFjaCB5ZWFyLiBCYXNlZCBvbiB0aGF0IGRhdGEsIHRoZSBvbmx5IHRoaW5nIHdlIHJlYWxseSBzYXcgd2FzIHRoYXQgMjAwOSBoYWQgdGhlIGhpZ2hlc3QgdG90YWwgYW1vdW50IG9mIGJpcnRocyBhbmQgMjAxMyBoYWQgdGhlIGxvd2VzdCB0b3RhbCBhbW91bnQgb2YgYmlydGhzLiBNYW55IHBlb3BsZSBoYXZlIHNhaWQgdGhhdCB0aGVyZSB3YXMgc3VjaCBhIGRlY2xpbmUgaW4gMjAxMyBiZWNhdXNlIHBlb3BsZSBmZWx0IHRoZSBlZmZlY3RzIG9mIHRoZSByZWNlc3Npb24uIENoaWxkcmVuIGFyZSB0aGUgaGlnaGVzdCBleHBlbnNlIGEgZmFtaWx5IGNhbiBoYXZlIGFuZCB0aGVyZWZvcmUsIGZhbWlsaWVzIGRpZCBub3QgZmVlbCBhcyB0aGV5IGNvdWxkIGFmZm9yZCBpdCBhZnRlciBzb21ldGhpbmcgYXMgYmlnIGFzIFRoZSBHcmVhdCBSZWNlc3Npb24gaGFwcGVuZWQgYW5kIG1hbnkgcGVvcGxlIGxvc3QgdGhlaXIgam9icy4gVGhhdCBjb3VsZCByZWFsbHkgZXhwbGFpbiB0aGUgZGVjbGluZS4gV2UgZG8gbm90IGhhdmUgbW9yZSBkYXRhIGFmdGVyIDIwMTQgYW5kIHdlIGNhbm5vdCByZWFsbHkgc2VlIGlmIHRoZSBhbW91bnQgb2YgYmlydGhzIHdlcmUgcmlzaW5nIGZvciBhIGZldyB5ZWFycyBhZnRlciB0aGUgcmVjZXNzaW9uLCBidXQgd2Uga25vdyB0aGF0IG1hbnkgZmFjdG9ycyBjYW4gaGF2ZSBhbiBlZmZlY3Qgb24gaGF2aW5nIGNoaWxkcmVuLiBXZSBhbHNvIGNhbm5vdCBndWFyYW50ZWUgdGhhdCB0aGUgcmVjZXNzaW9uIHdhcyB0aGUgb25seSBmYWN0b3IgaW4gdGhlIGRlY2xpbmUgb2YgYmlydGhzIGluIDIwMTMuCiAgCiAgVGhlIG5leHQgdGhpbmcgd2UgZXhwbG9yZWQgd2FzIHRoZSBhdmVyYWdlIGJpcnRocyBwZXIgZGF0ZS4gVGhpcyB3YXMgb3VyIGJyZWFrdGhyb3VnaCBtb21lbnQgd2l0aCB0aGUgZGF0YS4gQnkgZG9pbmcgdGhpcyBkYXRhIG1pbmluZyBhbmFseXNpcywgd2Ugd2VyZSBhYmxlIHRvIHZpc3VhbGl6ZSB0aGUgb3V0bGllcnMgb2YgdGhpcyBkYXRhc2V0LiBXZSB0b29rIHRoZSBhdmVyYWdlIGJpcnRocyBlYWNoIGRheSwgb2YgZWFjaCB5ZWFyIGFuZCBjb21iaW5lZCB0aGVtIGFuZCB0aGVuIHBsb3R0ZWQgaXQgaW50byBhIHNjYXR0ZXIgcGxvdC4gQXMgbWVudGlvbmVkIGluIHRoZSBwcmV2aW91cyBzZWN0aW9uLCB3ZSB3ZXJlIGFibGUgdG8gc2VlIHRoYXQgdGhlIGxvd2VzdCBhdmVyYWdlIG9mIGJpcnRocyBvbiBhIHNwZWNpZmljIGRhdGUgd2FzIHRoZSBkYXRlcyBiZWZvcmUgYW5kIGFmdGVyIG1ham9yIGhvbGlkYXlzLiBIb2xpZGF5cyBhcmUgYSBzdHJlc3NmdWwgdGltZSBmb3IgZmFtaWxpZXMsIGFuZCBwZW9wbGUgd2FudCB0byBzcGVuZCB0aGF0IHRpbWUgd2l0aCB0aGVpciBmYW1pbGllcyAobm90IGdpdmluZyBiaXJ0aCBpbiBhIGhvc3BpdGFsKS4gQWdhaW4sIHRoZXJlIGlzIG9ubHkgc28gbXVjaCBwbGFubmluZyBhbiBleHBlY3RpbmcgZmFtaWx5IGNhbiBkbyBiZWZvcmUgZ2l2aW5nIGJpcnRoLCBidXQgdGhyb3VnaCB0aGUgdmlzdWFsaXphdGlvbiByZXN1bHRzLCB3ZSBjb3VsZCBzZWUgdGhhdCBiZWZvcmUgYW5kIGFmdGVyIG1ham9yIGhvbGlkYXlzIHRoZXJlIHdlcmUgcmVsYXRpdmVseSBsb3cgYmlydGhzLgoKICBXZSB0aGVuIGRpZCBhbiBhbmFseXNpcyB0byBzZWUgd2hpY2ggZGF5IG9mIHRoZSB3ZWVrIHdhcyBsZWFzdCBhbmQgbW9zdCBwb3B1bGFyIHRvIGdpdmUgYmlydGggb24uIEFzIGEgcmVzdWx0LCB3ZSBzYXcgdGhhdCBTYXR1cmRheSBhbmQgU3VuZGF5IGhhZCB0aGUgbGVhc3QgYXZlcmFnZSBhbW91bnQgb2YgYmlydGhzLiBXZSBldmVuIHNhdyB0aGF0IGEgYmlydGggZGF0ZSBvZiBgMDctMDctMDdgICh3aGljaCBpcyBldmVyeW9uZSdzIGx1Y2t5IG51bWJlcikgc3RpbGwgaGFkIGEgcHJldHR5IGxvdyBhbW91bnQgb2YgYmlydGhzIGJlY2F1c2UgaXQgd2FzIG9uIGEgU2F0dXJkYXkuIFRoaXMgdGhlbiBsZWQgdXMgdG8gZXhwbG9yZSBvdXIgZmluYWwgYW5hbHlzaXMuIFdlIGxvb2tlZCBhdCB0aGUgYmlydGhzIG9uIHNwZWNpYWxseSBudW1iZXJlZCBkYXlzIG9mIHNwZWNpZmljIHllYXJzLCBsaWtlIGAwNi0wNi0wNmAsIGAwNy0wNy0wN2AsIGAwOC0wOC0wOGAsIGFuZCBgMTEtMTEtMTFgLiBUaGlzIHdhcyBqdXN0IGEgc2FtcGxlIG9mIHRob3NlIGRheXMgaW4gcmFuZ2Ugb2YgeWVhcnMgaW4gb3VyIGRhdGEuIFRoZSByZXN1bHRzIHNob3dlZCB0aGF0IHRoZXNlIGRhdGVzIHdlcmUgc2lnbmlmaWNhbnQgZGF5cyB0byBnaXZlIGJpcnRoIG9uLiBBbHRob3VnaCB0aGVyZSBpcyBub3QgYSBzb2xpZCByZWFzb24gd2h5IHdlZWtlbmRzIGFyZSBub3QgYSBwb3B1bGFyIHRpbWUgdG8gZ2l2ZSBiaXJ0aCwgd2UgY2FuIHRha2UgaW50byBjb25zaWRlcmF0aW9uIHRoYXQgaG9zcGl0YWxzIG1pZ2h0IG5vdCBiZSBmdWxseSBzdGFmZmVkIG9uIHdlZWtlbmRzLCBwZW9wbGUgdGFrZSB2YWNhdGlvbnMgb24gdGhlIHdlZWtlbmQsIG9yIGJlY2F1c2UgcHJlZ25hbnQgd29tYW4ganVzdCB3YW50IGV4dHJhIGRheXMgb2ZmIHdvcmsgYW5kIHRoZXJlZm9yZSBjaG9vc2UgdGhhdCB0aGV5IHdhbnQgdG8gZ2l2ZSBiaXJ0aCBpbiB0aGUgbWlkZGxlIG9mIHRoZSB3ZWVrLiBUaGlzIGxhc3QgYW5hbHlzaXMgcmVhbGx5IHNob3dlZCB0aGF0IGFsdGhvdWdoIHRoZSBkYXRlIG9mIGJpcnRoIGRvZXMgbm90IGhhdmUgYSBodWdlIGVmZmVjdCBvbiB0aGUgYW1vdW50IG9mIGJpcnRocywgdGhlIGRheSBvZiB0aGUgd2VlayB0aGUgYmFieSBpcyBib3JuIGhhcyBhIGh1Z2UgY29ycmVsYXRpb24gdG8gdGhlIGFtb3VudCBvZiBiaXJ0aHMuCiAgCiAgQWdhaW4sIGFsdGhvdWdoIGV4cGVjdGluZyBmYW1pbGllcyBjYW4gcGxhbiBhcyBtdWNoIGFzIHBvc3NpYmxlLCB0aGVyZSBhcmUgbWFueSBmYWN0b3JzIHRoYXQgY2FuIGFmZmVjdCB3aGVuIGEgYmFieSBpcyBicm91Z2h0IGludG8gdGhpcyB3b3JsZC4gRmluYW5jaWFsIGhhcmRzaGlwcywgd2Vla2VuZHMsIG9yIGhvbGlkYXlzIGFyZSBzb21lIG9mIHRoZSBmYWN0b3JzIHRoZSBicmluZyBiaXJ0aHMgZG93bi4gU2lnbmljYXRsbHkgbnVtYmVyZWQgZGF5cywgbWlkZGxlIG9mIHRoZSB3ZWVrLCBhbmQgaGlnaGVyIGVjb25vbXkgYXJlIHNvbWUgb2YgdGhlIGZhY3RvcnMgdGhhdCBicmluZyBiaXJ0aHMgdXAu</div>
 
 
 </div>
